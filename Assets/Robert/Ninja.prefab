@@ -131,9 +131,10 @@ GameObject:
   - 33: {fileID: 3348108}
   - 23: {fileID: 2364186}
   - 111: {fileID: 11194198}
+  - 136: {fileID: 13688620}
   m_Layer: 0
   m_Name: Katana
-  m_TagString: Untagged
+  m_TagString: weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -750,9 +751,10 @@ GameObject:
   - 33: {fileID: 3327084}
   - 23: {fileID: 2334952}
   - 111: {fileID: 11185108}
+  - 136: {fileID: 13643098}
   m_Layer: 0
   m_Name: Katana
-  m_TagString: Untagged
+  m_TagString: weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -815,6 +817,7 @@ GameObject:
   - 136: {fileID: 13689340}
   - 114: {fileID: 11480326}
   - 114: {fileID: 11430598}
+  - 114: {fileID: 11468418}
   m_Layer: 0
   m_Name: Ninja
   m_TagString: Untagged
@@ -1150,8 +1153,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 190980}
-  m_LocalRotation: {x: 0, y: -.707106829, z: 0, w: .707106709}
-  m_LocalPosition: {x: 8.89999962, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 485850}
@@ -1799,6 +1802,18 @@ MonoBehaviour:
   startingHealth: 100
   currentHealth: 0
   deathClip: {fileID: 0}
+--- !u!114 &11468418
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 190980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d965e33a233d4e769b61e6a70fd5f03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 9599488}
 --- !u!114 &11480326
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1811,6 +1826,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 9599488}
+--- !u!136 &13643098
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 182312}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .100000001
+  m_Height: 1.39999998
+  m_Direction: 2
+  m_Center: {x: -2.65044747e-07, y: -.0196141843, z: -.301147908}
+--- !u!136 &13688620
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112574}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .100000001
+  m_Height: 1.39999998
+  m_Direction: 2
+  m_Center: {x: 1.52788573e-07, y: -.0196141507, z: -.301149487}
 --- !u!136 &13689340
 CapsuleCollider:
   m_ObjectHideFlags: 1

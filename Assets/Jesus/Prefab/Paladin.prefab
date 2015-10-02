@@ -673,7 +673,7 @@ GameObject:
   - 137: {fileID: 13709412}
   m_Layer: 0
   m_Name: Paladin_J_Nordstrom_Sword
-  m_TagString: Untagged
+  m_TagString: weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -919,6 +919,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &181926
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 479584}
+  - 136: {fileID: 13659920}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &187190
 GameObject:
   m_ObjectHideFlags: 1
@@ -991,6 +1007,7 @@ GameObject:
   - 54: {fileID: 5472750}
   - 136: {fileID: 13671614}
   - 114: {fileID: 11472400}
+  - 114: {fileID: 11493650}
   m_Layer: 0
   m_Name: Paladin
   m_TagString: Untagged
@@ -1421,8 +1438,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 190162}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 36.6275253, y: .952206731, z: 17.8870029}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 430900}
@@ -1631,7 +1648,8 @@ Transform:
   m_LocalRotation: {x: .509361684, y: .580286026, z: -.445697635, w: -.452959746}
   m_LocalPosition: {x: -.00480282586, y: .0774698555, z: .0345592909}
   m_LocalScale: {x: .999999166, y: 1.00000072, z: 1.00000072}
-  m_Children: []
+  m_Children:
+  - {fileID: 479584}
   m_Father: {fileID: 493722}
   m_RootOrder: 5
 --- !u!4 &461382
@@ -1814,6 +1832,18 @@ Transform:
   m_Children:
   - {fileID: 421290}
   m_Father: {fileID: 455346}
+  m_RootOrder: 0
+--- !u!4 &479584
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181926}
+  m_LocalRotation: {x: 9.08685607e-08, y: .10973487, z: -8.19217689e-08, w: .993960977}
+  m_LocalPosition: {x: 3.1504198e-05, y: -5.18018169e-06, z: -3.1252489e-07}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 460224}
   m_RootOrder: 0
 --- !u!4 &480222
 Transform:
@@ -2095,6 +2125,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animSpeed: 1.5
+--- !u!114 &11493650
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 190162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d965e33a233d4e769b61e6a70fd5f03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 9582728}
+  _weaponMount: {fileID: 0}
+--- !u!136 &13659920
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181926}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .100000001
+  m_Height: 1
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: .389999986}
 --- !u!136 &13671614
 CapsuleCollider:
   m_ObjectHideFlags: 1
