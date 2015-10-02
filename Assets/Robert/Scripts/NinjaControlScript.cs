@@ -14,8 +14,8 @@ public class NinjaControlScript : MonoBehaviour {
 	void Update()
 	{
 		//Get input from controls
-		float z = Input.GetAxis("Horizontal");
-		float x = -Input.GetAxis("Vertical");
+		float x = Input.GetAxis("Horizontal");
+		float z = Input.GetAxis("Vertical");
 		inputVec = new Vector3(x, 0, z);
 		
 		//Apply inputs to animator
