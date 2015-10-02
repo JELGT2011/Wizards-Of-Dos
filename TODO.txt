@@ -1,0 +1,8 @@
+TODO:
+
+figure out a standard structure for our characters
+  standarize scripts/controllers/ (animations?)
+merge individual assets into main assets directory
+discuss git workflow
+find a better way to split camera views
+split axis/joystick controls properly
