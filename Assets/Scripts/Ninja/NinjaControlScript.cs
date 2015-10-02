@@ -14,8 +14,8 @@ public class NinjaControlScript : MonoBehaviour {
 	void Update()
 	{
 		//Get input from controls
-		float x = Input.GetAxis("Horizontal");
-		float z = Input.GetAxis("Vertical");
+		float x = Input.GetAxis("P1.Horizontal");
+		float z = Input.GetAxis("P1.Vertical");
 		inputVec = new Vector3(x, 0, z);
 		
 		//Apply inputs to animator
@@ -38,20 +38,20 @@ public class NinjaControlScript : MonoBehaviour {
 			isMoving = false;
 		}
 		
-		if (Input.GetButtonDown("Fire1") && !animator.GetBool("IsStunned"))
+		if (Input.GetButtonDown("P1.Fire1") && !animator.GetBool("IsStunned"))
 		{
 			animator.SetTrigger("Attack1Trigger");
 			StartCoroutine (COStunPause(.6f));
 		}
-		if (Input.GetButtonDown("Fire2") && !animator.GetBool("IsStunned")){
+		if (Input.GetButtonDown("P1.Fire2") && !animator.GetBool("IsStunned")){
 			animator.SetTrigger("Attack2Trigger");
 			StartCoroutine (COStunPause(.9f)); 
 		}
-		if(Input.GetButtonDown("Fire3") && !animator.GetBool("IsStunned")){
+		if(Input.GetButtonDown("P1.Fire3") && !animator.GetBool("IsStunned")){
 			animator.SetTrigger("Attack3Trigger");
 			StartCoroutine (COStunPause(1.1f));
 		}
-		if(isMoving && Input.GetButtonDown("Jump") && !animator.GetBool("IsStunned")){
+		if(isMoving && Input.GetButtonDown("P1.Jump") && !animator.GetBool("IsStunned")){
 			animator.SetTrigger("JumpTrigger");
 			StartCoroutine (COStunPause(1.7f));
 		}
