@@ -7,8 +7,10 @@ using System.Collections;
 public class Movement : MonoBehaviour {
 
 	//public variables
-	public float animSpeed = 1.5f;				// a public setting for overall animator animation speed
-
+	public float animSpeed = 1.5f;
+	// a public setting for overall animator animation speed
+	[SerializeField]
+	private string PlayerAssign = "K2";
 	//private variables
 	private Animator anim;							// a reference to the animator on the character
 	private AnimatorStateInfo currentBaseState;			// a reference to the current state of the animator, used for base layer
@@ -43,8 +45,8 @@ public class Movement : MonoBehaviour {
 	//update called at set interval
 	void FixedUpdate() 
 	{
-		float h = Input.GetAxis("Horizontal");				// setup h variable as our horizontal input axis
-		float v = Input.GetAxis("Vertical");				// setup v variables as our vertical input axis
+		float h = Input.GetAxis(PlayerAssign + "_Horizontal");				// setup h variable as our horizontal input axis
+		float v = Input.GetAxis(PlayerAssign + "_Vertical");				// setup v variables as our vertical input axis
 
 		anim.SetFloat("Speed", v);							// set our animator's float parameter 'Speed' equal to the vertical input axis				
 		anim.SetFloat("Direction", h); 						// set our animator's float parameter 'Direction' equal to the horizontal input axis		
@@ -53,48 +55,48 @@ public class Movement : MonoBehaviour {
 
 
 		//idle/standing
-		if (currentBaseState.nameHash == standingState) {
-			if (Input.GetButtonUp ("Fire1")) {
+		if (currentBaseState.fullPathHash == standingState) {
+			if (Input.GetButtonUp (PlayerAssign + "_Fire1")) {
 				anim.SetBool ("Attack1", true);
 			}
-		} else if (currentBaseState.nameHash == locoState) {
-			if (Input.GetButtonUp ("Fire3")) {
-				print ("FIRE!");
+		} else if (currentBaseState.fullPathHash == locoState) {
+			if (Input.GetButtonUp (PlayerAssign + "_Fire3")) {
+				//print ("FIRE!");
 				anim.SetBool ("JumpAttack", true);
 			}
-			if (Input.GetButtonUp ("Fire1")) {
+			if (Input.GetButtonUp (PlayerAssign + "_Fire1")) {
 				anim.SetBool ("Attack1", true);
 			}
-		} else if (currentBaseState.nameHash == walkBackState) {
-			if (Input.GetButtonUp ("Fire1")) {
+		} else if (currentBaseState.fullPathHash == walkBackState) {
+			if (Input.GetButtonUp (PlayerAssign + "_Fire1")) {
 				anim.SetBool ("Attack1", true);
 			}
-		} else if (currentBaseState.nameHash == jumpState) {		//reset jump
+		} else if (currentBaseState.fullPathHash == jumpState) {		//reset jump
 			anim.SetBool ("Jump", false);
-		} else if (currentBaseState.nameHash == jumpAttState) {		//reset jump attack
+		} else if (currentBaseState.fullPathHash == jumpAttState) {		//reset jump attack
 			anim.SetBool ("JumpAttack", false);
 		} 
-		if (currentBaseState.nameHash == att1State) {		//Attack state 1
+		if (currentBaseState.fullPathHash == att1State) {		//Attack state 1
 			anim.SetBool ("Attack1", false);
-			if (Input.GetButtonUp ("Fire1")) {
+			if (Input.GetButtonUp (PlayerAssign + "_Fire1")) {
 				anim.SetBool ("Attack2", true); 
 			}
-		} else if (currentBaseState.nameHash == att2State) {		//Attack state 2
+		} else if (currentBaseState.fullPathHash == att2State) {		//Attack state 2
 			anim.SetBool ("Attack2", false);
-			if (Input.GetButtonUp ("Fire1")) {
+			if (Input.GetButtonUp (PlayerAssign + "_Fire1")) {
 				anim.SetBool ("Attack3", true); 
 			}
-		} else if (currentBaseState.nameHash == att3State) {		//Attack state 3
+		} else if (currentBaseState.fullPathHash == att3State) {		//Attack state 3
 			anim.SetBool ("Attack3", false);
 		}
 		//block
-		if (Input.GetButtonUp ("Fire2")) {
+		if (Input.GetButtonUp (PlayerAssign + "_Fire2")) {
 			block = !block;
 			anim.SetBool ("Block", block); 
 		}
 
 		//Jump
-		if (Input.GetButtonUp ("Jump")) {
+		if (Input.GetButtonUp (PlayerAssign + "_Jump")) {
 			anim.SetBool ("Jump", true);
 		}
 
