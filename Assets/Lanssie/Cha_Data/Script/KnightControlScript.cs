@@ -54,7 +54,7 @@ public class KnightControlScript : MonoBehaviour {
 		//Physics.gravity = Vector3(0, -1.0, 0);
 		//charCtrl.SimpleMove(gameObject.transform.up * Gravity * Time.deltaTime);
 
-		if (currentBaseState.nameHash == locoState)
+		if (currentBaseState.fullPathHash == locoState)
 		{
 			if(Input.GetButtonDown("Jump"))
 			{
