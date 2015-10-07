@@ -511,8 +511,8 @@ GameObject:
   - 4: {fileID: 446434}
   - 95: {fileID: 9540700}
   - 136: {fileID: 13650972}
-  - 114: {fileID: 11404744}
   - 54: {fileID: 5433220}
+  - 114: {fileID: 11457830}
   m_Layer: 0
   m_Name: Ekko
   m_TagString: Untagged
@@ -3899,7 +3899,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 116124}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .414000005, z: 0}
+  m_LocalPosition: {x: 0, y: .5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 474362}
@@ -5167,7 +5167,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!95 &9540700
 Animator:
@@ -5178,7 +5178,7 @@ Animator:
   m_GameObject: {fileID: 116124}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 69784a728f64fb44c888b40cbec78121, type: 3}
-  m_Controller: {fileID: 9100000, guid: a567779ca83e08c4f8427909e17de5b8, type: 2}
+  m_Controller: {fileID: 9100000, guid: 599a5242eae835b4686d12e1fb2ed77b, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 1
   m_ApplyRootMotion: 1
@@ -5186,7 +5186,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11404744
+--- !u!114 &11457830
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -5194,12 +5194,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 116124}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b0e36a2c17f8cf41aa31b8eef79faae, type: 3}
+  m_Script: {fileID: 11500000, guid: 347782a68c3d64997a175c934b5723aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 9540700}
-  _controllerGUI: {fileID: 0}
-  _weapon: {fileID: 0}
+  PlayerAssign: K1
 --- !u!136 &13650972
 CapsuleCollider:
   m_ObjectHideFlags: 1
