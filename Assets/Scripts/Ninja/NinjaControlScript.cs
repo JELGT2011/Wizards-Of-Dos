@@ -4,17 +4,26 @@ using System.Collections;
 public class NinjaControlScript : MonoBehaviour {
 	
 	public Animator animator;
-	
+	public AudioSource audioSource;
+	AudioClip sandStep;
+	AudioClip rockHit;
+	AudioClip cactusHit;
 	float rotationSpeed = 30;
 	Vector3 inputVec;
 	bool isMoving;
 	bool isStunned;
-
+	string floorTag;
 	[SerializeField]
 	private string PlayerAssign = "K1";
-	
+	void Awake(){
+		audioSource = GetComponent<AudioSource>();
+		sandStep = (AudioClip)Resources.Load("Audio/sand_step");
+		rockHit = (AudioClip)Resources.Load("Audio/rock_hit");
+		cactusHit = (AudioClip)Resources.Load("Audio/cactus_hit");
+	}
 	void Update()
 	{
+		RaycastHit hit;
 		//Get input from controls
 		float x = Input.GetAxis(PlayerAssign + "_Horizontal");
 		float z = Input.GetAxis(PlayerAssign + "_Vertical");
@@ -30,7 +39,9 @@ public class NinjaControlScript : MonoBehaviour {
 			//set that character is moving
 			animator.SetBool("Moving", true);
 			isMoving = true;
+			if(Mathf.Abs(x) >= 0.2 || Mathf.Abs(z) >= 0.2){
 			animator.SetBool("Running", true);
+			}
 		}
 		else
 		{
@@ -56,6 +67,22 @@ public class NinjaControlScript : MonoBehaviour {
 		if(isMoving && Input.GetButtonDown(PlayerAssign + "_Jump") && !animator.GetBool("IsStunned")){
 			animator.SetTrigger("JumpTrigger");
 			StartCoroutine (COStunPause(1.7f));
+		}
+		if(animator.GetBool ("Running") && animator.GetBool ("IsStunned") == false){
+			if (Physics.Raycast(transform.position, Vector3.down, out hit))
+			{
+				//This is the colliders tag
+				floorTag = hit.collider.tag;
+			}
+			
+			//Then you use the floorTag to choose the type of footstep
+			if (floorTag == "Sand")
+			{
+				audioSource.clip = sandStep;
+				audioSource.pitch = 2.25f; //Increase the pitch to increase speed of audio clip
+				if(audioSource.isPlaying == false)
+					audioSource.Play();
+			}
 		}
 		UpdateMovement();  //update character position and facing
 	}
@@ -85,6 +112,23 @@ public class NinjaControlScript : MonoBehaviour {
 		RotateTowardsMovementDir();  //if not strafing, face character along input direction
 		
 		return inputVec.magnitude;  //return a movement value for the animator, not currently used
+	}
+	
+	void OnCollisionEnter (Collision collision){
+		if(collision.gameObject.tag == "Rock"){
+			animator.Play("Hit Reaction");
+			StartCoroutine (COStunPause(1.2f));
+			audioSource.clip = rockHit;
+			if(audioSource.isPlaying == false)
+				audioSource.Play();
+		}
+		if(collision.gameObject.tag == "Cactus"){
+			animator.Play("Hit Reaction");
+			StartCoroutine (COStunPause(1.2f));
+			audioSource.clip = cactusHit;
+			if(audioSource.isPlaying == false)
+				audioSource.Play();
+		}
 	}
 
 }
