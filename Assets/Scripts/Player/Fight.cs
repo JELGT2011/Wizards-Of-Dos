@@ -32,10 +32,8 @@ public class Fight : MonoBehaviour
 
 	void OnCollisionEnter (Collision collision)
 	{
-
 		if (collision.collider.gameObject.tag == "weapon") {
 			_animator.Play ("Hit Reaction");
-
 		}
 	}
 }
