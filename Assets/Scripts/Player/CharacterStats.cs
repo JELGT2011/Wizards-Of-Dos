@@ -17,15 +17,19 @@ public class CharacterStats : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
+		if(Input.GetKeyDown(KeyCode.Z))
+		{
+			health = 0;
+			print ("test");
+		}
+
+	}
+	
+	void TakeDamage(int damage){
+		health -= damage;
 		if(health <= 0)
 		{
 			rdc.triggerRagdoll();
 		}
-
-		if(Input.GetKeyDown(KeyCode.Z))
-		{
-			health = 0;
-		}
-
 	}
 }
