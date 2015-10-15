@@ -6,6 +6,8 @@ public class CharacterStats : MonoBehaviour
 
 	[SerializeField]
 	private float health = 100;
+
+	private float throwDamage = 0;
 	
 	RagdollController rdc;
 	// Use this for initialization
@@ -17,15 +19,16 @@ public class CharacterStats : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
+		TakeDamage(throwDamage);
 		if(Input.GetKeyDown(KeyCode.Z))
 		{
 			health = 0;
-			print ("test");
 		}
 
 	}
 	
-	void TakeDamage(int damage){
+	void TakeDamage(float damage)
+	{
 		health -= damage;
 		if(health <= 0)
 		{
