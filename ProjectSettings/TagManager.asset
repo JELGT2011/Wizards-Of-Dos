@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - weapon
+  - Sand
+  - Rock
+  - Cactus
   layers:
   - Default
   - TransparentFX
