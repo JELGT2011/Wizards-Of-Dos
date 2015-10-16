@@ -17,6 +17,7 @@ public class NinjaControlScript : MonoBehaviour {
 	private string PlayerAssign = "K1";
 	void Awake(){
 		audioSource = GetComponent<AudioSource>();
+		animator = GetComponent<Animator>();
 		sandStep = (AudioClip)Resources.Load("Audio/sand_step");
 		rockHit = (AudioClip)Resources.Load("Audio/rock_hit");
 		cactusHit = (AudioClip)Resources.Load("Audio/cactus_hit");
