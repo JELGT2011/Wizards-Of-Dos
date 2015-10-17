@@ -8,6 +8,8 @@ TagManager:
   - Sand
   - Rock
   - Cactus
+  - Snow
+  - Tree
   layers:
   - Default
   - TransparentFX
