@@ -8,6 +8,7 @@ TagManager:
   - Sand
   - Rock
   - Cactus
+  - River
   layers:
   - Default
   - TransparentFX
