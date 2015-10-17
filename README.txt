@@ -1,4 +1,4 @@
-This is the README for team Wizards of Dos Milestone two. 
+﻿This is the README for team Wizards of Dos Milestone two. 
 
 a) Your team name should appear on the HUD of your game when it is running.
 
@@ -78,14 +78,12 @@ environment…”) Please also include game feel description.
 
 
 
-//////////Jesus
-
-v. Detail exact steps grader should take to demonstrate that your game meets
-assignment requirements (e.g. “First, walk towards the pile of blocks using
-WASD and mouse and bump into them to knock them down. This should
-demonstrate actor movement via physically simulated forces and interactivity with
-environment…”) Please also include game feel description.
-
+//////////Jesus  Mountain Top
+The player should be limited to the mesa, but he can jump off. The sign in front of the player's spawn can be hit to swing it, but if you hit the post, you take a short stun and have to play the knockback animation. The player can also run into the dead trees to knock snow off of them.
+The high elevation of the mountian made me want to make use of the particle system. I decided a good combination was slight snow fall and a small snow storm. I limited the amount of particle effects to to make sure the player didnt have to deal with limited visibility.
+Sounds include the snound of steps on the snow, hitting the trees, and hitting the sign post.
+The sign is composed of several smaller cubes. The sign is attached to the top of the sign post with two smaller cubes that act like links.
+The top of the mountain is a very quiet place. I wanted to include sounds to go along with the windy environment, but couldn't really find anything that didnt get annoying quickly.
 
 
 
