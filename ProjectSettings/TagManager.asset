@@ -8,6 +8,10 @@ TagManager:
   - Sand
   - Rock
   - Cactus
+  - Water
+  - Snow
+  - Box
+  - Bounce
   layers:
   - Default
   - TransparentFX
