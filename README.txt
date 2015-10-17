@@ -47,15 +47,24 @@ You should try running around the arena and the water, kicking away boxes, runni
 
 ////////Nate
 
+ii.
+Completed all individual parts for "Sunset Forest" (jungle.level). 
+One minor issue: for the interacion, I implemented randomly generating potions that will play a sound on collision, instead of dust from foot step. The generated potion bottles do not always stick to the floor. However they are always reachable by the player.
 
-v. Detail exact steps grader should take to demonstrate that your game meets
-assignment requirements (e.g. “First, walk towards the pile of blocks using
-WASD and mouse and bump into them to knock them down. This should
-demonstrate actor movement via physically simulated forces and interactivity with
-environment…”) Please also include game feel description.
+iii.
+Standard Assets are used for river water and trees.
+Various asset bundle including stone fence, stone gate, water FX, treasure box and old bridge are also used for enviornment.
+Fantasy SFX pack is used for footstep, walking in water and getting potions sound effect.
+A sound file from teammate is used for bumping into the stone gate.
 
+iv.
+None.
 
-
+v.
+Walk around to see different trees/terrain/stone walls/broken bridge/river and waterfall, and pickup randomly generated bottles.
+Bottles should play a sound on pickup. (interaction with environment)
+Material sounds includes: Footstep sounds when walking on the ground, water sound when walking into/under river, and a clash sound when bumping into the wooden gate.
+Two hinge joints: A stone gate is attached to a stone fence. Bump into it to open. A rope is attached to the tree in sight on start (the tree next to the bridge). It is hard to bump into it, but it should swing when you do. The original design was to hang a dead body on it, but it is too creepy.
 
 
 ///////////Timothy
