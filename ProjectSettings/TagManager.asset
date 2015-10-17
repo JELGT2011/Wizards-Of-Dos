@@ -3,12 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - weapon
-  - Sand
-  - Rock
-  - Cactus
-  - River
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -18,8 +13,8 @@ TagManager:
   - UI
   - 
   - 
-  - charCollider
-  - Ragdoll
+  - 
+  - 
   - 
   - 
   - 

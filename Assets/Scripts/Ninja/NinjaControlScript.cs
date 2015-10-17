@@ -1,3 +1,5 @@
+// Robert, Lanssie
+
 using UnityEngine;
 using System.Collections;
 
@@ -8,18 +10,29 @@ public class NinjaControlScript : MonoBehaviour {
 	AudioClip sandStep;
 	AudioClip rockHit;
 	AudioClip cactusHit;
+	AudioClip snowStep;
+	AudioClip waterStep;
+	AudioClip snowWind;
+	AudioClip boxKick;
 	float rotationSpeed = 30;
 	Vector3 inputVec;
 	bool isMoving;
 	bool isStunned;
+	bool isJumpTrigger;
 	string floorTag;
 	[SerializeField]
+
 	private string PlayerAssign = "K1";
 	void Awake(){
 		audioSource = GetComponent<AudioSource>();
+		animator = GetComponent<Animator>();
 		sandStep = (AudioClip)Resources.Load("Audio/sand_step");
 		rockHit = (AudioClip)Resources.Load("Audio/rock_hit");
 		cactusHit = (AudioClip)Resources.Load("Audio/cactus_hit");
+		snowStep = (AudioClip)Resources.Load("Audio/snow_step");
+		waterStep = (AudioClip)Resources.Load ("Audio/water_step");
+		snowWind = (AudioClip)Resources.Load ("Audio/snow_wind");
+		boxKick = (AudioClip)Resources.Load ("Audio/box_kick");
 	}
 	void Update()
 	{
@@ -33,7 +46,8 @@ public class NinjaControlScript : MonoBehaviour {
 		animator.SetFloat("Input X", x);
 		animator.SetFloat("Input Z", z);
 		
-		
+		//audioSource.clip = snowStep;
+
 		if (x != 0 || z != 0 )  //if there is some input
 		{
 			//set that character is moving
@@ -41,6 +55,9 @@ public class NinjaControlScript : MonoBehaviour {
 			isMoving = true;
 			if(Mathf.Abs(x) >= 0.2 || Mathf.Abs(z) >= 0.2){
 			animator.SetBool("Running", true);
+			//audioSource.pitch = 1.5f; //Increase the pitch to increase speed of audio clip
+//			if(audioSource.isPlaying == false)
+//				audioSource.Play();
 			}
 		}
 		else
@@ -49,6 +66,7 @@ public class NinjaControlScript : MonoBehaviour {
 			animator.SetBool("Moving", false);
 			animator.SetBool("Running", false);	
 			isMoving = false;
+			audioSource.Stop();
 		}
 		
 		if (Input.GetButtonDown(PlayerAssign + "_Fire1") && !animator.GetBool("IsStunned"))
@@ -64,8 +82,9 @@ public class NinjaControlScript : MonoBehaviour {
 			animator.SetTrigger("Attack3Trigger");
 			StartCoroutine (COStunPause(1.1f));
 		}
-		if(isMoving && Input.GetButtonDown(PlayerAssign + "_Jump") && !animator.GetBool("IsStunned")){
+		if(isJumpTrigger || (isMoving && Input.GetButtonDown(PlayerAssign + "_Jump") && !animator.GetBool("IsStunned"))){
 			animator.SetTrigger("JumpTrigger");
+			isJumpTrigger = false;
 			StartCoroutine (COStunPause(1.7f));
 		}
 		if(animator.GetBool ("Running") && animator.GetBool ("IsStunned") == false){
@@ -78,10 +97,19 @@ public class NinjaControlScript : MonoBehaviour {
 			//Then you use the floorTag to choose the type of footstep
 			if (floorTag == "Sand")
 			{
-				audioSource.clip = sandStep;
+//				audioSource.clip = sandStep;
 				audioSource.pitch = 2.25f; //Increase the pitch to increase speed of audio clip
 				if(audioSource.isPlaying == false)
 					audioSource.Play();
+			}
+			if (floorTag == "Snow"){
+				//audioSource.pitch = 1.5f; //Increase the pitch to increase speed of audio clip
+				if(audioSource.isPlaying == false)
+				{
+					
+					audioSource.clip = snowStep;
+					audioSource.Play();
+				}
 			}
 		}
 		UpdateMovement();  //update character position and facing
@@ -128,6 +156,18 @@ public class NinjaControlScript : MonoBehaviour {
 			audioSource.clip = cactusHit;
 			if(audioSource.isPlaying == false)
 				audioSource.Play();
+		}
+		if(collision.gameObject.tag == "Box"){
+			audioSource.Stop();
+			audioSource.clip = boxKick;
+//			if(audioSource.isPlaying == false)
+//			{
+				audioSource.Play();
+//			}
+		}
+		if (collision.gameObject.tag == "Bounce") {
+			Debug.Log("hit the kwon");
+			isJumpTrigger = true;
 		}
 	}
 
