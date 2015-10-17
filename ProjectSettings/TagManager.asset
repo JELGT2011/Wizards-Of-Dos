@@ -11,6 +11,11 @@ TagManager:
   - Box
   - Bounce
   - weapon
+  - Dirt
+  - Lantern
+  - Nagi
+  - wood
+  - Bucket
   layers:
   - Default
   - TransparentFX
