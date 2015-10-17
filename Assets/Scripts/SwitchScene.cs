@@ -23,5 +23,11 @@ public class SwitchScene : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.Alpha4)) {
 			Application.LoadLevel(3);
 		}
+		if (Input.GetKeyDown (KeyCode.Alpha5)) {
+			Application.LoadLevel(4);
+		}
+		if (Input.GetKeyDown (KeyCode.Alpha6)) {
+			Application.LoadLevel(5);
+		}
 	}
 }
