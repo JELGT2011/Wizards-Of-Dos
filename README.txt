@@ -1,0 +1,124 @@
+This is the README for team Wizards of Dos Milestone two. 
+
+a) Your team name should appear on the HUD of your game when it is running.
+
+
+b) ZIP file name: Wizards_of_Dos_m2.zip
+
+
+c) Readme file should be in the top level directory: < teamname >_m2_readme.txt and
+should contain the following
+
+i. Full name, email, and prism account name for each member of the team
+Lanssie Mingyue Ma, mma48@gatech.edu, lanseafood
+
+Nate Ziran Chen, natechendev@gmail.com, 
+
+Timothy Storm,
+
+Jesus Carillo, jcarrillo9@gatech.edu,  Buddy Jesus
+
+Robert Sun, sunwrobert@gmail.com, rsun39
+
+Jason Libbey, 
+
+
+ii. Detail which requirements you have completed, which are incomplete, and which
+are buggy (be specific)
+
+/////////Lanssie- ICE Environment
+
+I made an icy-winter environment. 
+
+I made some of the unique actors also compound. I have some boxes that you can kick around the environment, a flag that you can knock around a barn (compound), a boat that you can push around but won’t cooperate fully with the water, and a door with side fences that swings out. I also have a platform that makes you bounce if you land on it, so it forces you to bounce around. 
+
+• The level must have variable height terrain 
+There is a ramp to a dock and a lot of random hills and mountains. There’s also a small lake in the middle of the environment that he can walk through. 
+
+• The level must have at least three material sounds that play while the character is
+interacting with the ground surface
+So I made the wind in the background, which I think sounds actually pretty good. I made him have snowy sounding footsteps when he moves, and a sound for when he knocks into boxes around the environment. 
+
+• Game Feel: I made two particle systems. One for the snow and the other for a windy snow, so that combined they make it look more wintery. I also tried to make the friction on the environment much more icey, but since I’m sharing the controller with my teammates, the change I make to it to adjust the vector would have complicated theirs. However, the items  in the environment do respond to the low friction in the environment. 
+The water was really hard, I tried to get splashes and to change the friction but it was not cooperating with me. I’ll have to keep trying. The boat I couldn’t really get to float, even though I tried writing several iterations of the script. That part is buggy. 
+
+What to do:
+You should try running around the arena and the water, kicking away boxes, running from the ramp to the dock, pushing around the boat on the water, swinging around the flag on the barn, pushing the door open on the gated area, and landing on the small platform that makes you bounce. The wind and sound effects will take place as you interact with certain parts of the environment. Remember everything has little friction so things will go pretty far! 
+
+////////Nate
+
+
+v. Detail exact steps grader should take to demonstrate that your game meets
+assignment requirements (e.g. “First, walk towards the pile of blocks using
+WASD and mouse and bump into them to knock them down. This should
+demonstrate actor movement via physically simulated forces and interactivity with
+environment…”) Please also include game feel description.
+
+
+
+
+
+///////////Timothy
+
+v. Detail exact steps grader should take to demonstrate that your game meets
+assignment requirements (e.g. “First, walk towards the pile of blocks using
+WASD and mouse and bump into them to knock them down. This should
+demonstrate actor movement via physically simulated forces and interactivity with
+environment…”) Please also include game feel description.
+
+
+
+
+//////////Jesus
+
+v. Detail exact steps grader should take to demonstrate that your game meets
+assignment requirements (e.g. “First, walk towards the pile of blocks using
+WASD and mouse and bump into them to knock them down. This should
+demonstrate actor movement via physically simulated forces and interactivity with
+environment…”) Please also include game feel description.
+
+
+
+
+///////////Robert DESERT Environment
+iv. Switch to desert scene as shown in readme.
+v. Run around to hear sand sfx. Run into the cacti and rocks to hear the other environmental sfx. Lastly run into the two signs to see demonstration of hinge joints. Also press Z to see ragdoll controller
+
+
+
+////////////Jason
+-emailed professor, he’s submitting late. 
+
+
+
+iii. Detail any and all resources that were acquired outside of class and what it is
+being used for(e.g. Asset Bundles downloaded from the Asset Store for double
+sided cutout shaders, or this file was found on the internet has link
+http://example.com/test and does the orbit camera tracking ).
+
+Collectively we used:
+UF Creator LITE for houses, 
+Water FX pack
+Standard Assets
+Cactus/Rock desert pack 
+Sand textures pack
+
+
+
+
+iv. Detail any special install instructions the grader will need to be aware of for
+building and running your code
+
+
+
+
+
+
+vi. Which scene file is the main file that should be opened first in Unity
+
+vii. URL of the web page where you posted your assignment
+
+d) Complete Unity project (each script file you created should include team name and
+members’ names in comments at top of file, and any file you acquired outside should also
+be attributed with the appropriate source information)
+
