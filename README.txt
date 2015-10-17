@@ -12,7 +12,7 @@ should contain the following
 i. Full name, email, and prism account name for each member of the team
 Lanssie Mingyue Ma, mma48@gatech.edu, lanseafood
 
-Nate Ziran Chen, natechendev@gmail.com, 
+Nate Ziran Chen, ziranchen@gatech.edu, 
 
 Timothy Storm,
 
@@ -45,17 +45,11 @@ The water was really hard, I tried to get splashes and to change the friction bu
 What to do:
 You should try running around the arena and the water, kicking away boxes, running from the ramp to the dock, pushing around the boat on the water, swinging around the flag on the barn, pushing the door open on the gated area, and landing on the small platform that makes you bounce. The wind and sound effects will take place as you interact with certain parts of the environment. Remember everything has little friction so things will go pretty far! 
 
-////////Nate
+////////Nate - Sunset Forest
 
 ii.
 Completed all individual parts for "Sunset Forest" (jungle.level). 
 One minor issue: for the interacion, I implemented randomly generating potions that will play a sound on collision, instead of dust from foot step. The generated potion bottles do not always stick to the floor. However they are always reachable by the player.
-
-iii.
-Standard Assets are used for river water and trees.
-Various asset bundle including stone fence, stone gate, water FX, treasure box and old bridge are also used for enviornment.
-Fantasy SFX pack is used for footstep, walking in water and getting potions sound effect.
-A sound file from teammate is used for bumping into the stone gate.
 
 iv.
 None.
@@ -67,7 +61,7 @@ Material sounds includes: Footstep sounds when walking on the ground, water soun
 Two hinge joints: A stone gate is attached to a stone fence. Bump into it to open. A rope is attached to the tree in sight on start (the tree next to the bridge). It is hard to bump into it, but it should swing when you do. The original design was to hang a dead body on it, but it is too creepy.
 
 
-///////////Timothy
+///////////Timothy - Japanese
 
 v. Detail exact steps grader should take to demonstrate that your game meets
 assignment requirements (e.g. “First, walk towards the pile of blocks using
@@ -78,9 +72,9 @@ environment…”) Please also include game feel description.
 
 
 
-//////////Jesus  Mountain Top
+//////////Jesus  Evil Mountain 
 The player should be limited to the mesa, but he can jump off. The sign in front of the player's spawn can be hit to swing it, but if you hit the post, you take a short stun and have to play the knockback animation. The player can also run into the dead trees to knock snow off of them.
-The high elevation of the mountian made me want to make use of the particle system. I decided a good combination was slight snow fall and a small snow storm. I limited the amount of particle effects to to make sure the player didnt have to deal with limited visibility.
+The high elevation of the mountian made me want to make use of the particle system. I decided a good combination was slight red snow fall and a small snow storm. I limited the amount of particle effects to to make sure the player didnt have to deal with limited visibility.
 Sounds include the snound of steps on the snow, hitting the trees, and hitting the sign post.
 The sign is composed of several smaller cubes. The sign is attached to the top of the sign post with two smaller cubes that act like links.
 The top of the mountain is a very quiet place. I wanted to include sounds to go along with the windy environment, but couldn't really find anything that didnt get annoying quickly.
@@ -116,12 +110,20 @@ Sand textures pack
 iv. Detail any special install instructions the grader will need to be aware of for
 building and running your code
 
-
+Test ragdoll (press Z) at last.
+Some map edges are not enclosed so you may run off the edges.
 
 
 
 
 vi. Which scene file is the main file that should be opened first in Unity
+jungle
+SnowMountain
+Desert
+JapaneseEnvironmentScene
+M2_ice
+
+are the five scenes for milestone 2. Start with any one of these and press keyboard 1 - 5 to navigate.
 
 vii. URL of the web page where you posted your assignment
 
