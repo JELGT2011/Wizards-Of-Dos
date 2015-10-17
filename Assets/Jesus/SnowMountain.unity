@@ -2938,6 +2938,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &1224698869 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 171340, guid: 7182df8c70b3783419ec7826c773921d, type: 2}
+  m_PrefabInternal: {fileID: 1777253513}
+--- !u!65 &1224698871
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1224698869}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 2.5, z: .100000001}
+  m_Center: {x: .25, y: -1, z: .270000011}
 --- !u!1 &1224776837
 GameObject:
   m_ObjectHideFlags: 0
@@ -3479,7 +3495,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Jesus Carrillo
+  m_Text: 'Author: Jesus Carrillo / Wizards of Dos'
 --- !u!222 &1371520629
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3500,8 +3516,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -50}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 262.399994, y: -37.7999992}
+  m_SizeDelta: {x: 500, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!1001 &1379127122
 Prefab:
@@ -4188,7 +4204,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 458080, guid: 7182df8c70b3783419ec7826c773921d, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 259.372986
+      value: 259.329987
       objectReference: {fileID: 0}
     - target: {fileID: 458080, guid: 7182df8c70b3783419ec7826c773921d, type: 2}
       propertyPath: m_LocalRotation.x
@@ -4214,6 +4230,14 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: caf4be6c4583045c7bbe1edaafa4d1a5, type: 2}
+    - target: {fileID: 171340, guid: 7182df8c70b3783419ec7826c773921d, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 185180, guid: 7182df8c70b3783419ec7826c773921d, type: 2}
+      propertyPath: m_TagString
+      value: Sign
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7182df8c70b3783419ec7826c773921d, type: 2}
   m_IsPrefabParent: 0

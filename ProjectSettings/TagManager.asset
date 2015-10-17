@@ -10,6 +10,7 @@ TagManager:
   - Cactus
   - Snow
   - Tree
+  - Sign
   layers:
   - Default
   - TransparentFX

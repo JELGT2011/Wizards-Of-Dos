@@ -10,6 +10,7 @@ public class NinjaControlSnow : MonoBehaviour {
 	AudioClip cactusHit;
     AudioClip snowStep;
     AudioClip treeShake;
+    AudioClip knock;
 	float rotationSpeed = 30;
 	Vector3 inputVec;
 	bool isMoving;
@@ -24,6 +25,7 @@ public class NinjaControlSnow : MonoBehaviour {
 		cactusHit = (AudioClip)Resources.Load("Audio/cactus_hit");
         snowStep = (AudioClip)Resources.Load("Audio/snow_step");
         treeShake = (AudioClip)Resources.Load("Audio/tree_shake");
+        knock = (AudioClip)Resources.Load("Audio/Knock");
     }
 	void Update()
 	{
@@ -143,10 +145,17 @@ public class NinjaControlSnow : MonoBehaviour {
 		}
         if (collision.gameObject.tag == "Tree")
         {
-            
             animator.Play("Hit Reaction");
             StartCoroutine(COStunPause(1.2f));
             audioSource.clip = treeShake;
+            if (audioSource.isPlaying == false)
+                audioSource.Play();
+        }
+        if (collision.gameObject.tag == "Sign")
+        {
+            animator.Play("Hit Reaction");
+            StartCoroutine(COStunPause(1.2f));
+            audioSource.clip = knock;
             if (audioSource.isPlaying == false)
                 audioSource.Play();
         }
