@@ -7,6 +7,8 @@ public class NinjaControlScript : MonoBehaviour {
 	
 	public Animator animator;
 	public AudioSource audioSource;
+	CapsuleCollider bodyCol;
+
 	AudioClip sandStep;
 	AudioClip rockHit;
 	AudioClip cactusHit;
@@ -41,6 +43,8 @@ public class NinjaControlScript : MonoBehaviour {
 		dirtStep = (AudioClip)Resources.Load("Audio/Footstep_Dirt_01");
 		lanternHit = (AudioClip)Resources.Load("Audio/hit_metal");
 		nagiFall = (AudioClip)Resources.Load("Audio/metallic_hit"); 
+
+		bodyCol = GetComponent<CapsuleCollider> ();
 	}
 	void Update()
 	{
@@ -132,6 +136,12 @@ public class NinjaControlScript : MonoBehaviour {
 			}
 		}
 		UpdateMovement();  //update character position and facing
+		
+		//Change Collider Height
+		if (!animator.IsInTransition (0)) {
+			bodyCol.height = animator.GetFloat("ColliderHeight");
+		}
+
 	}
 	
 	public IEnumerator COStunPause(float pauseTime)
