@@ -20,7 +20,7 @@ Jesus Carillo, jcarrillo9@gatech.edu,  Buddy Jesus
 
 Robert Sun, sunwrobert@gmail.com, rsun39
 
-Jason Libbey, 
+Jason Libbey, jlibbey3@gatech.edu
 
 
 ii. Detail which requirements you have completed, which are incomplete, and which
