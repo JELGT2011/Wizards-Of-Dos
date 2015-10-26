@@ -34,8 +34,8 @@ public class PlayerController : MonoBehaviour {
 		{
 			//set that character is moving
 			_animator.SetBool("Moving", true);
-			isMoving = true;
 			_animator.SetBool("Running", true);
+			isMoving = true;
 		}
 		else
 		{
@@ -90,6 +90,15 @@ public class PlayerController : MonoBehaviour {
 		RotateTowardsMovementDir();  //if not strafing, face character along input direction
 		
 		return inputVec.magnitude;  //return a movement value for the animator, not currently used
+	}
+
+	void OnCollisionEnter (Collision collision)
+	{
+		
+		if (collision.collider.gameObject.tag == "weapon") {
+			_animator.Play("Hit Reaction");
+			
+		}
 	}
 
 }
