@@ -35,4 +35,8 @@ public class CharacterStats : MonoBehaviour
 			rdc.triggerRagdoll();
 		}
 	}
+	
+	public float getHealth(){
+		return health;
+	}
 }
