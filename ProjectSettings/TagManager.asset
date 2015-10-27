@@ -4,7 +4,18 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Sand
+  - Snow
+  - Rock
+  - Cactus
+  - Box
+  - Bounce
   - weapon
+  - Dirt
+  - Lantern
+  - Nagi
+  - wood
+  - Bucket
   layers:
   - Default
   - TransparentFX
@@ -14,8 +25,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - CapsuleControl
+  - Ragdoll
   - 
   - 
   - 
