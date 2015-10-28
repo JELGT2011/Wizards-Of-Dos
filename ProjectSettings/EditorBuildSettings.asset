@@ -14,4 +14,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/JapaneseEnvironmentScene.unity
   - enabled: 1
-    path: Assets/Lanssie/Scenes/M2_ice.unity
+    path: Assets/Scenes/M2_ice.unity
