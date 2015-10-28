@@ -138,9 +138,9 @@ public class NinjaControlScript : MonoBehaviour {
 		UpdateMovement();  //update character position and facing
 		
 		//Change Collider Height
-		if (!animator.IsInTransition (0)) {
-			bodyCol.height = animator.GetFloat("ColliderHeight");
-		}
+//		if (!animator.IsInTransition (0)) {
+//			bodyCol.height = animator.GetFloat("ColliderHeight");
+//		}
 
 	}
 	
