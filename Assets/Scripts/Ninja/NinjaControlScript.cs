@@ -7,6 +7,8 @@ public class NinjaControlScript : MonoBehaviour {
 	
 	public Animator animator;
 	public AudioSource audioSource;
+	CapsuleCollider bodyCol;
+
 	AudioClip sandStep;
 	AudioClip rockHit;
 	AudioClip cactusHit;
@@ -14,6 +16,10 @@ public class NinjaControlScript : MonoBehaviour {
 	AudioClip waterStep;
 	AudioClip snowWind;
 	AudioClip boxKick;
+	AudioClip dirtStep;
+	AudioClip lanternHit;
+	AudioClip nagiFall;
+
 	float rotationSpeed = 30;
 	Vector3 inputVec;
 	bool isMoving;
@@ -23,8 +29,10 @@ public class NinjaControlScript : MonoBehaviour {
 	[SerializeField]
 
 	private string PlayerAssign = "K1";
-	void Awake(){
+	void Awake()
+	{
 		audioSource = GetComponent<AudioSource>();
+		animator = GetComponent<Animator>();
 		sandStep = (AudioClip)Resources.Load("Audio/sand_step");
 		rockHit = (AudioClip)Resources.Load("Audio/rock_hit");
 		cactusHit = (AudioClip)Resources.Load("Audio/cactus_hit");
@@ -32,6 +40,11 @@ public class NinjaControlScript : MonoBehaviour {
 		waterStep = (AudioClip)Resources.Load ("Audio/water_step");
 		snowWind = (AudioClip)Resources.Load ("Audio/snow_wind");
 		boxKick = (AudioClip)Resources.Load ("Audio/box_kick");
+		dirtStep = (AudioClip)Resources.Load("Audio/Footstep_Dirt_01");
+		lanternHit = (AudioClip)Resources.Load("Audio/hit_metal");
+		nagiFall = (AudioClip)Resources.Load("Audio/metallic_hit"); 
+
+		bodyCol = GetComponent<CapsuleCollider> ();
 	}
 	void Update()
 	{
@@ -86,6 +99,7 @@ public class NinjaControlScript : MonoBehaviour {
 			isJumpTrigger = false;
 			StartCoroutine (COStunPause(1.7f));
 		}
+
 		if(animator.GetBool ("Running") && animator.GetBool ("IsStunned") == false){
 			if (Physics.Raycast(transform.position, Vector3.down, out hit))
 			{
@@ -101,6 +115,16 @@ public class NinjaControlScript : MonoBehaviour {
 				if(audioSource.isPlaying == false)
 					audioSource.Play();
 			}
+			
+			if (floorTag == "Dirt")
+			{
+				audioSource.clip = dirtStep;
+				//audioSource.pitch = 2.25f; //Increase the pitch to increase speed of audio clip
+				if(audioSource.isPlaying == false)
+					audioSource.Play();
+			}
+
+
 			if (floorTag == "Snow"){
 				//audioSource.pitch = 1.5f; //Increase the pitch to increase speed of audio clip
 				if(audioSource.isPlaying == false)
@@ -112,6 +136,12 @@ public class NinjaControlScript : MonoBehaviour {
 			}
 		}
 		UpdateMovement();  //update character position and facing
+		
+		//Change Collider Height
+//		if (!animator.IsInTransition (0)) {
+//			bodyCol.height = animator.GetFloat("ColliderHeight");
+//		}
+
 	}
 	
 	public IEnumerator COStunPause(float pauseTime)
@@ -164,6 +194,25 @@ public class NinjaControlScript : MonoBehaviour {
 				audioSource.Play();
 //			}
 		}
+
+		if(collision.gameObject.tag == "Lantern"){
+			audioSource.Stop();
+			audioSource.clip = lanternHit;
+			if(audioSource.isPlaying == false)
+			{
+				audioSource.Play();
+			}
+		}
+
+		if(collision.gameObject.tag == "Nagi"){
+			audioSource.Stop();
+			audioSource.clip = nagiFall;
+			if(audioSource.isPlaying == false)
+			{
+				audioSource.Play();
+			}
+		}
+
 		if (collision.gameObject.tag == "Bounce") {
 			Debug.Log("hit the kwon");
 			isJumpTrigger = true;
