@@ -14,4 +14,8 @@ MonoBehaviour:
   _updateMetaformRequired: 0
   _lastLoadSaveDirectory: 
   _lastUpdateCheck: 
+<<<<<<< HEAD:Assets/RAIN/Editor/RAINProjectState.asset
+  _lastMetricsUpdate: 10/28/2015 15:04:24
+=======
   _lastMetricsUpdate: 10/28/2015 13:52:43
+>>>>>>> master:Assets/Libs/RAIN/Editor/RAINProjectState.asset
