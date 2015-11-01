@@ -10,11 +10,11 @@ TagManager:
   - Cactus
   - Box
   - Bounce
-  - weapon
+  - Weapon
   - Dirt
   - Lantern
   - Nagi
-  - wood
+  - Wood
   - Bucket
   layers:
   - Default

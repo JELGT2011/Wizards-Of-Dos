@@ -10,10 +10,12 @@ public class StandardCharacterController : MonoBehaviour {
 	float rotationSpeed = 30;
 
 	private Vector3 inputVec;
-
+	bool inLocomotionState;
 	bool isMoving;
 	bool isStunned;
 	bool isJumpTrigger;
+	readonly string locomotion = "Locomotion";
+	
 
 	[SerializeField] private string PlayerAssign = "K1";
 
@@ -23,12 +25,11 @@ public class StandardCharacterController : MonoBehaviour {
 		bodyCol = GetComponent<CapsuleCollider>();
 	}
 
-	void Update()
+	void FixedUpdate()
 	{
-
 		characterMove();
-		UpdateMovement();  //update character position and facing
-		
+		//update character position and facing
+		UpdateMovement();  
 //		//Change Collider Height
 //		if (!animator.IsInTransition (0)) 
 //		{
@@ -37,12 +38,6 @@ public class StandardCharacterController : MonoBehaviour {
 		
 	}
 	
-	public IEnumerator COStunPause(float pauseTime)
-	{
-		animator.SetBool("IsStunned", true);	
-		yield return new WaitForSeconds(pauseTime);
-		animator.SetBool("IsStunned", false);
-	}
 	
 	void RotateTowardsMovementDir()  //face character along input direction
 	{
@@ -82,31 +77,29 @@ public class StandardCharacterController : MonoBehaviour {
 			animator.SetBool("Running", false);	
 			isMoving = false;
 		}
-
 		
-		if (Input.GetButtonDown(PlayerAssign + "_Fire1") && !animator.GetBool("IsStunned"))
-		{
-			animator.SetTrigger("Attack1Trigger");
-			StartCoroutine (COStunPause(.6f));
-		}
-
-		if (Input.GetButtonDown(PlayerAssign + "_Fire2") && !animator.GetBool("IsStunned"))
-		{
-			animator.SetTrigger("Attack2Trigger");
-			StartCoroutine (COStunPause(.9f)); 
-		}
-
-		if(Input.GetButtonDown(PlayerAssign + "_Fire3") && !animator.GetBool("IsStunned"))
-		{
-			animator.SetTrigger("Attack3Trigger");
-			StartCoroutine (COStunPause(1.1f));
-		}
-
-		if(isJumpTrigger || (isMoving && Input.GetButtonDown(PlayerAssign + "_Jump") && !animator.GetBool("IsStunned")))
-		{
-			animator.SetTrigger("JumpTrigger");
-			isJumpTrigger = false;
-			StartCoroutine (COStunPause(1.7f));
+		inLocomotionState = animator.GetCurrentAnimatorStateInfo(0).IsName("Locomotion");
+		// Prevent trigger buffering in other states
+		if(inLocomotionState){
+			if (Input.GetButtonDown(PlayerAssign + "_Fire1"))
+			{
+				animator.SetTrigger("Attack1Trigger");
+			}
+	
+			if (Input.GetButtonDown(PlayerAssign + "_Fire2"))
+			{
+				animator.SetTrigger("Attack2Trigger");
+			}
+	
+			if(Input.GetButtonDown(PlayerAssign + "_Fire3"))
+			{
+				animator.SetTrigger("Attack3Trigger");
+			}
+	
+			if(isMoving && Input.GetButtonDown(PlayerAssign + "_Jump"))
+			{
+				animator.SetTrigger("JumpTrigger");
+			}
 		}
 	}
 
@@ -116,8 +109,9 @@ public class StandardCharacterController : MonoBehaviour {
 		
 		//reduce input for diagonal movement
 		motion *= (Mathf.Abs(inputVec.x) == 1 && Mathf.Abs(inputVec.z) == 1)?.7f:1;
-		
+		if(inLocomotionState){
 		RotateTowardsMovementDir();  //if not strafing, face character along input direction
+		}
 		
 //		return inputVec.magnitude;  //return a movement value for the animator, not currently used
 	}

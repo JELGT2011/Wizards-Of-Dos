@@ -17,7 +17,7 @@ public class ItemManager : MonoBehaviour
 	
 	void Spawn ()
 	{
-		if(playerHealth.getHealth() <= 0f)
+		if(playerHealth.GetHealth() <= 0f)
 		{
 			return;
 		}
