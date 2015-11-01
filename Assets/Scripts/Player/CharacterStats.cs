@@ -8,6 +8,7 @@ public class CharacterStats : MonoBehaviour
 	[SerializeField]
 	private float health = 100;
 	private int attack1Damage = 20;
+	private Animator animator;
 	int attack2Damage = 15;
 	int attack3Damage = 30;
 	Dictionary<string, int> attackDamage;
@@ -16,6 +17,7 @@ public class CharacterStats : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
+		animator = GetComponent<Animator>();
 		attackDamage = new Dictionary<string, int>();
 		attackDamage.Add("Attack1", attack1Damage);
 		attackDamage.Add("Attack2", attack2Damage);
@@ -26,7 +28,11 @@ public class CharacterStats : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-
+		if(Input.GetKeyDown(KeyCode.Z))
+		{
+			rdc.triggerRagdoll();
+			animator.SetTrigger("DeathTrigger");
+		}
 	}
 	
 	public void TakeDamage(float damage)
@@ -35,6 +41,7 @@ public class CharacterStats : MonoBehaviour
 		if(health <= 0)
 		{
 			rdc.triggerRagdoll();
+			animator.SetTrigger("DeathTrigger");
 		}
 	}
 	

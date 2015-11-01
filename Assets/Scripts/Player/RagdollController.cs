@@ -66,18 +66,10 @@ public class RagdollController : MonoBehaviour {
 
 			goRagdoll = true;
 
-			if(GetComponent<MainControllerScript>())
+			if(GetComponent<StandardCharacterController>())
 			{
-			
-			MainControllerScript MCS = GetComponent<MainControllerScript>();
-			MCS.enabled = false;
-
-			}
-
-			if(GetComponent<NinjaControlScript>())
-			{
-				NinjaControlScript NCS = GetComponent<NinjaControlScript>();
-				NCS.enabled = false;
+				StandardCharacterController standardCharacterController = GetComponent<StandardCharacterController>();
+				standardCharacterController.enabled = false;
 			}
 
 			Collider chCol = GetComponent<Collider>();
