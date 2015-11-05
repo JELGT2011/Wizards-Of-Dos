@@ -16,42 +16,55 @@ MonoBehaviour:
       value="&lt;behaviortree version=&quot;1.1&quot; repeatuntil=&quot;&quot; name=&quot;Agressive&quot;
       debugbreak=&quot;False&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;all&quot;
       repeatuntil=&quot;&quot; name=&quot;root&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;detect
-      sensor=&quot;&amp;quot;FarSensor&amp;quot;&quot; repeatuntil=&quot;&quot; name=&quot;PlayerFar&quot;
-      matchtype=&quot;best&quot; entityobjectvariable=&quot;FarDetected&quot; debugbreak=&quot;False&quot;
+      sensor=&quot;&quot; repeatuntil=&quot;&quot; name=&quot;PlayerFar&quot; matchtype=&quot;best&quot;
+      entityobjectvariable=&quot;&quot; debugbreak=&quot;False&quot; consistent=&quot;True&quot;
+      aspectvariable=&quot;&quot; aspectobjectvariable=&quot;&quot; aspect=&quot;&quot;
+      /&gt;&lt;detect sensor=&quot;&quot; repeatuntil=&quot;&quot; name=&quot;PlayerClose&quot;
+      matchtype=&quot;best&quot; entityobjectvariable=&quot;&quot; debugbreak=&quot;False&quot;
       consistent=&quot;True&quot; aspectvariable=&quot;&quot; aspectobjectvariable=&quot;&quot;
-      aspect=&quot;&amp;quot;Player&amp;quot;&quot; /&gt;&lt;detect sensor=&quot;&amp;quot;CloseSensor&amp;quot;&quot;
-      repeatuntil=&quot;&quot; name=&quot;PlayerClose&quot; matchtype=&quot;best&quot;
-      entityobjectvariable=&quot;CloseDetected&quot; debugbreak=&quot;False&quot;
-      consistent=&quot;True&quot; aspectvariable=&quot;&quot; aspectobjectvariable=&quot;&quot;
-      aspect=&quot;&amp;quot;Player&amp;quot;&quot; /&gt;&lt;selector usepriorities=&quot;False&quot;
-      repeatuntil=&quot;&quot; name=&quot;Selector&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;PlayerNotFound&quot;
-      debugbreak=&quot;False&quot; constraint=&quot;FarDetected == null&quot;&gt;&lt;waypointpatrol
-      waypointsetvariable=&quot;&amp;quot;Waypoint Network&amp;quot;&quot; waypointactiontype=&quot;patrol&quot;
-      traversetype=&quot;loop&quot; traverseorder=&quot;forward&quot; repeatuntil=&quot;&quot;
-      pathtargetvariable=&quot;&quot; name=&quot;waypointpatrol&quot; movetargetvariable=&quot;NextTarget&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;move turnspeed=&quot;&quot; repeatuntil=&quot;&quot;
-      name=&quot;Patrol&quot; movetarget=&quot;NextTarget&quot; movespeed=&quot;.3&quot;
+      aspect=&quot;&quot; /&gt;&lt;selector usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
+      name=&quot;Selector&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;PlayerNotFound&quot; debugbreak=&quot;False&quot;
+      constraint=&quot;&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;all&quot;
+      repeatuntil=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;animate
+      repeatuntil=&quot;&quot; name=&quot;animate_Walk&quot; debugbreak=&quot;False&quot;
+      animationstate=&quot;&quot; /&gt;&lt;waypointpatrol waypointsetvariable=&quot;&quot;
+      waypointactiontype=&quot;patrol&quot; traversetype=&quot;pingpong&quot; traverseorder=&quot;forward&quot;
+      repeatuntil=&quot;&quot; pathtargetvariable=&quot;&quot; name=&quot;waypointpatrol&quot;
+      movetargetvariable=&quot;&quot; debugbreak=&quot;False&quot;&gt;&lt;move turnspeed=&quot;&quot;
+      repeatuntil=&quot;&quot; name=&quot;Patrol&quot; movetarget=&quot;&quot; movespeed=&quot;&quot;
       facetarget=&quot;&quot; debugbreak=&quot;False&quot; closeenoughdistance=&quot;&quot;
-      closeenoughangle=&quot;&quot; /&gt;&lt;/waypointpatrol&gt;&lt;/constraint&gt;&lt;constraint
+      closeenoughangle=&quot;&quot; /&gt;&lt;/waypointpatrol&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;PlayerFound&quot;
-      debugbreak=&quot;False&quot; constraint=&quot;FarDetected != null&quot;&gt;&lt;selector
-      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;Selector&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;&quot; priority=&quot;&quot;
-      name=&quot;PlayerClose&quot; debugbreak=&quot;False&quot; constraint=&quot;CloseDetected
-      != null&quot;&gt;&lt;random repeatuntil=&quot;&quot; name=&quot;random&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;animate weight=&quot;&quot; repeatuntil=&quot;&quot;
-      name=&quot;Attack1&quot; debugbreak=&quot;False&quot; animationstate=&quot;Base
-      Layer.Attack1&quot; /&gt;&lt;animate weight=&quot;&quot; repeatuntil=&quot;&quot;
-      name=&quot;Attack2&quot; debugbreak=&quot;False&quot; animationstate=&quot;Base
-      Layer.Attack2&quot; /&gt;&lt;animate weight=&quot;&quot; repeatuntil=&quot;&quot;
-      name=&quot;Attack3&quot; debugbreak=&quot;False&quot; animationstate=&quot;Base
-      Layer.Attack3&quot; /&gt;&lt;/random&gt;&lt;/constraint&gt;&lt;constraint repeatuntil=&quot;&quot;
-      priority=&quot;&quot; name=&quot;PlayerFar&quot; debugbreak=&quot;False&quot;
-      constraint=&quot;FarDetected != null&quot;&gt;&lt;move turnspeed=&quot;&quot;
-      repeatuntil=&quot;&quot; name=&quot;MoveToPlayer&quot; movetarget=&quot;FarDetected&quot;
-      movespeed=&quot;1&quot; facetarget=&quot;&quot; debugbreak=&quot;False&quot;
-      closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot; /&gt;&lt;/constraint&gt;&lt;/selector&gt;&lt;/constraint&gt;&lt;constraint
+      debugbreak=&quot;False&quot; constraint=&quot;&quot;&gt;&lt;selector usepriorities=&quot;False&quot;
+      repeatuntil=&quot;&quot; name=&quot;Selector&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;PlayerFar&quot; debugbreak=&quot;False&quot;
+      constraint=&quot;&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;all&quot;
+      repeatuntil=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;move
+      turnspeed=&quot;&quot; repeatuntil=&quot;&quot; name=&quot;MoveToPlayer&quot;
+      movetarget=&quot;&quot; movespeed=&quot;&quot; facetarget=&quot;&quot; debugbreak=&quot;False&quot;
+      closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot; /&gt;&lt;animate
+      repeatuntil=&quot;&quot; name=&quot;animate_Run&quot; debugbreak=&quot;False&quot;
+      animationstate=&quot;&quot; /&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;constraint
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;PlayerClose&quot;
+      debugbreak=&quot;False&quot; constraint=&quot;&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot;
+      succeed=&quot;all&quot; repeatuntil=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;move turnspeed=&quot;&quot; repeatuntil=&quot;&quot;
+      name=&quot;FollowPlayer&quot; movetarget=&quot;&quot; movespeed=&quot;&quot;
+      facetarget=&quot;&quot; debugbreak=&quot;False&quot; closeenoughdistance=&quot;&quot;
+      closeenoughangle=&quot;&quot; /&gt;&lt;animate repeatuntil=&quot;&quot; name=&quot;animate_Run&quot;
+      debugbreak=&quot;False&quot; animationstate=&quot;&quot; /&gt;&lt;constraint
+      repeatuntil=&quot;&quot; name=&quot;If_Fight_Range&quot; debugbreak=&quot;False&quot;
+      constraint=&quot;&quot;&gt;&lt;random repeatuntil=&quot;&quot; name=&quot;random&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;mecparam weight=&quot;&quot; valueexpression=&quot;&quot;
+      repeatuntil=&quot;&quot; parametertype=&quot;float&quot; parametername=&quot;&quot;
+      name=&quot;Attack1&quot; debugbreak=&quot;False&quot; damptime=&quot;0&quot;
+      /&gt;&lt;mecparam weight=&quot;&quot; valueexpression=&quot;&quot; repeatuntil=&quot;&quot;
+      parametertype=&quot;float&quot; parametername=&quot;&quot; name=&quot;Attack2&quot;
+      debugbreak=&quot;False&quot; damptime=&quot;0&quot; /&gt;&lt;mecparam weight=&quot;&quot;
+      valueexpression=&quot;&quot; repeatuntil=&quot;&quot; parametertype=&quot;float&quot;
+      parametername=&quot;&quot; name=&quot;Attack3&quot; debugbreak=&quot;False&quot;
+      damptime=&quot;0&quot; /&gt;&lt;/random&gt;&lt;/constraint&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;/selector&gt;&lt;/constraint&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;HealthLow&quot; debugbreak=&quot;False&quot;
       constraint=&quot;&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;all&quot;
       repeatuntil=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;move
@@ -63,7 +76,7 @@ MonoBehaviour:
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;HealthZero&quot; debugbreak=&quot;False&quot;
       constraint=&quot;&quot;&gt;&lt;action repeatuntil=&quot;&quot; parametervalues=&quot;&quot;
       parameters=&quot;&quot; namespace=&quot;&quot; name=&quot;TriggerRagdoll&quot;
-      debugbreak=&quot;False&quot; classname=&quot;&quot; /&gt;&lt;/constraint&gt;&lt;/selector&gt;&lt;/parallel&gt;&lt;/behaviortree&gt;"
+      debugbreak=&quot;False&quot; classname=&quot;(global).&quot; /&gt;&lt;/constraint&gt;&lt;/selector&gt;&lt;/parallel&gt;&lt;/behaviortree&gt;"
       type="System.String" id="treeData" /><field type="System.Array" id="treeBindings"
       elementtype="System.String" /></fields><references /></scriptableobject>
     _serializedGameObjects: []
