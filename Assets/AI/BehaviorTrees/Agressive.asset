@@ -17,6 +17,10 @@ MonoBehaviour:
       debugbreak=&quot;False&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot;
       repeatuntil=&quot;&quot; name=&quot;root&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;detect
       sensor=&quot;&amp;quot;FarSensor&amp;quot;&quot; repeatuntil=&quot;running&quot;
+      name=&quot;PlayerPrediction&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;PredictionDetected&quot;
+      debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
+      aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;PlayerPrediction&amp;quot;&quot;
+      /&gt;&lt;detect sensor=&quot;&amp;quot;FarSensor&amp;quot;&quot; repeatuntil=&quot;running&quot;
       name=&quot;PlayerFar&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;FarDetected&quot;
       debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
       aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;Player&amp;quot;&quot;
@@ -65,10 +69,15 @@ MonoBehaviour:
       repeatuntil=&quot;&quot; name=&quot;Attack3&quot; debugbreak=&quot;False&quot;
       animationstate=&quot;Base Layer.Attack3&quot; /&gt;&lt;/random&gt;&lt;/constraint&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;PlayerFar&quot; debugbreak=&quot;False&quot;
-      constraint=&quot;FarDetected != null&quot;&gt;&lt;move turnspeed=&quot;360&quot;
-      repeatuntil=&quot;&quot; name=&quot;MoveToPlayer&quot; movetarget=&quot;FarDetected&quot;
-      movespeed=&quot;1&quot; facetarget=&quot;FarDetected&quot; debugbreak=&quot;False&quot;
-      closeenoughdistance=&quot;1&quot; closeenoughangle=&quot;&quot; /&gt;&lt;/constraint&gt;&lt;/selector&gt;&lt;/constraint&gt;&lt;/selector&gt;&lt;/parallel&gt;&lt;/behaviortree&gt;"
+      constraint=&quot;FarDetected != null&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot;
+      succeed=&quot;all&quot; repeatuntil=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;move turnspeed=&quot;360&quot; repeatuntil=&quot;&quot;
+      name=&quot;MoveToPrediction&quot; movetarget=&quot;PredictionDetected&quot;
+      movespeed=&quot;0.75&quot; facetarget=&quot;PredictionDetected&quot; debugbreak=&quot;False&quot;
+      closeenoughdistance=&quot;1&quot; closeenoughangle=&quot;&quot; /&gt;&lt;action
+      repeatuntil=&quot;&quot; parametervalues=&quot;&quot; parameters=&quot;&quot;
+      namespace=&quot;(global)&quot; name=&quot;InterceptPlayer&quot; debugbreak=&quot;False&quot;
+      classname=&quot;InterceptPlayer&quot; /&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;/selector&gt;&lt;/constraint&gt;&lt;/selector&gt;&lt;/parallel&gt;&lt;/behaviortree&gt;"
       type="System.String" id="treeData" /><field type="System.Array" id="treeBindings"
       elementtype="System.String" /></fields><references /></scriptableobject>
     _serializedGameObjects: []
