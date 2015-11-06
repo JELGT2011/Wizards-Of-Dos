@@ -38,13 +38,16 @@ MonoBehaviour:
       debugbreak=&quot;False&quot; closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot;
       /&gt;&lt;/random&gt;&lt;/constraint&gt;&lt;constraint repeatuntil=&quot;&quot;
       priority=&quot;&quot; name=&quot;PlayerNotFound&quot; debugbreak=&quot;False&quot;
-      constraint=&quot;FarDetected == null&quot;&gt;&lt;waypointpatrol waypointsetvariable=&quot;&amp;quot;Waypoint
-      Network&amp;quot;&quot; waypointactiontype=&quot;patrol&quot; traversetype=&quot;pingpong&quot;
-      traverseorder=&quot;forward&quot; repeatuntil=&quot;&quot; pathtargetvariable=&quot;&quot;
-      name=&quot;waypointpatrol&quot; movetargetvariable=&quot;NextTarget&quot; debugbreak=&quot;False&quot;&gt;&lt;move
-      turnspeed=&quot;&quot; repeatuntil=&quot;&quot; name=&quot;Patrol&quot; movetarget=&quot;NextTarget&quot;
+      constraint=&quot;FarDetected == null&quot;&gt;&lt;action repeatuntil=&quot;&quot;
+      parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;(global)&quot;
+      name=&quot;WanderEnvironment&quot; debugbreak=&quot;False&quot; classname=&quot;WanderEnvironment&quot;
+      /&gt;&lt;waypointpath waypointsetvariable=&quot;&amp;quot;Wander&amp;quot;&quot;
+      waypointactiontype=&quot;path&quot; traversetype=&quot;pingpong&quot; traverseorder=&quot;forward&quot;
+      repeatuntil=&quot;&quot; pathtargetvariable=&quot;NextTarget&quot; name=&quot;Wander&quot;
+      movetargetvariable=&quot;&amp;quot;wanderTarget&amp;quot;&quot; debugbreak=&quot;False&quot;&gt;&lt;move
+      turnspeed=&quot;&quot; repeatuntil=&quot;&quot; name=&quot;Patrol&quot; movetarget=&quot;&amp;quot;wanderTarget&amp;quot;&quot;
       movespeed=&quot;.4&quot; facetarget=&quot;&quot; debugbreak=&quot;False&quot;
-      closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot; /&gt;&lt;/waypointpatrol&gt;&lt;/constraint&gt;&lt;constraint
+      closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot; /&gt;&lt;/waypointpath&gt;&lt;/constraint&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;PlayerFound&quot;
       debugbreak=&quot;False&quot; constraint=&quot;FarDetected != null&quot;&gt;&lt;selector
       usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;Selector&quot;

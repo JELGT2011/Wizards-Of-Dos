@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 25cd5593a4c6a9941b775cd688f41c4d
 folderAsset: yes
 timeCreated: 1446763808
+=======
+guid: 2dde1dac050887a4ba08687fd3036bd4
+folderAsset: yes
+timeCreated: 1446763030
+>>>>>>> origin/mile3
 licenseType: Free
 DefaultImporter:
   userData: 

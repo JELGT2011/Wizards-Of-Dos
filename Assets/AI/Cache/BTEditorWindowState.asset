@@ -29,6 +29,7 @@ MonoBehaviour:
     Errored: 0
   - AssetPath: Assets/AI/BehaviorTrees/Agressive.asset
     BehaviorTreeName: Agressive
+<<<<<<< HEAD
     BehaviorTreeID: 3
     BehaviorTreeBindings: []
     LastUpdate: 635823419706489870
@@ -40,6 +41,12 @@ MonoBehaviour:
     BehaviorTreeBindings: []
     LastUpdate: 635823445982169375
     LastModified: 635823433882739103
+=======
+    BehaviorTreeID: 36
+    BehaviorTreeBindings: []
+    LastUpdate: 635823439844514714
+    LastModified: 635823377247486089
+>>>>>>> origin/mile3
     Errored: 0
   - AssetPath: Assets/AI/BehaviorTrees/testNavTarget.asset
     BehaviorTreeName: testNavTarget
@@ -159,6 +166,7 @@ MonoBehaviour:
       _focused: 0
     - _fields:
       - _field: name
+<<<<<<< HEAD
         _currentValue: root
         _recordChange: 1
         _changed: 0
@@ -166,6 +174,11 @@ MonoBehaviour:
         _currentValue: True
         _recordChange: 0
         _changed: 0
+=======
+        _currentValue: MoveToPlayer
+        _recordChange: 1
+        _changed: 0
+>>>>>>> origin/mile3
       - _field: repeatuntil
         _currentValue: 
         _recordChange: 1
@@ -190,6 +203,7 @@ MonoBehaviour:
         _currentValue: 
         _recordChange: 1
         _changed: 0
+<<<<<<< HEAD
       - _field: fail
         _currentValue: any
         _recordChange: 1
@@ -207,6 +221,37 @@ MonoBehaviour:
       _parent: 3
       _lastUpdate: 635823419706409830
       _children: 050000000600000007000000
+=======
+      - _field: movetarget
+        _currentValue: FarDetected
+        _recordChange: 1
+        _changed: 0
+      - _field: movespeed
+        _currentValue: 1
+        _recordChange: 1
+        _changed: 0
+      - _field: facetarget
+        _currentValue: 
+        _recordChange: 1
+        _changed: 0
+      - _field: turnspeed
+        _currentValue: 
+        _recordChange: 1
+        _changed: 0
+      - _field: closeenoughdistance
+        _currentValue: 
+        _recordChange: 1
+        _changed: 0
+      - _field: closeenoughangle
+        _currentValue: 
+        _recordChange: 1
+        _changed: 0
+      _type: 14
+      _stateIndex: 4
+      _parent: 7
+      _lastUpdate: 0
+      _children: 
+>>>>>>> origin/mile3
       _variables: 
       _focused: 1
     - _fields:
@@ -1924,7 +1969,11 @@ MonoBehaviour:
       _focused: 0
     - _fields:
       - _field: name
+<<<<<<< HEAD
         _currentValue: PlayerNotFound
+=======
+        _currentValue: PlayerFar
+>>>>>>> origin/mile3
         _recordChange: 1
         _changed: 0
       - _field: open
@@ -1956,6 +2005,7 @@ MonoBehaviour:
         _recordChange: 1
         _changed: 0
       - _field: constraint
+<<<<<<< HEAD
         _currentValue: FarDetected == null
         _recordChange: 1
         _changed: 0
@@ -1964,11 +2014,25 @@ MonoBehaviour:
       _parent: 46
       _lastUpdate: 635823445982079312
       _children: 28000000
+=======
+        _currentValue: FarDetected != null
+        _recordChange: 1
+        _changed: 0
+      _type: 5
+      _stateIndex: 7
+      _parent: 18
+      _lastUpdate: 635823438078843723
+      _children: 04000000
+>>>>>>> origin/mile3
       _variables: 
       _focused: 0
     - _fields:
       - _field: name
+<<<<<<< HEAD
         _currentValue: move
+=======
+        _currentValue: Attack3
+>>>>>>> origin/mile3
         _recordChange: 1
         _changed: 0
       - _field: repeatuntil
@@ -1995,6 +2059,7 @@ MonoBehaviour:
         _currentValue: 
         _recordChange: 1
         _changed: 0
+<<<<<<< HEAD
       - _field: movetarget
         _currentValue: '"Navigation TargetToItem"'
         _recordChange: 1
@@ -2022,13 +2087,26 @@ MonoBehaviour:
       _type: 14
       _stateIndex: 42
       _parent: 44
+=======
+      - _field: animationstate
+        _currentValue: Base Layer.Attack3
+        _recordChange: 1
+        _changed: 0
+      _type: 2
+      _stateIndex: 8
+      _parent: 11
+>>>>>>> origin/mile3
       _lastUpdate: 0
       _children: 
       _variables: 
       _focused: 0
     - _fields:
       - _field: name
+<<<<<<< HEAD
         _currentValue: move
+=======
+        _currentValue: Attack2
+>>>>>>> origin/mile3
         _recordChange: 1
         _changed: 0
       - _field: repeatuntil
@@ -2055,6 +2133,7 @@ MonoBehaviour:
         _currentValue: 
         _recordChange: 1
         _changed: 0
+<<<<<<< HEAD
       - _field: movetarget
         _currentValue: '"Navigation TargetToItem1"'
         _recordChange: 1
@@ -2082,13 +2161,74 @@ MonoBehaviour:
       _type: 14
       _stateIndex: 43
       _parent: 44
+=======
+      - _field: animationstate
+        _currentValue: Base Layer.Attack2
+        _recordChange: 1
+        _changed: 0
+      _type: 2
+      _stateIndex: 9
+      _parent: 11
+>>>>>>> origin/mile3
       _lastUpdate: 0
       _children: 
       _variables: 
       _focused: 0
     - _fields:
       - _field: name
+        _currentValue: Attack1
+        _recordChange: 1
+        _changed: 0
+      - _field: repeatuntil
+        _currentValue: 
+        _recordChange: 1
+        _changed: 0
+      - _field: debugbreak
+        _currentValue: False
+        _recordChange: 1
+        _changed: 0
+      - _field: startingpriority
+        _currentValue: 
+        _recordChange: 1
+        _changed: 0
+      - _field: runningpriority
+        _currentValue: 
+        _recordChange: 1
+        _changed: 0
+      - _field: priority
+        _currentValue: 
+        _recordChange: 1
+        _changed: 0
+      - _field: weight
+        _currentValue: 
+        _recordChange: 1
+        _changed: 0
+<<<<<<< HEAD
+      _type: 17
+      _stateIndex: 44
+      _parent: 45
+      _lastUpdate: 635823445982079312
+      _children: 2b0000002a000000
+=======
+      - _field: animationstate
+        _currentValue: Base Layer.Attack1
+        _recordChange: 1
+        _changed: 0
+      _type: 2
+      _stateIndex: 10
+      _parent: 11
+      _lastUpdate: 0
+      _children: 
+>>>>>>> origin/mile3
+      _variables: 
+      _focused: 0
+    - _fields:
+      - _field: name
+<<<<<<< HEAD
+        _currentValue: HealthLow
+=======
         _currentValue: random
+>>>>>>> origin/mile3
         _recordChange: 1
         _changed: 0
       - _field: open
@@ -2119,16 +2259,61 @@ MonoBehaviour:
         _currentValue: 
         _recordChange: 1
         _changed: 0
-      _type: 17
-      _stateIndex: 44
-      _parent: 45
+<<<<<<< HEAD
+      - _field: constraint
+        _currentValue: (AI_Health <=50 && FarDetected == null) || (AI_Health <= 50
+          && FarDetected != null)
+        _recordChange: 1
+        _changed: 0
+      _type: 5
+      _stateIndex: 45
+      _parent: 46
       _lastUpdate: 635823445982079312
-      _children: 2b0000002a000000
+      _children: 2c000000
+=======
+      _type: 17
+      _stateIndex: 11
+      _parent: 16
+      _lastUpdate: 635823438078843723
+      _children: 0a0000000900000008000000
+      _variables: 
+      _focused: 0
+    - _fields: []
+      _type: 0
+      _stateIndex: 0
+      _parent: 0
+      _lastUpdate: 0
+      _children: 
+      _variables: 
+      _focused: 0
+    - _fields: []
+      _type: 0
+      _stateIndex: 0
+      _parent: 0
+      _lastUpdate: 0
+      _children: 
+      _variables: 
+      _focused: 0
+    - _fields: []
+      _type: 0
+      _stateIndex: 0
+      _parent: 0
+      _lastUpdate: 0
+      _children: 
+      _variables: 
+      _focused: 0
+    - _fields: []
+      _type: 0
+      _stateIndex: 0
+      _parent: 0
+      _lastUpdate: 0
+      _children: 
+>>>>>>> origin/mile3
       _variables: 
       _focused: 0
     - _fields:
       - _field: name
-        _currentValue: HealthLow
+        _currentValue: PlayerClose
         _recordChange: 1
         _changed: 0
       - _field: open
@@ -2160,19 +2345,37 @@ MonoBehaviour:
         _recordChange: 1
         _changed: 0
       - _field: constraint
-        _currentValue: (AI_Health <=50 && FarDetected == null) || (AI_Health <= 50
-          && FarDetected != null)
+        _currentValue: CloseDetected != null
         _recordChange: 1
         _changed: 0
+<<<<<<< HEAD
+      _type: 18
+      _stateIndex: 46
+      _parent: 49
+      _lastUpdate: 635823445982169375
+      _children: 2d00000029000000260000001c000000
+=======
       _type: 5
-      _stateIndex: 45
-      _parent: 46
-      _lastUpdate: 635823445982079312
-      _children: 2c000000
+      _stateIndex: 16
+      _parent: 18
+      _lastUpdate: 635823438078843723
+      _children: 0b000000
+      _variables: 
+      _focused: 0
+    - _fields: []
+      _type: 0
+      _stateIndex: 0
+      _parent: 0
+      _lastUpdate: 0
+      _children: 
+>>>>>>> origin/mile3
       _variables: 
       _focused: 0
     - _fields:
       - _field: name
+<<<<<<< HEAD
+        _currentValue: PlayerClose
+=======
         _currentValue: Selector
         _recordChange: 1
         _changed: 0
@@ -2209,15 +2412,16 @@ MonoBehaviour:
         _recordChange: 1
         _changed: 0
       _type: 18
-      _stateIndex: 46
-      _parent: 49
-      _lastUpdate: 635823445982169375
-      _children: 2d00000029000000260000001c000000
+      _stateIndex: 18
+      _parent: 19
+      _lastUpdate: 635823438078843723
+      _children: 1000000007000000
       _variables: 
       _focused: 0
     - _fields:
       - _field: name
-        _currentValue: PlayerClose
+        _currentValue: PlayerFound
+>>>>>>> origin/mile3
         _recordChange: 1
         _changed: 0
       - _field: repeatuntil
@@ -2248,6 +2452,7 @@ MonoBehaviour:
         _currentValue: '"CloseSenser"'
         _recordChange: 1
         _changed: 0
+<<<<<<< HEAD
       - _field: aspect
         _currentValue: '"Player"'
         _recordChange: 1
@@ -2277,6 +2482,13 @@ MonoBehaviour:
       _parent: 49
       _lastUpdate: 0
       _children: 
+=======
+      _type: 5
+      _stateIndex: 19
+      _parent: 28
+      _lastUpdate: 635823438078843723
+      _children: 12000000
+>>>>>>> origin/mile3
       _variables: 
       _focused: 0
     - _fields:
@@ -2308,8 +2520,13 @@ MonoBehaviour:
         _currentValue: 
         _recordChange: 1
         _changed: 0
+<<<<<<< HEAD
       - _field: sensor
         _currentValue: '"FarSensor"'
+=======
+      - _field: movetarget
+        _currentValue: '"wanderTarget"'
+>>>>>>> origin/mile3
         _recordChange: 1
         _changed: 0
       - _field: aspect
@@ -2332,6 +2549,7 @@ MonoBehaviour:
         _currentValue: best
         _recordChange: 1
         _changed: 0
+<<<<<<< HEAD
       - _field: consistent
         _currentValue: True
         _recordChange: 1
@@ -2339,13 +2557,22 @@ MonoBehaviour:
       _type: 7
       _stateIndex: 48
       _parent: 49
+=======
+      _type: 14
+      _stateIndex: 20
+      _parent: 21
+>>>>>>> origin/mile3
       _lastUpdate: 0
       _children: 
       _variables: 
       _focused: 0
     - _fields:
       - _field: name
+<<<<<<< HEAD
         _currentValue: root
+=======
+        _currentValue: Wander
+>>>>>>> origin/mile3
         _recordChange: 1
         _changed: 0
       - _field: open
@@ -2376,6 +2603,7 @@ MonoBehaviour:
         _currentValue: 
         _recordChange: 1
         _changed: 0
+<<<<<<< HEAD
       - _field: fail
         _currentValue: any
         _recordChange: 1
@@ -2393,6 +2621,89 @@ MonoBehaviour:
       _parent: 50
       _lastUpdate: 635823445982079312
       _children: 300000002f0000002e000000
+=======
+      - _field: waypointactiontype
+        _currentValue: path
+        _recordChange: 1
+        _changed: 0
+      - _field: traversetype
+        _currentValue: pingpong
+        _recordChange: 1
+        _changed: 0
+      - _field: traverseorder
+        _currentValue: forward
+        _recordChange: 1
+        _changed: 0
+      - _field: waypointsetvariable
+        _currentValue: '"Wander"'
+        _recordChange: 1
+        _changed: 0
+      - _field: pathtargetvariable
+        _currentValue: NextTarget
+        _recordChange: 1
+        _changed: 0
+      - _field: movetargetvariable
+        _currentValue: '"wanderTarget"'
+        _recordChange: 1
+        _changed: 0
+      _type: 23
+      _stateIndex: 21
+      _parent: 23
+      _lastUpdate: 635823439834454138
+      _children: 14000000
+      _variables: 
+      _focused: 1
+    - _fields:
+      - _field: name
+        _currentValue: WanderEnvironment
+        _recordChange: 1
+        _changed: 0
+      - _field: repeatuntil
+        _currentValue: 
+        _recordChange: 1
+        _changed: 0
+      - _field: debugbreak
+        _currentValue: False
+        _recordChange: 1
+        _changed: 0
+      - _field: startingpriority
+        _currentValue: 
+        _recordChange: 1
+        _changed: 0
+      - _field: runningpriority
+        _currentValue: 
+        _recordChange: 1
+        _changed: 0
+      - _field: priority
+        _currentValue: 
+        _recordChange: 1
+        _changed: 0
+      - _field: weight
+        _currentValue: 
+        _recordChange: 1
+        _changed: 0
+      - _field: namespace
+        _currentValue: (global)
+        _recordChange: 1
+        _changed: 0
+      - _field: classname
+        _currentValue: WanderEnvironment
+        _recordChange: 1
+        _changed: 0
+      - _field: parameters
+        _currentValue: 
+        _recordChange: 1
+        _changed: 0
+      - _field: parametervalues
+        _currentValue: 
+        _recordChange: 1
+        _changed: 0
+      _type: 1
+      _stateIndex: 22
+      _parent: 23
+      _lastUpdate: 0
+      _children: 
+>>>>>>> origin/mile3
       _variables: 
       _focused: 0
     - _fields:
@@ -2428,6 +2739,7 @@ MonoBehaviour:
         _currentValue: 
         _recordChange: 1
         _changed: 0
+<<<<<<< HEAD
       _type: 4
       _stateIndex: 50
       _parent: 0
@@ -2441,6 +2753,17 @@ MonoBehaviour:
       _parent: 0
       _lastUpdate: 0
       _children: 
+=======
+      - _field: constraint
+        _currentValue: FarDetected == null
+        _recordChange: 1
+        _changed: 0
+      _type: 5
+      _stateIndex: 23
+      _parent: 28
+      _lastUpdate: 635823438078843723
+      _children: 1600000015000000
+>>>>>>> origin/mile3
       _variables: 
       _focused: 0
     - _fields:
@@ -2497,6 +2820,7 @@ MonoBehaviour:
         _recordChange: 1
         _changed: 0
       _type: 14
+<<<<<<< HEAD
       _stateIndex: 52
       _parent: 63
       _lastUpdate: 0
@@ -2555,6 +2879,10 @@ MonoBehaviour:
       _type: 0
       _stateIndex: 0
       _parent: 0
+=======
+      _stateIndex: 24
+      _parent: 26
+>>>>>>> origin/mile3
       _lastUpdate: 0
       _children: 
       _variables: 
@@ -2613,6 +2941,7 @@ MonoBehaviour:
         _recordChange: 1
         _changed: 0
       _type: 14
+<<<<<<< HEAD
       _stateIndex: 60
       _parent: 63
       _lastUpdate: 0
@@ -2631,6 +2960,10 @@ MonoBehaviour:
       _type: 0
       _stateIndex: 0
       _parent: 0
+=======
+      _stateIndex: 25
+      _parent: 26
+>>>>>>> origin/mile3
       _lastUpdate: 0
       _children: 
       _variables: 
@@ -2669,6 +3002,7 @@ MonoBehaviour:
         _recordChange: 1
         _changed: 0
       _type: 17
+<<<<<<< HEAD
       _stateIndex: 63
       _parent: 72
       _lastUpdate: 635823477736642030
@@ -2737,6 +3071,12 @@ MonoBehaviour:
       _parent: 0
       _lastUpdate: 0
       _children: 
+=======
+      _stateIndex: 26
+      _parent: 27
+      _lastUpdate: 635823438078843723
+      _children: 1900000018000000
+>>>>>>> origin/mile3
       _variables: 
       _focused: 0
     - _fields:
@@ -2778,10 +3118,17 @@ MonoBehaviour:
         _recordChange: 1
         _changed: 0
       _type: 5
+<<<<<<< HEAD
       _stateIndex: 72
       _parent: 73
       _lastUpdate: 635823477736642030
       _children: 3f000000
+=======
+      _stateIndex: 27
+      _parent: 28
+      _lastUpdate: 635823438078843723
+      _children: 1a000000
+>>>>>>> origin/mile3
       _variables: 
       _focused: 0
     - _fields:
@@ -2822,10 +3169,25 @@ MonoBehaviour:
         _recordChange: 1
         _changed: 0
       _type: 18
+<<<<<<< HEAD
       _stateIndex: 73
       _parent: 76
       _lastUpdate: 635823481275288821
       _children: 4800000001000000550000005e000000
+=======
+      _stateIndex: 28
+      _parent: 34
+      _lastUpdate: 635823438078843723
+      _children: 1b00000017000000130000002f000000
+      _variables: 
+      _focused: 0
+    - _fields: []
+      _type: 0
+      _stateIndex: 0
+      _parent: 0
+      _lastUpdate: 0
+      _children: 
+>>>>>>> origin/mile3
       _variables: 
       _focused: 0
     - _fields:
@@ -2886,6 +3248,7 @@ MonoBehaviour:
         _recordChange: 1
         _changed: 0
       _type: 7
+<<<<<<< HEAD
       _stateIndex: 74
       _parent: 76
       _lastUpdate: 635823481361398237
@@ -3060,6 +3423,10 @@ MonoBehaviour:
       _type: 0
       _stateIndex: 0
       _parent: 0
+=======
+      _stateIndex: 30
+      _parent: 34
+>>>>>>> origin/mile3
       _lastUpdate: 0
       _children: 
       _variables: 
@@ -3082,7 +3449,11 @@ MonoBehaviour:
       _focused: 0
     - _fields:
       - _field: name
+<<<<<<< HEAD
         _currentValue: ChooseWanderPosition
+=======
+        _currentValue: PlayerFar
+>>>>>>> origin/mile3
         _recordChange: 1
         _changed: 0
       - _field: repeatuntil
@@ -3109,6 +3480,7 @@ MonoBehaviour:
         _currentValue: 
         _recordChange: 1
         _changed: 0
+<<<<<<< HEAD
       - _field: namespace
         _currentValue: 
         _recordChange: 1
@@ -3151,16 +3523,21 @@ MonoBehaviour:
         _changed: 0
       - _field: runningpriority
         _currentValue: 
+=======
+      - _field: sensor
+        _currentValue: '"FarSensor"'
+>>>>>>> origin/mile3
         _recordChange: 1
         _changed: 0
-      - _field: priority
+      - _field: aspect
+        _currentValue: '"Player"'
+        _recordChange: 1
+        _changed: 0
+      - _field: aspectvariable
         _currentValue: 
         _recordChange: 1
         _changed: 0
-      - _field: weight
-        _currentValue: 
-        _recordChange: 1
-        _changed: 0
+<<<<<<< HEAD
       - _field: movetarget
         _currentValue: WanderTarget
         _recordChange: 1
@@ -3171,20 +3548,25 @@ MonoBehaviour:
         _changed: 0
       - _field: facetarget
         _currentValue: 
+=======
+      - _field: entityobjectvariable
+        _currentValue: FarDetected
+>>>>>>> origin/mile3
         _recordChange: 1
         _changed: 0
-      - _field: turnspeed
+      - _field: aspectobjectvariable
         _currentValue: 
         _recordChange: 1
         _changed: 0
-      - _field: closeenoughdistance
-        _currentValue: 
+      - _field: matchtype
+        _currentValue: best
         _recordChange: 1
         _changed: 0
-      - _field: closeenoughangle
-        _currentValue: 
+      - _field: consistent
+        _currentValue: True
         _recordChange: 1
         _changed: 0
+<<<<<<< HEAD
       _type: 14
       _stateIndex: 83
       _parent: 1
@@ -3196,12 +3578,18 @@ MonoBehaviour:
       _type: 0
       _stateIndex: 0
       _parent: 0
+=======
+      _type: 7
+      _stateIndex: 33
+      _parent: 34
+>>>>>>> origin/mile3
       _lastUpdate: 0
       _children: 
       _variables: 
       _focused: 0
     - _fields:
       - _field: name
+<<<<<<< HEAD
         _currentValue: PlayerFound
         _recordChange: 1
         _changed: 0
@@ -3247,6 +3635,9 @@ MonoBehaviour:
     - _fields:
       - _field: name
         _currentValue: Selector
+=======
+        _currentValue: root
+>>>>>>> origin/mile3
         _recordChange: 1
         _changed: 0
       - _field: open
@@ -3277,6 +3668,7 @@ MonoBehaviour:
         _currentValue: 
         _recordChange: 1
         _changed: 0
+<<<<<<< HEAD
       - _field: usepriorities
         _currentValue: False
         _recordChange: 1
@@ -3311,16 +3703,21 @@ MonoBehaviour:
         _changed: 0
       - _field: runningpriority
         _currentValue: 
+=======
+      - _field: fail
+        _currentValue: any
+>>>>>>> origin/mile3
         _recordChange: 1
         _changed: 0
-      - _field: priority
-        _currentValue: 
+      - _field: succeed
+        _currentValue: all
         _recordChange: 1
         _changed: 0
-      - _field: weight
-        _currentValue: 
+      - _field: tiebreaker
+        _currentValue: fail
         _recordChange: 1
         _changed: 0
+<<<<<<< HEAD
       - _field: constraint
         _currentValue: CloseDetected != null
         _recordChange: 1
@@ -3330,6 +3727,21 @@ MonoBehaviour:
       _parent: 86
       _lastUpdate: 635823477736642030
       _children: 58000000
+=======
+      _type: 15
+      _stateIndex: 34
+      _parent: 36
+      _lastUpdate: 635823438078843723
+      _children: 210000001e0000001c000000
+      _variables: 
+      _focused: 0
+    - _fields: []
+      _type: 0
+      _stateIndex: 0
+      _parent: 0
+      _lastUpdate: 0
+      _children: 
+>>>>>>> origin/mile3
       _variables: 
       _focused: 1
     - _fields:
@@ -3365,11 +3777,51 @@ MonoBehaviour:
         _currentValue: 
         _recordChange: 1
         _changed: 0
+<<<<<<< HEAD
       _type: 17
       _stateIndex: 88
       _parent: 87
       _lastUpdate: 635823477736642030
       _children: 590000005a0000005b000000
+=======
+      _type: 4
+      _stateIndex: 36
+      _parent: 0
+      _lastUpdate: 635823439834454138
+      _children: 22000000
+      _variables: 
+      _focused: 0
+    - _fields: []
+      _type: 0
+      _stateIndex: 0
+      _parent: 0
+      _lastUpdate: 0
+      _children: 
+      _variables: 
+      _focused: 0
+    - _fields: []
+      _type: 0
+      _stateIndex: 0
+      _parent: 0
+      _lastUpdate: 0
+      _children: 
+      _variables: 
+      _focused: 0
+    - _fields: []
+      _type: 0
+      _stateIndex: 0
+      _parent: 0
+      _lastUpdate: 0
+      _children: 
+      _variables: 
+      _focused: 0
+    - _fields: []
+      _type: 0
+      _stateIndex: 0
+      _parent: 0
+      _lastUpdate: 0
+      _children: 
+>>>>>>> origin/mile3
       _variables: 
       _focused: 0
     - _fields:
@@ -3492,6 +3944,7 @@ MonoBehaviour:
       _children: 
       _variables: 
       _focused: 0
+<<<<<<< HEAD
     - _fields:
       - _field: name
         _currentValue: PlayerFar
@@ -3593,6 +4046,29 @@ MonoBehaviour:
       _stateIndex: 93
       _parent: 92
       _lastUpdate: 635823485594460805
+=======
+    - _fields: []
+      _type: 0
+      _stateIndex: 0
+      _parent: 0
+      _lastUpdate: 0
+      _children: 
+      _variables: 
+      _focused: 0
+    - _fields: []
+      _type: 0
+      _stateIndex: 0
+      _parent: 0
+      _lastUpdate: 0
+      _children: 
+      _variables: 
+      _focused: 0
+    - _fields: []
+      _type: 0
+      _stateIndex: 0
+      _parent: 0
+      _lastUpdate: 0
+>>>>>>> origin/mile3
       _children: 
       _variables: 
       _focused: 0
@@ -3634,10 +4110,17 @@ MonoBehaviour:
         _recordChange: 1
         _changed: 0
       _type: 5
+<<<<<<< HEAD
       _stateIndex: 94
       _parent: 73
       _lastUpdate: 635823477736642030
       _children: 5f000000
+=======
+      _stateIndex: 47
+      _parent: 28
+      _lastUpdate: 635823438078843723
+      _children: 30000000
+>>>>>>> origin/mile3
       _variables: 
       _focused: 0
     - _fields:
@@ -3686,10 +4169,19 @@ MonoBehaviour:
         _recordChange: 1
         _changed: 0
       _type: 1
+<<<<<<< HEAD
       _stateIndex: 95
       _parent: 94
+=======
+      _stateIndex: 48
+      _parent: 47
+>>>>>>> origin/mile3
       _lastUpdate: 0
       _children: 
       _variables: 
       _focused: 0
+<<<<<<< HEAD
     _freeList: 020000001a0000003300000035000000360000003700000038000000390000003a0000003b0000003d0000003e00000040000000410000004200000043000000440000004500000046000000470000004e0000004f000000500000005100000054000000
+=======
+    _freeList: 01000000020000000300000005000000060000000c0000000d0000000e0000000f000000110000001d0000001f000000200000002300000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e000000
+>>>>>>> origin/mile3
