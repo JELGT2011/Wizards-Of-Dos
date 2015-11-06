@@ -1,16 +1,19 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
 public class CharacterStats : MonoBehaviour 
 {
-
+	
 	[SerializeField]
-	private float health = 100;
-	private int attack1Damage = 20;
-	private Animator animator;
+	public int startingHealth = 100;                            // The amount of health the player starts the game with.
+	public int currentHealth;                                   // The current health the player has.
+	public Slider healthSlider;                                 // Reference to the UI's health bar.
+	int attack1Damage = 20;
 	int attack2Damage = 15;
 	int attack3Damage = 30;
+	private Animator animator;
 	Dictionary<string, int> attackDamage;
 	
 	RagdollController rdc;
@@ -23,6 +26,7 @@ public class CharacterStats : MonoBehaviour
 		attackDamage.Add("Attack2", attack2Damage);
 		attackDamage.Add("Attack3", attack3Damage);
 		rdc = GetComponent<RagdollController>();
+		currentHealth = startingHealth;
 	}
 	
 	// Update is called once per frame
@@ -35,10 +39,11 @@ public class CharacterStats : MonoBehaviour
 		}
 	}
 	
-	public void TakeDamage(float damage)
+	public void TakeDamage(int damage)
 	{
-		health -= damage;
-		if(health <= 0)
+		currentHealth -= damage;
+		healthSlider.value = currentHealth;
+		if(currentHealth <= 0)
 		{
 			rdc.triggerRagdoll();
 			animator.SetTrigger("DeathTrigger");
@@ -56,6 +61,6 @@ public class CharacterStats : MonoBehaviour
 		}
 	}
 	public float GetHealth(){
-		return health;
+		return currentHealth;
 	}
 }

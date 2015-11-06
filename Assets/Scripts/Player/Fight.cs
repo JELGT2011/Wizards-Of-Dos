@@ -52,7 +52,7 @@ public class Fight : MonoBehaviour
 			// Prevent multiple damage occurences per attack
 			if(timer >= timeBetweenAttacks){
 				bool isEnemyAttack = false;
-				float damage = 0;
+				int damage = 0;
 				foreach(string Attack in Attacks){
 					if(enemyAnimationState.IsName(Attack)){
 						isEnemyAttack = true;
