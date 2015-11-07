@@ -24,13 +24,12 @@ public class HealthModifier : MonoBehaviour
 
 		if(Input.GetKeyDown(KeyCode.Alpha8))
 		{
+			NinjaRig.AI.WorkingMemory.SetItem<float>("AI_Health", 100);
+		}
+
+		if(Input.GetKeyDown(KeyCode.Alpha9))
+		{
 			NinjaRig.AI.WorkingMemory.SetItem<float>("AI_Health", 0);
 		}
 	}
-
-//	public float setHealth()
-//	{
-//
-//
-//	}
 }
