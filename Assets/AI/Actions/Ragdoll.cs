@@ -8,7 +8,6 @@ using RAIN.Core;
 public class Ragdoll : RAINAction
 {
 	RagdollController rdc; 
-	HealthModifier health;
 	
 	public Ragdoll()
 	{
@@ -18,7 +17,8 @@ public class Ragdoll : RAINAction
     public override void Start(RAIN.Core.AI ai)
     {
 		rdc = ai.Body.GetComponent<RagdollController> ();
-		health = ai.Body.GetComponent<HealthModifier>();
+
+		ai.WorkingMemory.SetItem("AI_Health", 50);
 
         base.Start(ai);
     }
@@ -27,16 +27,11 @@ public class Ragdoll : RAINAction
     {
 
 
-		if(Input.GetKeyDown(KeyCode.Alpha7))
-		{
-			Debug.Log ("Test");
-		}
-
 		if (ai.WorkingMemory.GetItem<float>("AI_Health") <= 0) 
 		{
 			rdc.triggerRagdoll();
 		}
-		ai.WorkingMemory.SetItem("AI_Health", 0);
+
 
         return ActionResult.SUCCESS;
     }
