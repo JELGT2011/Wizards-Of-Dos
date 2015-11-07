@@ -13053,7 +13053,7 @@ Prefab:
     - target: {fileID: 11448774, guid: b9e1a1f1b52d0a345ac706c560b6b217, type: 2}
       propertyPath: _dataSerializer._serializedGameObjects.Array.data[3]
       value: 
-      objectReference: {fileID: 11400000, guid: 65452afda9ef8ac45a3ea7733dfa1855,
+      objectReference: {fileID: 11400000, guid: 3fba8aaea27877a4181696df4bec1f25,
         type: 2}
     - target: {fileID: 11448774, guid: b9e1a1f1b52d0a345ac706c560b6b217, type: 2}
       propertyPath: _dataSerializer._serializedCustomData.Array.size
