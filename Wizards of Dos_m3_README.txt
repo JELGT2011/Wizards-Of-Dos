@@ -129,13 +129,17 @@ to show the behavior. It does a good Job of predicting where the player might go
 target postion before it sets a new one to find the player. Our player characters in our game are pretty fast so does not support our game type well.
 The controls are the same run around the environment and the AI will attempt to intercept the player.
 
+Death state and low health triggers mapped to keys might have delay when triggered. 
+
+
 vi. Which scene file is the main file that should be opened first in Unity
+The Aggresssive Scene, Defensive Scene, Guardian Scene and InterceptDemo Scene can be opened in any order. 
+Scene switchin should work from any of them.
 
 
 vii. URL of the web page where you posted your assignment
 
+http://www.prism.gatech.edu/~tstorm3/MileStone3/New%20Unity%20Project.html
 
-d) Complete Unity project (each script file you created should include team name and
-members’ names in comments at top of file, and any file you acquired outside should also
-be attributed with the appropriate source information)
+
 
