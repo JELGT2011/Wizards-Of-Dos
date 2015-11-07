@@ -27,7 +27,7 @@ public class Ragdoll : RAINAction
     {
 
 
-		if(Input.GetKeyDown(KeyCode.Alpha0))
+		if(Input.GetKeyDown(KeyCode.Alpha7))
 		{
 			Debug.Log ("Test");
 		}
