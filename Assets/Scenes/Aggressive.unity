@@ -6820,7 +6820,9 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11425034, guid: 82568066dad784f8a986ae6c35e592fc, type: 2}
       propertyPath: m_Text
-      value: Wizards of Dos
+      value: 'Wizards of Dos
+
+        Aggressive Scene'
       objectReference: {fileID: 0}
     - target: {fileID: 11425034, guid: 82568066dad784f8a986ae6c35e592fc, type: 2}
       propertyPath: m_Color.r
@@ -6832,6 +6834,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11425034, guid: 82568066dad784f8a986ae6c35e592fc, type: 2}
       propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11425034, guid: 82568066dad784f8a986ae6c35e592fc, type: 2}
+      propertyPath: m_FontData.m_VerticalOverflow
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

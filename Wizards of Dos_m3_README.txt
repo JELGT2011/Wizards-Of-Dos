@@ -95,17 +95,39 @@ WASD and mouse and bump into them to knock them down. This should
 demonstrate actor movement via physically simulated forces and interactivity with
 environment…”) Please also include game feel description.
 
+Scenes can be switch using the number keys: "1","2","3","4"
+
+Key "1": Loads the Aggresssive Scene
+Key "2": Loads the Defensive Scene
+Key "3": Loads the Guardian Scene
+Key "4": Loads the InterceptDemo Scene
+
+Scene Controls: W,A,S,D for movement. Use mouse to rotate camera.
+
 1) The Aggressive scene will have the aggressive behavior tree on the AI. In this scene walk towards the AI using
 the W,A,S,D keys and he will pursue and attack the player. If the don't approach the AI he will wander the evironment
 using the Waypoint Network. If you press number key "7" the AI's health will drop to 50 and cause him move to the navigation
 target points continuously. If you press number key "8" his health will will be restored to 100 and he will resume his
 standard behavrior. If you press number Key "9" his health will drop to 0 and his death state will trigger. 
 
-2) The Defensive scene will have the defensive behavior tree on the AI. 
+2) The Defensive scene will have the defensive behavior tree on the AI. The AI will run from the player if you get reach his detection 
+range. If you get close enough to the AI he might stop and attack the player momentarily and then begin to retreat again. You can corner the 
+AI in the environment due to its small size. If you approach him when he is cornered he will turn to attack the player and then begin searching 
+for a new place to retreat. If you are not in his sensor range he will wander the environment using the Waypoint Network.
+If you press number key "7" the AI's health will drop to 50 and cause him move to the navigation
+target points continuously. If you press number key "8" his health will will be restored to 100 and he will resume his
+standard behavrior. If you press number Key "9" his health will drop to 0 and his death state will trigger.
 
+3) The Guardian scene has the guardain behavior tree on the AI. The AI patrols a path on the a waypoint route. If you approach the the AI
+he will attack and pursue. If you make it out of  his sensor range he will resume patrolling the path. 
+If you press number key "7" the AI's health will drop to 50 and cause him move to the navigation
+target points continuously. If you press number key "8" his health will will be restored to 100 and he will resume his
+standard behavrior. If you press number Key "9" his health will drop to 0 and his death state will trigger.
 
-
-
+4) The InterceptDemo scene has the aggressive AI with the custom action from requirement 7 on it. Its in a different environment at its best suited 
+to show the behavior. It does a good Job of predicting where the player might go but it has to reach the predicted
+target postion before it sets a new one to find the player. Our player characters in our game are pretty fast so does not support our game type well.
+The controls are the same run around the environment and the AI will attempt to intercept the player.
 
 vi. Which scene file is the main file that should be opened first in Unity
 

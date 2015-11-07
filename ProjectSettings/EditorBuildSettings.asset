@@ -6,12 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Desert.unity
+    path: Assets/Scenes/Aggressive.unity
   - enabled: 1
-    path: Assets/Scenes/jungle.unity
+    path: Assets/Scenes/Defensive.unity
   - enabled: 1
-    path: Assets/Scenes/EvilMountain.unity
+    path: Assets/Scenes/Guardian.unity
   - enabled: 1
-    path: Assets/Scenes/JapaneseEnvironmentScene.unity
-  - enabled: 1
-    path: Assets/Scenes/M2_ice.unity
+    path: Assets/Scenes/InterceptDemo.unity
