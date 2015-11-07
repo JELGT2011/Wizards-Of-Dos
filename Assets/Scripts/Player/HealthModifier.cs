@@ -5,7 +5,6 @@ using RAIN.Core;
 
 public class HealthModifier : MonoBehaviour 
 {
-	float health = 100;
 
 	AIRig NinjaRig;
 
@@ -13,7 +12,6 @@ public class HealthModifier : MonoBehaviour
 	void Start () 
 	{
 		NinjaRig = gameObject.GetComponentInChildren<AIRig>();
-		NinjaRig.AI.WorkingMemory.SetItem<float>("AI_Health", health);
 	}
 	
 	// Update is called once per frame
@@ -21,12 +19,12 @@ public class HealthModifier : MonoBehaviour
 	{
 		if(Input.GetKeyDown(KeyCode.Alpha7))
 		{
-			NinjaRig.AI.WorkingMemory.SetItem<float>("AI_Health", health - 50);
+			NinjaRig.AI.WorkingMemory.SetItem<float>("AI_Health", 50);
 		}
 
 		if(Input.GetKeyDown(KeyCode.Alpha8))
 		{
-			NinjaRig.AI.WorkingMemory.SetItem<float>("AI_Health", health - 100);
+			NinjaRig.AI.WorkingMemory.SetItem<float>("AI_Health", 0);
 		}
 	}
 
