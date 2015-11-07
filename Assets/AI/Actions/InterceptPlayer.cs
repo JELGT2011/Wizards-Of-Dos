@@ -29,7 +29,7 @@ public class InterceptPlayer : RAINAction
 	protected Vector2 _targetPrediction2D;
 	protected Vector3 _targetPrediction;
 
-	protected float EXECUTE_FREQUENCY = 0.5f;
+	protected float EXECUTE_FREQUENCY = 0.1f;
 	protected float _lastExecute = Time.time;
 
 	public override void Start(RAIN.Core.AI ai)
@@ -67,15 +67,9 @@ public class InterceptPlayer : RAINAction
 				}
 			}
 			_self = new Vector2(_selfTransform.position.x, _selfTransform.position.z);
-			
-			Debug.Log("_target = " + _target);
-			Debug.Log("_self = " + _self);
 
 			_targetVelocity = (_target - _targetPrevPosition) / EXECUTE_FREQUENCY;
 			_selfVelocity = (_self - _selfPrevPosition) / EXECUTE_FREQUENCY;
-			
-			Debug.Log("_targetVelocity = " + _targetVelocity);
-			Debug.Log("_selfVelocity = " + _selfVelocity);
 			
 			_positionDifference = _target - _self;
 			_velocityDifference = _targetVelocity - _selfVelocity;
@@ -90,14 +84,12 @@ public class InterceptPlayer : RAINAction
 			{
 				_targetPrediction = new Vector3(_target.x, 0f, _target.y);
 			}
-			
-			Debug.Log("_targetPrediction = " + _targetPrediction);
+
 			_targetPredictionObject.transform.position = _targetPrediction;
-			
+
 			_targetPrevPosition = _target;
 			_selfPrevPosition = _self;
-
-		}
+        }
 
 		return ActionResult.SUCCESS;
 	}
