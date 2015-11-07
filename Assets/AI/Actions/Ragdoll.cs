@@ -18,8 +18,6 @@ public class Ragdoll : RAINAction
     {
 		rdc = ai.Body.GetComponent<RagdollController> ();
 
-		ai.WorkingMemory.SetItem("AI_Health", 50);
-
         base.Start(ai);
     }
 

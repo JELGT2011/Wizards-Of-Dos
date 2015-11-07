@@ -11,6 +11,7 @@ public class InterceptPlayer : RAINAction
 
 	protected RAIN.Perception.Sensors.VisualSensor _farSensor;
 
+	protected RAIN.Entities.Aspects.RAINAspect _targetAspect;
 	protected Vector2 _target;
 
 	protected Transform _selfTransform;
@@ -28,7 +29,7 @@ public class InterceptPlayer : RAINAction
 	protected Vector2 _targetPrediction2D;
 	protected Vector3 _targetPrediction;
 
-	protected float EXECUTE_FREQUENCY = 1f;
+	protected float EXECUTE_FREQUENCY = 0.5f;
 	protected float _lastExecute = Time.time;
 
 	public override void Start(RAIN.Core.AI ai)
@@ -40,13 +41,30 @@ public class InterceptPlayer : RAINAction
 	
 	public override ActionResult Execute(RAIN.Core.AI ai)
 	{
+
 		if (_lastExecute + EXECUTE_FREQUENCY < Time.time)
 		{
 			_lastExecute = Time.time;
 
 			if (_farSensor.Matches.Count != 0)
 			{
-				_target = new Vector2(_farSensor.Matches[0].Position.x, _farSensor.Matches[0].Position.z);
+				IList<RAIN.Entities.Aspects.RAINAspect> _matches = _farSensor.Matches;
+				foreach (RAIN.Entities.Aspects.RAINAspect match in _matches)
+				{
+					if (match.AspectName == "Player")
+					{
+						_targetAspect = match;
+					}
+				}
+
+				if (_targetAspect != null)
+				{
+					_target = new Vector2(_targetAspect.Position.x, _targetAspect.Position.z);
+				}
+				else
+				{
+					throw new UnityException();
+				}
 			}
 			_self = new Vector2(_selfTransform.position.x, _selfTransform.position.z);
 			
