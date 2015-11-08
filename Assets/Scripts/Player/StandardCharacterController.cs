@@ -11,7 +11,7 @@ public class StandardCharacterController : MonoBehaviour {
 
 	private Vector3 inputVec;
 	bool inLocomotionState;
-	bool isMoving;
+	public bool isMoving;
 	bool isStunned;
 	bool isJumpTrigger;
 	readonly string locomotion = "Locomotion";
