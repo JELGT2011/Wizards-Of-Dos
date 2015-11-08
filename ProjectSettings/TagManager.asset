@@ -18,6 +18,9 @@ TagManager:
   - Bucket
   - Player1
   - Player2
+  - weapon
+  - wood
+  - Japan
   layers:
   - Default
   - TransparentFX
