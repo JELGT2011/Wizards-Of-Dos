@@ -14,14 +14,13 @@ public class CharacterStats : MonoBehaviour
 	int attack2Damage = 15;
 	int attack3Damage = 30;
 	private Animator animator;
-	Dictionary<string, int> attackDamage;
+	Dictionary<string, int> attackDamage = new Dictionary<string, int>();
 	
 	RagdollController rdc;
 	// Use this for initialization
 	void Start () 
 	{
 		animator = GetComponent<Animator>();
-		attackDamage = new Dictionary<string, int>();
 		attackDamage.Add("Attack1", attack1Damage);
 		attackDamage.Add("Attack2", attack2Damage);
 		attackDamage.Add("Attack3", attack3Damage);
@@ -42,7 +41,7 @@ public class CharacterStats : MonoBehaviour
 	public void TakeDamage(int damage)
 	{
 		currentHealth -= damage;
-		healthSlider.value = currentHealth;
+		//healthSlider.value = currentHealth;
 		if(currentHealth <= 0)
 		{
 			rdc.triggerRagdoll();

@@ -562,6 +562,8 @@ GameObject:
   - 136: {fileID: 13650972}
   - 54: {fileID: 5433220}
   - 114: {fileID: 11457830}
+  - 114: {fileID: 11496682}
+  - 114: {fileID: 11418104}
   m_Layer: 0
   m_Name: Ekko
   m_TagString: Untagged
@@ -5876,6 +5878,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11418104
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 116124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b695168601c94046a9352e74571bf97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!114 &11457830
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5884,11 +5898,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 116124}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 347782a68c3d64997a175c934b5723aa, type: 3}
+  m_Script: {fileID: 11500000, guid: 3c98de8e0cf59d049b315926c34f6503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animator: {fileID: 9540700}
+  animator: {fileID: 0}
   PlayerAssign: K1
+--- !u!114 &11496682
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 116124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc7814ee223933b41a0c48fb72057f8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 100
+  currentHealth: 0
+  healthSlider: {fileID: 0}
 --- !u!136 &13650972
 CapsuleCollider:
   m_ObjectHideFlags: 1

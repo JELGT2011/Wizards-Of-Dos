@@ -14187,6 +14187,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 11485562, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
+      propertyPath: healthSlider
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436140, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
+      propertyPath: PlayerAssign
+      value: J1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
   m_IsPrefabParent: 0
@@ -16438,52 +16446,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1945414241}
   m_Mesh: {fileID: 4300000, guid: a39a9c841442d9f47a9fe068ab248920, type: 3}
---- !u!1001 &1947662333
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 421018, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 2.46099997
-      objectReference: {fileID: 0}
-    - target: {fileID: 421018, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 421018, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -28.8299999
-      objectReference: {fileID: 0}
-    - target: {fileID: 421018, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 421018, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 421018, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 421018, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 421018, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
-      propertyPath: m_RootOrder
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 180302, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
-      propertyPath: m_Name
-      value: Ninja (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1960749978
 GameObject:
   m_ObjectHideFlags: 0

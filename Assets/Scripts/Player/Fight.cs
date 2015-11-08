@@ -56,6 +56,7 @@ public class Fight : MonoBehaviour
 				foreach(string Attack in Attacks){
 					if(enemyAnimationState.IsName(Attack)){
 						isEnemyAttack = true;
+						print ("hit");
 						damage = playerStats.GetAttackDamage(Attack);
 					}
 				}

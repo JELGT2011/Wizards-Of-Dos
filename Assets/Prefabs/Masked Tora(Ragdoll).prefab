@@ -643,6 +643,7 @@ GameObject:
   - 114: {fileID: 11449142}
   - 114: {fileID: 11468832}
   - 114: {fileID: 11452674}
+  - 114: {fileID: 11400858}
   m_Layer: 8
   m_Name: Masked Tora(Ragdoll)
   m_TagString: Untagged
@@ -2758,6 +2759,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11400858
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b695168601c94046a9352e74571bf97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!114 &11449142
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2766,7 +2779,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 143962}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d723eb47878072c409c6537cbf56ee7f, type: 3}
+  m_Script: {fileID: 11500000, guid: 3c98de8e0cf59d049b315926c34f6503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 9529386}
@@ -2782,7 +2795,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc7814ee223933b41a0c48fb72057f8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  startingHealth: 100
+  currentHealth: 0
+  healthSlider: {fileID: 0}
 --- !u!114 &11468832
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -25,7 +25,7 @@ public class StandardCharacterController : MonoBehaviour {
 		bodyCol = GetComponent<CapsuleCollider>();
 	}
 
-	void FixedUpdate()
+	void Update()
 	{
 		characterMove();
 		//update character position and facing
@@ -79,6 +79,7 @@ public class StandardCharacterController : MonoBehaviour {
 		}
 		
 		inLocomotionState = animator.GetCurrentAnimatorStateInfo(0).IsName("Locomotion");
+		Debug.Log (inLocomotionState);
 		// Prevent trigger buffering in other states
 		if(inLocomotionState){
 			if (Input.GetButtonDown(PlayerAssign + "_Fire1"))
