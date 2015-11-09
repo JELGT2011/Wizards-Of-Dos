@@ -45,7 +45,7 @@ public class CharacterStats : MonoBehaviour
 
         GameObject HUD = GameObject.FindGameObjectWithTag("HUD");
 
-        if (_characterController.PlayerAssign == "K1")
+        if (_characterController.PlayerAssign == "J1")
         {
             Slider[] _sliders = HUD.GetComponentsInChildren<Slider>();
             foreach (Slider _slider in _sliders)
@@ -56,7 +56,7 @@ public class CharacterStats : MonoBehaviour
                 }
             }
         }
-        else if (_characterController.PlayerAssign == "J1")
+        else if (_characterController.PlayerAssign == "J2")
         {
             Slider[] _sliders = HUD.GetComponentsInChildren<Slider>();
             foreach (Slider _slider in _sliders)
