@@ -21,6 +21,8 @@ TagManager:
   - weapon
   - wood
   - Japan
+  - PlayerCam1
+  - PlayerCam2
   layers:
   - Default
   - TransparentFX
