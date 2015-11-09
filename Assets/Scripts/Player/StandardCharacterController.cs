@@ -3,47 +3,57 @@ using System.Collections;
 
 public class StandardCharacterController : MonoBehaviour {
 
-	public Animator animator;
+	[SerializeField]
+	protected Animator _animator;
+	public Animator Animator
+	{
+		get { return _animator; }
+		protected set { _animator = value; }
+	}
 
 	CapsuleCollider bodyCol;
-	
+	GameObject playerCam;
+
 	float rotationSpeed = 30;
 
 	private Vector3 inputVec;
+	bool inLocomotionState;
 
-	bool isMoving;
+	protected bool _isMoving;
+	public bool IsMoving
+	{
+		get { return _isMoving; }
+	}
+
 	bool isStunned;
 	bool isJumpTrigger;
 
+	readonly string locomotion = "Locomotion";
+	
 	[SerializeField] private string PlayerAssign = "K1";
+	[SerializeField] [Range (1,2)] private int camAssign = 1;
 
 	void Start()
 	{
-		animator = GetComponent<Animator>();	
+		playerCam = GameObject.FindGameObjectWithTag("PlayerCam" + camAssign);
+		animator = GetComponent<Animator>();
 		bodyCol = GetComponent<CapsuleCollider>();
 	}
 
 	void Update()
 	{
-
 		characterMove();
-		UpdateMovement();  //update character position and facing
-		
+		//update character position and facing
+		UpdateMovement();
 //		//Change Collider Height
-//		if (!animator.IsInTransition (0)) 
+//		if (!animator.IsInTransition (0))
 //		{
 //			bodyCol.height = animator.GetFloat("ColliderHeight");
 //		}
-		
+
 	}
-	
-	public IEnumerator COStunPause(float pauseTime)
-	{
-		animator.SetBool("IsStunned", true);	
-		yield return new WaitForSeconds(pauseTime);
-		animator.SetBool("IsStunned", false);
-	}
-	
+
+
 	void RotateTowardsMovementDir()  //face character along input direction
 	{
 		if (inputVec != Vector3.zero)
@@ -55,72 +65,72 @@ public class StandardCharacterController : MonoBehaviour {
 	void characterMove()
 	{
 		//Get input from controls
-		float x = Input.GetAxis(PlayerAssign + "_Horizontal");
-		float z = Input.GetAxis(PlayerAssign + "_Vertical");
+		float x = Input.GetAxis(_playerAssign + "_Horizontal");
+		float z = Input.GetAxis(_playerAssign + "_Vertical");
 		inputVec = new Vector3(x, 0, z);
-		inputVec = Camera.main.transform.TransformDirection(inputVec);
+		inputVec = playerCam.transform.TransformDirection(inputVec);
 		inputVec.y = 0;
-		
+
 		//Apply inputs to animator
-		animator.SetFloat("Input X", x);
-		animator.SetFloat("Input Z", z);
+		_animator.SetFloat("Input X", x);
+		_animator.SetFloat("Input Z", z);
 
 		if (x != 0 || z != 0 )  //if there is some input
 		{
 			//set that character is moving
-			animator.SetBool("Moving", true);
-			isMoving = true;
+			_animator.SetBool("Moving", true);
+			_isMoving = true;
 			if(Mathf.Abs(x) >= 0.2 || Mathf.Abs(z) >= 0.2)
 			{
-				animator.SetBool("Running", true);
+				_animator.SetBool("Running", true);
 			}
 		}
 		else
 		{
 			//character is not moving
-			animator.SetBool("Moving", false);
-			animator.SetBool("Running", false);	
-			isMoving = false;
+			_animator.SetBool("Moving", false);
+			_animator.SetBool("Running", false);
+			_isMoving = false;
 		}
 
-		
-		if (Input.GetButtonDown(PlayerAssign + "_Fire1") && !animator.GetBool("IsStunned"))
-		{
-			animator.SetTrigger("Attack1Trigger");
-			StartCoroutine (COStunPause(.6f));
-		}
+		inLocomotionState = _animator.GetCurrentAnimatorStateInfo(0).IsName("Locomotion");
 
-		if (Input.GetButtonDown(PlayerAssign + "_Fire2") && !animator.GetBool("IsStunned"))
-		{
-			animator.SetTrigger("Attack2Trigger");
-			StartCoroutine (COStunPause(.9f)); 
-		}
+		// Prevent trigger buffering in other states
+		if(inLocomotionState){
+			if (Input.GetButtonDown(_playerAssign + "_Fire1"))
+			{
+				_animator.SetTrigger("Attack1Trigger");
+			}
 
-		if(Input.GetButtonDown(PlayerAssign + "_Fire3") && !animator.GetBool("IsStunned"))
-		{
-			animator.SetTrigger("Attack3Trigger");
-			StartCoroutine (COStunPause(1.1f));
-		}
+			if (Input.GetButtonDown(_playerAssign + "_Fire2"))
+			{
+				_animator.SetTrigger("Attack2Trigger");
+			}
 
-		if(isJumpTrigger || (isMoving && Input.GetButtonDown(PlayerAssign + "_Jump") && !animator.GetBool("IsStunned")))
-		{
-			animator.SetTrigger("JumpTrigger");
-			isJumpTrigger = false;
-			StartCoroutine (COStunPause(1.7f));
+			if(Input.GetButtonDown(_playerAssign + "_Fire3"))
+			{
+				_animator.SetTrigger("Attack3Trigger");
+			}
+
+			if(_isMoving && Input.GetButtonDown(_playerAssign + "_Jump"))
+			{
+				_animator.SetTrigger("JumpTrigger");
+			}
 		}
 	}
 
 	void UpdateMovement()
 	{
 		Vector3 motion = inputVec;  //get movement input from controls
-		
+
 		//reduce input for diagonal movement
 		motion *= (Mathf.Abs(inputVec.x) == 1 && Mathf.Abs(inputVec.z) == 1)?.7f:1;
-		
+		if(inLocomotionState){
 		RotateTowardsMovementDir();  //if not strafing, face character along input direction
-		
+		}
+
 //		return inputVec.magnitude;  //return a movement value for the animator, not currently used
 	}
-	
+
 
 }

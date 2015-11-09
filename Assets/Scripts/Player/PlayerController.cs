@@ -45,32 +45,28 @@ public class PlayerController : MonoBehaviour {
 			isMoving = false;
 		}
 		
-		if (Input.GetButtonDown(PlayerAssign + "_Fire1") && !_animator.GetBool("IsStunned"))
+		if (Input.GetButtonDown(PlayerAssign + "_Fire1"))
 		{
 			_animator.SetTrigger("Attack1Trigger");
-			StartCoroutine (COStunPause(.6f));
 		}
-		if (Input.GetButtonDown(PlayerAssign + "_Fire2") && !_animator.GetBool("IsStunned")){
+		if (Input.GetButtonDown(PlayerAssign + "_Fire2")){
 			_animator.SetTrigger("Attack2Trigger");
-			StartCoroutine (COStunPause(.9f)); 
 		}
-		if(Input.GetButtonDown(PlayerAssign + "_Fire3") && !_animator.GetBool("IsStunned")){
+		if(Input.GetButtonDown(PlayerAssign + "_Fire3")){
 			_animator.SetTrigger("Attack3Trigger");
-			StartCoroutine (COStunPause(1.1f));
 		}
-		if(isMoving && Input.GetButtonDown(PlayerAssign + "_Jump") && !_animator.GetBool("IsStunned")){
+		if(isMoving && Input.GetButtonDown(PlayerAssign + "_Jump")){
 			_animator.SetTrigger("JumpTrigger");
-			StartCoroutine (COStunPause(1.7f));
 		}
 		UpdateMovement();  //update character position and facing
 	}
 	
-	public IEnumerator COStunPause(float pauseTime)
+	/*public IEnumerator COStunPause(float pauseTime)
 	{
 		_animator.SetBool("IsStunned", true);	
 		yield return new WaitForSeconds(pauseTime);
 		_animator.SetBool("IsStunned", false);
-	}
+	}*/
 	
 	void RotateTowardsMovementDir()  //face character along input direction
 	{

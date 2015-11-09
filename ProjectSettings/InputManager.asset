@@ -301,9 +301,9 @@ InputManager:
     positiveButton: right
     altNegativeButton: 
     altPositiveButton: 
-    gravity: 0
-    dead: .189999998
-    sensitivity: 3
+    gravity: 1
+    dead: .25
+    sensitivity: 1
     snap: 0
     invert: 0
     type: 2
@@ -317,9 +317,9 @@ InputManager:
     positiveButton: up
     altNegativeButton: 
     altPositiveButton: 
-    gravity: 0
-    dead: .189999998
-    sensitivity: 3
+    gravity: 1
+    dead: .25
+    sensitivity: 1
     snap: 0
     invert: 1
     type: 2
@@ -397,9 +397,9 @@ InputManager:
     positiveButton: right
     altNegativeButton: 
     altPositiveButton: 
-    gravity: 3
-    dead: .189999998
-    sensitivity: 3
+    gravity: 1
+    dead: .25
+    sensitivity: 1
     snap: 0
     invert: 0
     type: 2
@@ -413,9 +413,9 @@ InputManager:
     positiveButton: up
     altNegativeButton: 
     altPositiveButton: 
-    gravity: 3
-    dead: .189999998
-    sensitivity: 3
+    gravity: 1
+    dead: .25
+    sensitivity: 1
     snap: 0
     invert: 1
     type: 2
@@ -484,4 +484,68 @@ InputManager:
     invert: 0
     type: 0
     axis: 0
+    joyNum: 2
+  - serializedVersion: 3
+    m_Name: J1_RightStickH
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1
+    dead: .5
+    sensitivity: 1
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 3
+    joyNum: 1
+  - serializedVersion: 3
+    m_Name: J1_RightStickV
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1
+    dead: .5
+    sensitivity: 1
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 4
+    joyNum: 1
+  - serializedVersion: 3
+    m_Name: J2_RightStickH
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1
+    dead: .5
+    sensitivity: 1
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 3
+    joyNum: 2
+  - serializedVersion: 3
+    m_Name: J2_RightStickV
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1
+    dead: .5
+    sensitivity: 1
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 4
     joyNum: 2
