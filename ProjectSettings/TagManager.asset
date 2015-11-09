@@ -11,51 +11,51 @@ TagManager:
   - Box
   - Bounce
   - Weapon
-  - Dirt
-  - Lantern
   - Nagi
   - Wood
   - Bucket
   - Player1
   - Player2
-  - weapon
   - wood
   - Japan
   - PlayerCam1
   - PlayerCam2
+  - Tree
+  - Sign
+  - HUD
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  -
   - Water
   - UI
-  - 
-  - 
+  -
+  -
   - CapsuleControl
   - Ragdoll
   - footCollider
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
   m_SortingLayers:
   - name: Default
     uniqueID: 0
