@@ -2046,7 +2046,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 9569230}
-  PlayerAssign: K1
+  isMoving: 0
+  PlayerAssign: J1
+  camAssign: 1
 --- !u!114 &11448566
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2083,7 +2085,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc7814ee223933b41a0c48fb72057f8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  startingHealth: 100
+  currentHealth: 0
+  healthSlider: {fileID: 0}
 --- !u!135 &13519758
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -2145,7 +2149,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: .300000012
-  m_Height: 2.0999999
+  m_Height: 2.02018166
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!136 &13656124
