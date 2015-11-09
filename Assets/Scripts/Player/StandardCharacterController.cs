@@ -30,13 +30,21 @@ public class StandardCharacterController : MonoBehaviour {
 
 	readonly string locomotion = "Locomotion";
 	
-	[SerializeField] private string PlayerAssign = "K1";
-	[SerializeField] [Range (1,2)] private int camAssign = 1;
+	[SerializeField]
+    protected string _playerAssign = "K1";
+    public string PlayerAssign
+    {
+        get { return _playerAssign; }
+    }
+
+	[SerializeField]
+    [Range (1,2)]
+    protected int camAssign = 1;
 
 	void Start()
 	{
 		playerCam = GameObject.FindGameObjectWithTag("PlayerCam" + camAssign);
-		animator = GetComponent<Animator>();
+		_animator = GetComponent<Animator>();
 		bodyCol = GetComponent<CapsuleCollider>();
 	}
 

@@ -16,9 +16,10 @@ public class CharacterStats : MonoBehaviour
         set { _currentHealth = value; }
     }
 
-    protected Slider _healthSlider;
-
     protected StandardCharacterController _characterController;
+
+    [SerializeField]
+    protected Slider _healthSlider;
 
     int attack1Damage = 20;
     int attack2Damage = 15;
