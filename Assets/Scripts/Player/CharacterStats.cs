@@ -7,59 +7,106 @@ public class CharacterStats : MonoBehaviour
 {
 	
 	[SerializeField]
-	public int startingHealth = 100;                            // The amount of health the player starts the game with.
-	public int currentHealth;                                   // The current health the player has.
-	public Slider healthSlider;                                 // Reference to the UI's health bar.
+	protected int startingHealth = 100;
+
+	protected int _currentHealth;
+	public int CurrentHealth
+	{
+		get { return _currentHealth; }
+		set { _currentHealth = value; }
+	}
+
+	protected Slider _healthSlider;
+
+	protected StandardCharacterController _characterController;
+
 	int attack1Damage = 20;
 	int attack2Damage = 15;
 	int attack3Damage = 30;
-	private Animator animator;
+
+	protected Animator _animator;
+
 	Dictionary<string, int> attackDamage = new Dictionary<string, int>();
 	
 	RagdollController rdc;
+
 	// Use this for initialization
 	void Start () 
 	{
-		animator = GetComponent<Animator>();
+		_animator = GetComponent<Animator>();
 		attackDamage.Add("Attack1", attack1Damage);
 		attackDamage.Add("Attack2", attack2Damage);
 		attackDamage.Add("Attack3", attack3Damage);
 		rdc = GetComponent<RagdollController>();
-		currentHealth = startingHealth;
+		_currentHealth = startingHealth;
+
+		_characterController = GetComponentInChildren<StandardCharacterController>();
+
+		GameObject HUD = GameObject.FindGameObjectWithTag("HUD");
+
+		if (_characterController.PlayerAssign == "K1")
+		{
+			Slider[] _sliders = HUD.GetComponentsInChildren<Slider>();
+			foreach (Slider _slider in _sliders)
+			{
+				if (_slider.tag == "Player 1")
+				{
+					_healthSlider = _slider;
+				}
+			}
+		}
+		else if (_characterController.PlayerAssign == "J1")
+		{
+			Slider[] _sliders = HUD.GetComponentsInChildren<Slider>();
+			foreach (Slider _slider in _sliders)
+			{
+				if (_slider.tag == "Player 2")
+				{
+					_healthSlider = _slider;
+				}
+			}
+		}
+
 	}
 	
 	// Update is called once per frame
-	void Update () 
+	void Update()
 	{
 		if(Input.GetKeyDown(KeyCode.Z))
 		{
 			rdc.triggerRagdoll();
-			animator.SetTrigger("DeathTrigger");
+			_animator.SetTrigger("DeathTrigger");
 		}
+	}
+
+	void OnGUI()
+	{
+		_healthSlider.value = _currentHealth;
 	}
 	
 	public void TakeDamage(int damage)
 	{
-		currentHealth -= damage;
+		_currentHealth -= damage;
 		//healthSlider.value = currentHealth;
-		if(currentHealth <= 0)
+		if(_currentHealth <= 0)
 		{
 			rdc.triggerRagdoll();
-			animator.SetTrigger("DeathTrigger");
+			_animator.SetTrigger("DeathTrigger");
 		}
 	}
 	
 	//Return the damage from an attack given its name
-	public int GetAttackDamage(string attack){
+	public int GetAttackDamage(string attack)
+	{
 		int damage;
-		if(attackDamage.TryGetValue(attack, out damage)){
+		if (attackDamage.TryGetValue(attack, out damage))
+		{
 			return damage;
 		}
-		else{
+		else
+		{
 			return 0;
 		}
 	}
-	public float GetHealth(){
-		return currentHealth;
-	}
+	
 }

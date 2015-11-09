@@ -3,27 +3,44 @@ using System.Collections;
 
 public class StandardCharacterController : MonoBehaviour {
 
-	public Animator animator;
+	[SerializeField]
+	protected Animator _animator;
+	public Animator Animator
+	{
+		get { return _animator; }
+		protected set { _animator = value; }
+	}
 
-	CapsuleCollider bodyCol;
+	CapsuleCollider _bodyCollider;
 	
 	float rotationSpeed = 30;
 
 	private Vector3 inputVec;
 	bool inLocomotionState;
-	public bool isMoving;
+	
+	protected bool _isMoving;
+	public bool IsMoving
+	{
+		get { return _isMoving; }
+	}
+
 	bool isStunned;
 	bool isJumpTrigger;
+
 	readonly string locomotion = "Locomotion";
 	
 
 	[SerializeField]
-	protected string PlayerAssign = "K1";
+	protected string _playerAssign = "K1";
+	public string PlayerAssign
+	{
+		get { return _playerAssign; }
+	}
 
 	void Start()
 	{
-		animator = GetComponent<Animator>();	
-		bodyCol = GetComponent<CapsuleCollider>();
+		_animator = GetComponentInChildren<Animator>();	
+		_bodyCollider = GetComponentInChildren<CapsuleCollider>();
 	}
 
 	void Update()
@@ -51,56 +68,56 @@ public class StandardCharacterController : MonoBehaviour {
 	void characterMove()
 	{
 		//Get input from controls
-		float x = Input.GetAxis(PlayerAssign + "_Horizontal");
-		float z = Input.GetAxis(PlayerAssign + "_Vertical");
+		float x = Input.GetAxis(_playerAssign + "_Horizontal");
+		float z = Input.GetAxis(_playerAssign + "_Vertical");
 		inputVec = new Vector3(x, 0, z);
 		inputVec = Camera.main.transform.TransformDirection(inputVec);
 		inputVec.y = 0;
 		
 		//Apply inputs to animator
-		animator.SetFloat("Input X", x);
-		animator.SetFloat("Input Z", z);
+		_animator.SetFloat("Input X", x);
+		_animator.SetFloat("Input Z", z);
 
 		if (x != 0 || z != 0 )  //if there is some input
 		{
 			//set that character is moving
-			animator.SetBool("Moving", true);
-			isMoving = true;
+			_animator.SetBool("Moving", true);
+			_isMoving = true;
 			if(Mathf.Abs(x) >= 0.2 || Mathf.Abs(z) >= 0.2)
 			{
-				animator.SetBool("Running", true);
+				_animator.SetBool("Running", true);
 			}
 		}
 		else
 		{
 			//character is not moving
-			animator.SetBool("Moving", false);
-			animator.SetBool("Running", false);	
-			isMoving = false;
+			_animator.SetBool("Moving", false);
+			_animator.SetBool("Running", false);	
+			_isMoving = false;
 		}
 		
-		inLocomotionState = animator.GetCurrentAnimatorStateInfo(0).IsName("Locomotion");
+		inLocomotionState = _animator.GetCurrentAnimatorStateInfo(0).IsName("Locomotion");
 
 		// Prevent trigger buffering in other states
 		if(inLocomotionState){
-			if (Input.GetButtonDown(PlayerAssign + "_Fire1"))
+			if (Input.GetButtonDown(_playerAssign + "_Fire1"))
 			{
-				animator.SetTrigger("Attack1Trigger");
+				_animator.SetTrigger("Attack1Trigger");
 			}
 	
-			if (Input.GetButtonDown(PlayerAssign + "_Fire2"))
+			if (Input.GetButtonDown(_playerAssign + "_Fire2"))
 			{
-				animator.SetTrigger("Attack2Trigger");
+				_animator.SetTrigger("Attack2Trigger");
 			}
 	
-			if(Input.GetButtonDown(PlayerAssign + "_Fire3"))
+			if(Input.GetButtonDown(_playerAssign + "_Fire3"))
 			{
-				animator.SetTrigger("Attack3Trigger");
+				_animator.SetTrigger("Attack3Trigger");
 			}
 	
-			if(isMoving && Input.GetButtonDown(PlayerAssign + "_Jump"))
+			if(_isMoving && Input.GetButtonDown(_playerAssign + "_Jump"))
 			{
-				animator.SetTrigger("JumpTrigger");
+				_animator.SetTrigger("JumpTrigger");
 			}
 		}
 	}

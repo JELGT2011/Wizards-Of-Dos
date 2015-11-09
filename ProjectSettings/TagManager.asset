@@ -21,6 +21,9 @@ TagManager:
   - weapon
   - wood
   - Japan
+  - Tree
+  - Sign
+  - HUD
   layers:
   - Default
   - TransparentFX

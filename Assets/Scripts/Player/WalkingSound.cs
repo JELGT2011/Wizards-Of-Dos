@@ -22,7 +22,7 @@ public class WalkingSound : MonoBehaviour {
 
 	void OnCollisionEnter (Collision coll)
 	{
-		if (coll.gameObject.tag == "Player" && coll.gameObject.GetComponentInChildren<StandardCharacterController>().isMoving){
+		if (coll.gameObject.tag == "Player" && coll.gameObject.GetComponentInChildren<StandardCharacterController>().IsMoving){
 			source.clip = walkSound;
 			source.Play ();
 		}

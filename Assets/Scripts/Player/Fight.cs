@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class Fight : MonoBehaviour
@@ -13,7 +14,7 @@ public class Fight : MonoBehaviour
 	readonly string[] Attacks = {"Attack1", "Attack2", "Attack3"};
 	float timeBetweenAttacks = 1f;
 	float timer;
-	
+
 	// Use this for initialization
 	void Start()
 	{
@@ -26,6 +27,7 @@ public class Fight : MonoBehaviour
 		{
 			Physics.IgnoreCollision(weaponCollider, playerCollider);
 		}
+
 	}
 	
 	// Update is called once per frame
