@@ -17,7 +17,8 @@ public class StandardCharacterController : MonoBehaviour {
 	readonly string locomotion = "Locomotion";
 	
 
-	[SerializeField] private string PlayerAssign = "K1";
+	[SerializeField]
+	protected string PlayerAssign = "K1";
 
 	void Start()
 	{
@@ -79,7 +80,7 @@ public class StandardCharacterController : MonoBehaviour {
 		}
 		
 		inLocomotionState = animator.GetCurrentAnimatorStateInfo(0).IsName("Locomotion");
-		Debug.Log (inLocomotionState);
+
 		// Prevent trigger buffering in other states
 		if(inLocomotionState){
 			if (Input.GetButtonDown(PlayerAssign + "_Fire1"))
