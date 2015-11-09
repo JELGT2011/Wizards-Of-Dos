@@ -6,6 +6,7 @@ public class StandardCharacterController : MonoBehaviour {
 	public Animator animator;
 
 	CapsuleCollider bodyCol;
+	GameObject playerCam;
 	
 	float rotationSpeed = 30;
 
@@ -18,9 +19,11 @@ public class StandardCharacterController : MonoBehaviour {
 	
 
 	[SerializeField] private string PlayerAssign = "K1";
+	[SerializeField] [Range (1,2)] private int camAssign = 1;
 
 	void Start()
 	{
+		playerCam = GameObject.FindGameObjectWithTag("PlayerCam" + camAssign);
 		animator = GetComponent<Animator>();	
 		bodyCol = GetComponent<CapsuleCollider>();
 	}
@@ -53,7 +56,7 @@ public class StandardCharacterController : MonoBehaviour {
 		float x = Input.GetAxis(PlayerAssign + "_Horizontal");
 		float z = Input.GetAxis(PlayerAssign + "_Vertical");
 		inputVec = new Vector3(x, 0, z);
-		inputVec = Camera.main.transform.TransformDirection(inputVec);
+		inputVec = playerCam.transform.TransformDirection(inputVec);
 		inputVec.y = 0;
 		
 		//Apply inputs to animator
