@@ -152,7 +152,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 464486}
   m_Layer: 8
-  m_Name: EkkoSword
+  m_Name: Ekko Weapon
   m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2887,7 +2887,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 480600}
   m_Layer: 8
-  m_Name: WeaponMountPoint
+  m_Name: Weapon Mount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5917,6 +5917,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 0}
   _playerAssign: K1
+  camAssign: 1
 --- !u!114 &11496682
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5929,6 +5930,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 100
+  _healthSlider: {fileID: 0}
 --- !u!136 &13650972
 CapsuleCollider:
   m_ObjectHideFlags: 1

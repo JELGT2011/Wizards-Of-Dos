@@ -193,7 +193,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 481982}
   m_Layer: 0
-  m_Name: EkkoSword
+  m_Name: Ekko Weapon
   m_TagString: weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
