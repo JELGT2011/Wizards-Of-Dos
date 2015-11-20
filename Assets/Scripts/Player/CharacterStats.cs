@@ -93,6 +93,14 @@ public class CharacterStats : MonoBehaviour
         {
             rdc.triggerRagdoll();
             _animator.SetTrigger("DeathTrigger");
+            if (FindObjectOfType<ParticleSystem>() != null)
+            {
+                ParticleSystem[] _particleSystems = FindObjectsOfType<ParticleSystem>();
+                foreach (ParticleSystem _particleSystem in _particleSystems)
+                {
+                    _particleSystem.Play();
+                }
+            }
         }
     }
 
