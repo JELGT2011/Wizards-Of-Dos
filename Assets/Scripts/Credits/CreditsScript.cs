@@ -6,7 +6,7 @@ using System.Text;
 
 public class CreditsScript : MonoBehaviour {
 
-	float speed = 100;
+	float speed = 80;
 	int screenHeight;
 	Text TextGUI;
 	float textHeight;
@@ -14,8 +14,8 @@ public class CreditsScript : MonoBehaviour {
 	
 	void Start () {
 		screenHeight = Screen.height;
-		print (screenHeight);
 		TextGUI = GetComponent<Text>();
+		textHeight = TextGUI.preferredHeight;
 		/*
 		StringBuilder credits = new StringBuilder();
 		credits.Append("Credits\n");
@@ -29,7 +29,7 @@ public class CreditsScript : MonoBehaviour {
 		// Scroll credits up
 		transform.Translate(Vector3.up * Time.deltaTime * speed);
 		// TODO: Needs to be updated to be more consistent
-		if(transform.position.y > screenHeight){
+		if(transform.position.y - textHeight > 0){
 			LoadMenuScreen();
 		}
 	}

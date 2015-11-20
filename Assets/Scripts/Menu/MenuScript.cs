@@ -14,7 +14,9 @@ public class MenuScript : MonoBehaviour {
 	}
 	
 	public void LoadCharacterSelect(){
-		Application.LoadLevel("CharacterSelect");
+		// TODO: Finish character select screen
+		// Application.LoadLevel("CharacterSelect");
+		Application.LoadLevel("Main");
 	}
 	
 	public void LoadCredits(){
