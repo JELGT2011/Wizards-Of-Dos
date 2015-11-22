@@ -132,7 +132,7 @@ public class StandardCharacterController : MonoBehaviour {
 		Vector3 motion = inputVec;  //get movement input from controls
 
 		//reduce input for diagonal movement
-		motion *= (Mathf.Abs(inputVec.x) == 1 && Mathf.Abs(inputVec.z) == 1)?.7f:1;
+		//motion *= (Mathf.Abs(inputVec.x) == 1 && Mathf.Abs(inputVec.z) == 1)?.7f:1;
 		if(inLocomotionState){
 		RotateTowardsMovementDir();  //if not strafing, face character along input direction
 		}
