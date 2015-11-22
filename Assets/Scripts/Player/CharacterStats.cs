@@ -93,13 +93,6 @@ public class CharacterStats : MonoBehaviour
         {
             rdc.triggerRagdoll();
             _animator.SetTrigger("DeathTrigger");
-
-            GameObject _fireworksParticleEffect = GameObject.Find("Fireworks Particle Effect");
-            if (_fireworksParticleEffect)
-            {
-                ParticleSystem _particleSystem = _fireworksParticleEffect.GetComponent<ParticleSystem>();
-                _particleSystem.Play();
-            }
         }
     }
 
