@@ -45,6 +45,8 @@ WASD and mouse and bump into them to knock them down. This should
 demonstrate actor movement via physically simulated forces and interactivity with
 environment…”) Please also include game feel description.
 
+Menu navigation is done using a mouse
+
 particle effects:
 	during gameplay, the first particle effect can be triggered using the "B" attack button
 	to trigger the second effect, one player must be killed.  This will trigger a sequence of fireworks in the background
