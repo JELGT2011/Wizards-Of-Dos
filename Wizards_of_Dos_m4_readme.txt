@@ -10,19 +10,25 @@ Jason Libbey
 
 Jesus Carillo
 
-Nate Zhiran Chen
+Nate Ziran Chen ziranchen@gatech.edu zchen437
 
-Robert Sun
+Robert Sun sunwrobert@gatech.edu rsun39
 
 
 ii. Detail which requirements you have completed, which are incomplete, and which
 are buggy (be specific)
 
 Opening Menu
+The buttons were chosen because they fit the "Hell" opening scene in the main menu. It gives a distinct fiery and intense feel to the game. The font was also chosen because we wanted the font to be more blockish to appeal to an arcade-fighting type of game such as Tekken.
 
 Credits
 
 Particle Systems for the following:
+
+Any special instructions: Use keyboard left and right as well as a joystick left/right to navigate the menu. Enter on the keyboard as well as the default action button on the joystick. Particle Systems ....
+
+First scene to be started: MenuScreen
+
 
 <!!!!!!!FILL THIS IN !!!!!!!>
 
