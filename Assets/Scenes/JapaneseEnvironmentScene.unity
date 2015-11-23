@@ -41,7 +41,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 5
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_LightmapsMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -50,7 +50,7 @@ LightmapSettings:
     m_AlbedoBoost: 4
     m_TemporalCoherenceThreshold: 1
     m_EnvironmentLightingMode: 0
-    m_EnableBakedLightmaps: 0
+    m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
     serializedVersion: 3
@@ -66,7 +66,8 @@ LightmapSettings:
     m_FinalGather: 0
     m_FinalGatherRayCount: 1024
     m_ReflectionCompression: 2
-  m_LightmapSnapshot: {fileID: 0}
+  m_LightmapSnapshot: {fileID: 112000144, guid: a74a18c1769cb1f48b90b1f1eede838d,
+    type: 2}
   m_RuntimeCPUUsage: 25
 --- !u!196 &4
 NavMeshSettings:
@@ -3626,26 +3627,6 @@ Prefab:
     - target: {fileID: 119238, guid: 43353fae4b73817449908ac5b6914354, type: 2}
       propertyPath: m_Name
       value: PLayerCam2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8145528, guid: 43353fae4b73817449908ac5b6914354, type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11422166, guid: 43353fae4b73817449908ac5b6914354, type: 2}
-      propertyPath: rotationRange.x
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 11422166, guid: 43353fae4b73817449908ac5b6914354, type: 2}
-      propertyPath: rotationSpeed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2031444, guid: 43353fae4b73817449908ac5b6914354, type: 2}
-      propertyPath: near clip plane
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2031444, guid: 43353fae4b73817449908ac5b6914354, type: 2}
-      propertyPath: far clip plane
-      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43353fae4b73817449908ac5b6914354, type: 2}
@@ -18043,7 +18024,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 437732, guid: d73dc2ebbf37de948aaf8f48597cb005, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 11441222, guid: d73dc2ebbf37de948aaf8f48597cb005, type: 2}
       propertyPath: m_Target
@@ -18052,26 +18033,6 @@ Prefab:
     - target: {fileID: 172038, guid: d73dc2ebbf37de948aaf8f48597cb005, type: 2}
       propertyPath: m_Name
       value: PLayerCam1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11474596, guid: d73dc2ebbf37de948aaf8f48597cb005, type: 2}
-      propertyPath: rotationRange.x
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 11474596, guid: d73dc2ebbf37de948aaf8f48597cb005, type: 2}
-      propertyPath: rotationSpeed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 11474596, guid: d73dc2ebbf37de948aaf8f48597cb005, type: 2}
-      propertyPath: dampingTime
-      value: .200000003
-      objectReference: {fileID: 0}
-    - target: {fileID: 2085810, guid: d73dc2ebbf37de948aaf8f48597cb005, type: 2}
-      propertyPath: far clip plane
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 2085810, guid: d73dc2ebbf37de948aaf8f48597cb005, type: 2}
-      propertyPath: near clip plane
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d73dc2ebbf37de948aaf8f48597cb005, type: 2}

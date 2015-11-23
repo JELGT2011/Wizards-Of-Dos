@@ -36,12 +36,12 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
+  m_Sun: {fileID: 546288399}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 5
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_LightmapsMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -49,7 +49,7 @@ LightmapSettings:
     m_IndirectOutputScale: 1
     m_AlbedoBoost: 1
     m_TemporalCoherenceThreshold: 1
-    m_EnvironmentLightingMode: 0
+    m_EnvironmentLightingMode: 1
     m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
@@ -66,7 +66,8 @@ LightmapSettings:
     m_FinalGather: 0
     m_FinalGatherRayCount: 1024
     m_ReflectionCompression: 2
-  m_LightmapSnapshot: {fileID: 0}
+  m_LightmapSnapshot: {fileID: 112000001, guid: ca084c7ab7e70864b8abf13b83e6d5b0,
+    type: 2}
   m_RuntimeCPUUsage: 25
 --- !u!196 &4
 NavMeshSettings:
@@ -2610,15 +2611,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 463668, guid: a7be69f4803787549831b4996f10c615, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1.45000005
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 463668, guid: a7be69f4803787549831b4996f10c615, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -.0900000036
+      value: -.119999997
       objectReference: {fileID: 0}
     - target: {fileID: 463668, guid: a7be69f4803787549831b4996f10c615, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 6.42999983
+      value: 5.90999985
       objectReference: {fileID: 0}
     - target: {fileID: 463668, guid: a7be69f4803787549831b4996f10c615, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2639,6 +2640,10 @@ Prefab:
     - target: {fileID: 463668, guid: a7be69f4803787549831b4996f10c615, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 143962, guid: a7be69f4803787549831b4996f10c615, type: 2}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11449142, guid: a7be69f4803787549831b4996f10c615, type: 2}
@@ -2848,7 +2853,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: .300000012
+  near clip plane: .100000001
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -3220,7 +3225,7 @@ GameObject:
   - 136: {fileID: 1851550165}
   m_Layer: 0
   m_Name: Paladin
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3231,7 +3236,7 @@ Transform:
   m_PrefabParentObject: {fileID: 434452, guid: 29947fa91ec4f564985213c014eaca95, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1851550161}
-  m_LocalRotation: {x: .0597905628, y: .816043437, z: .00956145208, w: .574810266}
+  m_LocalRotation: {x: .0152722048, y: .818088353, z: -.0217484515, w: .574478269}
   m_LocalPosition: {x: -6.42999983, y: .0299999993, z: -.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

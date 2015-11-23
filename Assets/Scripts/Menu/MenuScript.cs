@@ -16,7 +16,7 @@ public class MenuScript : MonoBehaviour {
 	public void LoadCharacterSelect(){
 		// TODO: Finish character select screen
 		// Application.LoadLevel("CharacterSelect");
-		Application.LoadLevel("Main");
+		Application.LoadLevel("JapaneseEnvironmentScene");
 	}
 	
 	public void LoadCredits(){
