@@ -31,6 +31,8 @@ public class CharacterStats : MonoBehaviour
 
     RagdollController rdc;
 
+	protected Dictionary<string, float> buffList; //buff name, durations
+
     // Use this for initialization
     void Start()
     {
@@ -109,5 +111,20 @@ public class CharacterStats : MonoBehaviour
             return 0;
         }
     }
+
+	public void AddBuff(string name, float duration){
+		buffList.Add (name, duration);
+	}
+
+	public void RemoveBuff(string name){
+		if (buffList.ContainsKey (name))
+			buffList.Remove (name);
+	}
+
+	public bool HasBuff(string name){
+		if (buffList.ContainsKey (name) && buffList [name] <= 0)
+			buffList.Remove (name);
+		return buffList.ContainsKey(name);
+	}
 
 }
