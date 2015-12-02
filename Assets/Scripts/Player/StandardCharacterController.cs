@@ -12,8 +12,21 @@ public class StandardCharacterController : MonoBehaviour
         protected set { _animator = value; }
     }
 
+	Rigidbody rigid;
+
     CapsuleCollider bodyCol;
     GameObject playerCam;
+
+	[SerializeField] float JumpStrength = 5f;
+	[SerializeField] float GravityStrength = 2f;
+	[SerializeField] float GroundCheckDistance = 0.1f;
+	float origGroundCheckDis;
+	bool isGrounded;
+	bool Jump;
+	Vector3 GroundNormal;
+
+
+
 
     float rotationSpeed = 30;
 
@@ -52,7 +65,10 @@ public class StandardCharacterController : MonoBehaviour
     void Start()
     {
         playerCam = GameObject.FindGameObjectWithTag("PlayerCam" + camAssign);
+		inLocomotionState = _animator.GetCurrentAnimatorStateInfo(0).IsName("Locomotion");
+		origGroundCheckDis = GroundCheckDistance;
         _animator = GetComponent<Animator>();
+		rigid = GetComponent<Rigidbody>();
         bodyCol = GetComponent<CapsuleCollider>();
         if (_weaponManager == null)
         {
@@ -65,14 +81,20 @@ public class StandardCharacterController : MonoBehaviour
         characterMove();
         //update character position and facing
         UpdateMovement();
-        //		//Change Collider Height
-        //		if (!animator.IsInTransition (0))
-        //		{
-        //			bodyCol.height = animator.GetFloat("ColliderHeight");
-        //		}
-
+        
     }
-
+	void FixedUpdate()
+	{
+		GroundCheck();
+		if(isGrounded)
+		{
+			HandleJumping();
+		}
+		else
+		{
+			AirborneMovment();
+		}
+	}
 
     void RotateTowardsMovementDir()  //face character along input direction
     {
@@ -94,6 +116,12 @@ public class StandardCharacterController : MonoBehaviour
         //Apply inputs to animator
         _animator.SetFloat("Input X", x);
         _animator.SetFloat("Input Z", z);
+		_animator.SetBool("onGround", isGrounded);
+
+		if (!isGrounded)
+		{
+			_animator.SetFloat("Jump", rigid.velocity.y);
+		}
 
         if (x != 0 || z != 0)  //if there is some input
         {
@@ -113,7 +141,11 @@ public class StandardCharacterController : MonoBehaviour
             _isMoving = false;
         }
 
-        inLocomotionState = _animator.GetCurrentAnimatorStateInfo(0).IsName("Locomotion");
+
+		if(!Jump)
+		{
+			Jump = Input.GetButtonDown(_playerAssign + "_Jump");
+		}
 
         // Prevent trigger buffering in other states
         if (inLocomotionState)
@@ -133,11 +165,6 @@ public class StandardCharacterController : MonoBehaviour
                 _animator.SetTrigger("Attack3Trigger");
                 _weaponManager.TriggerParticlesEffects();
             }
-
-            if (_isMoving && Input.GetButtonDown(_playerAssign + "_Jump"))
-            {
-                _animator.SetTrigger("JumpTrigger");
-            }
         }
     }
 
@@ -155,5 +182,45 @@ public class StandardCharacterController : MonoBehaviour
         //		return inputVec.magnitude;  //return a movement value for the animator, not currently used
     }
 
+	void HandleJumping()
+	{
+		if(Jump && inLocomotionState)
+		{
+			Debug.Log("jumping");
+			rigid.velocity = new Vector3(rigid.velocity.x, JumpStrength, rigid.velocity.z);
+			isGrounded = false;
+			_animator.applyRootMotion = false;
+			GroundCheckDistance = 0.1f;
+		}
+	}
 
+	void AirborneMovment()
+	{
+		Vector3 gravityFactor = (Physics.gravity * GravityStrength) - Physics.gravity;
+		rigid.AddForce(gravityFactor);
+		GroundCheckDistance = rigid.velocity.y < 0 ? origGroundCheckDis : 0.01f;
+	}
+
+	void GroundCheck()
+	{
+		RaycastHit hitInfo;
+#if UNITY_EDITOR
+		// helper to visualise the ground check ray in the scene view
+		Debug.DrawLine(transform.position + (Vector3.up * 0.1f), transform.position + (Vector3.up * 0.1f) + (Vector3.down * GroundCheckDistance));
+#endif
+		// 0.1f is a small offset to start the ray from inside the character
+		// it is also good to note that the transform position in the sample assets is at the base of the character
+		if (Physics.Raycast(transform.position + (Vector3.up * 0.1f), Vector3.down, out hitInfo, GroundCheckDistance))
+		{
+			GroundNormal = hitInfo.normal;
+			isGrounded = true;
+			_animator.applyRootMotion = true;
+		}
+		else
+		{
+			isGrounded = false;
+			GroundNormal = Vector3.up;
+			_animator.applyRootMotion = false;
+		}
+	}
 }
