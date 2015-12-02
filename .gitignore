@@ -92,3 +92,13 @@ sysinfo.txt
 *.resources
 test-results/
 
+
+*.meta
+
+Assets/Libs/RAIN/Editor/RAINProjectState.asset
+
+Assets/Standard Assets/Environment/Water/Water4/Materials/Water4Advanced.mat
+
+ProjectSettings/ProjectSettings.asset
+
+ProjectSettings/ProjectSettings.asset
