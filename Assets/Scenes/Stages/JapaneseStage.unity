@@ -3727,7 +3727,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 119238, guid: 43353fae4b73817449908ac5b6914354, type: 2}
       propertyPath: m_Name
-      value: PLayerCam2
+      value: Player2Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436154, guid: 43353fae4b73817449908ac5b6914354, type: 2}
+      propertyPath: m_AutoTargetPlayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43353fae4b73817449908ac5b6914354, type: 2}
@@ -15961,7 +15965,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
 --- !u!1 &1849083237
 GameObject:
   m_ObjectHideFlags: 0
@@ -18357,7 +18361,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 172038, guid: d73dc2ebbf37de948aaf8f48597cb005, type: 2}
       propertyPath: m_Name
-      value: PLayerCam1
+      value: Player1Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441222, guid: d73dc2ebbf37de948aaf8f48597cb005, type: 2}
+      propertyPath: m_AutoTargetPlayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d73dc2ebbf37de948aaf8f48597cb005, type: 2}

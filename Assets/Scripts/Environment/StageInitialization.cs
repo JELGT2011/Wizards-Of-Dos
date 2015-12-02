@@ -12,6 +12,9 @@ public class StageInitialization : MonoBehaviour {
 		print (CharacterSelect.player2Character);
 		player1Spawn = GameObject.Find("Player1Spawn");
 		player2Spawn = GameObject.Find("Player2Spawn");
+		player1Camera = GameObject.FindWithTag ("PlayerCam1").GetComponent<Camera>();
+		player2Camera = GameObject.FindWithTag ("PlayerCam2").GetComponent<Camera>();
+		player1Camera.GetComponent<AutoCam>();
 		GameObject player1 = (GameObject)Instantiate(Resources.Load("Characters/" + CharacterSelect.player1Character + "_K1"), player1Spawn.transform.position, 
 		player1Spawn.transform.rotation);
 		GameObject player2 = (GameObject)Instantiate(Resources.Load("Characters/" + CharacterSelect.player2Character + "_K2"), player2Spawn.transform.position,
