@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class MenuScript : MonoBehaviour {
@@ -14,9 +14,7 @@ public class MenuScript : MonoBehaviour {
 	}
 	
 	public void LoadCharacterSelect(){
-		// TODO: Finish character select screen
-		// Application.LoadLevel("CharacterSelect");
-		Application.LoadLevel("JapaneseEnvironmentScene");
+		Application.LoadLevel("CharacterSelect");
 	}
 	
 	public void LoadCredits(){

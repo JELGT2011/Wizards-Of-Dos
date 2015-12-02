@@ -14,4 +14,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main.unity
   - enabled: 1
-    path: Assets/Scenes/JapaneseEnvironmentScene.unity
+    path: Assets/Scenes/StageSelect.unity
+  - enabled: 1
+    path: Assets/Scenes/Stages/IceStage.unity
+  - enabled: 1
+    path: Assets/Scenes/Stages/JapaneseStage.unity
+  - enabled: 1
+    path: Assets/Scenes/Stages/JungleStage.unity
+  - enabled: 1
+    path: Assets/Scenes/Stages/HellStage.unity
