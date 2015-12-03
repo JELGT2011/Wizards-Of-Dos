@@ -41,7 +41,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 5
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_LightmapsMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -66,7 +66,8 @@ LightmapSettings:
     m_FinalGather: 0
     m_FinalGatherRayCount: 1024
     m_ReflectionCompression: 2
-  m_LightmapSnapshot: {fileID: 0}
+  m_LightmapSnapshot: {fileID: 112000001, guid: e93eaf5a073d04ab1b50c6602fd22eb0,
+    type: 2}
   m_RuntimeCPUUsage: 25
 --- !u!196 &4
 NavMeshSettings:
@@ -136,31 +137,31 @@ Prefab:
     m_Modifications:
     - target: {fileID: 430448, guid: a05f6925733394acea5c60c11fc18dc1, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 18.6690006
+      value: 20.2746067
       objectReference: {fileID: 0}
     - target: {fileID: 430448, guid: a05f6925733394acea5c60c11fc18dc1, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.99300003
+      value: 2.41384506
       objectReference: {fileID: 0}
     - target: {fileID: 430448, guid: a05f6925733394acea5c60c11fc18dc1, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 27.75
+      value: 28.5089645
       objectReference: {fileID: 0}
     - target: {fileID: 430448, guid: a05f6925733394acea5c60c11fc18dc1, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: .00837139226
       objectReference: {fileID: 0}
     - target: {fileID: 430448, guid: a05f6925733394acea5c60c11fc18dc1, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: .994754374
       objectReference: {fileID: 0}
     - target: {fileID: 430448, guid: a05f6925733394acea5c60c11fc18dc1, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -.000857929699
       objectReference: {fileID: 0}
     - target: {fileID: 430448, guid: a05f6925733394acea5c60c11fc18dc1, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: .101945944
       objectReference: {fileID: 0}
     - target: {fileID: 430448, guid: a05f6925733394acea5c60c11fc18dc1, type: 2}
       propertyPath: m_RootOrder
@@ -348,13 +349,13 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2026718, guid: 33d25420713be46929a1ffb1c8c5d439, type: 2}
+      propertyPath: m_TargetTexture
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 184882, guid: 33d25420713be46929a1ffb1c8c5d439, type: 2}
       propertyPath: m_Name
       value: IceLand
-      objectReference: {fileID: 0}
-    - target: {fileID: 2045174, guid: 33d25420713be46929a1ffb1c8c5d439, type: 2}
-      propertyPath: m_TargetTexture
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33d25420713be46929a1ffb1c8c5d439, type: 2}
