@@ -11,6 +11,8 @@ public class RagdollController : MonoBehaviour {
 
 	private Animator anim;
 	bool goRagdoll;
+	[SerializeField]
+	Rigidbody ninja;
 
 	// Use this for initialization
 	void Start () 
@@ -18,6 +20,7 @@ public class RagdollController : MonoBehaviour {
 		anim = GetComponent<Animator>();
 		cols = GetComponentsInChildren<Collider>();
 		rigids = GetComponentsInChildren<Rigidbody>();
+		ninja = GetComponent<Rigidbody>();
 
 		foreach(Collider col in cols)
 		{
@@ -32,6 +35,7 @@ public class RagdollController : MonoBehaviour {
 			if(rigid.gameObject.layer == 9)
 			{
 				rigid.isKinematic = true;
+
 			}
 		}
 	}
@@ -61,6 +65,8 @@ public class RagdollController : MonoBehaviour {
 				if(rigid.gameObject.layer == 9)
 				{
 					rigid.isKinematic = false;
+					rigid.velocity = ninja.velocity;
+
 				}
 			}
 

@@ -32,6 +32,7 @@ public class StandardCharacterController : MonoBehaviour
 
     private Vector3 inputVec;
     bool inLocomotionState;
+	bool inJump;
 
     protected bool _isMoving;
     public bool IsMoving
@@ -66,6 +67,7 @@ public class StandardCharacterController : MonoBehaviour
     {
         playerCam = GameObject.FindGameObjectWithTag("PlayerCam" + camAssign);
 		inLocomotionState = _animator.GetCurrentAnimatorStateInfo(0).IsName("Locomotion");
+		inJump = _animator.GetCurrentAnimatorStateInfo(0).IsName("Jumping");
 		origGroundCheckDis = GroundCheckDistance;
         _animator = GetComponent<Animator>();
 		rigid = GetComponent<Rigidbody>();
@@ -94,6 +96,7 @@ public class StandardCharacterController : MonoBehaviour
 		{
 			AirborneMovment();
 		}
+		Jump = false;
 	}
 
     void RotateTowardsMovementDir()  //face character along input direction
@@ -142,15 +145,12 @@ public class StandardCharacterController : MonoBehaviour
         }
 
 
-		if(!Jump)
-		{
-			Jump = Input.GetButtonDown(_playerAssign + "_Jump");
-		}
+
 
         // Prevent trigger buffering in other states
         if (inLocomotionState)
         {
-            if (Input.GetButtonDown(_playerAssign + "_Fire1"))
+            if (Input.GetButtonDown(_playerAssign + "_Fire1") && !inJump)
             {
                 _animator.SetTrigger("Attack1Trigger");
             }
@@ -165,6 +165,12 @@ public class StandardCharacterController : MonoBehaviour
                 _animator.SetTrigger("Attack3Trigger");
                 _weaponManager.TriggerParticlesEffects();
             }
+
+			if(!Jump)
+			{
+				Jump = Input.GetButtonDown(_playerAssign + "_Jump");
+				//print (Jump);
+			}
         }
     }
 
@@ -186,7 +192,7 @@ public class StandardCharacterController : MonoBehaviour
 	{
 		if(Jump && inLocomotionState)
 		{
-			Debug.Log("jumping");
+			//Debug.Log("jumping");
 			rigid.velocity = new Vector3(rigid.velocity.x, JumpStrength, rigid.velocity.z);
 			isGrounded = false;
 			_animator.applyRootMotion = false;
@@ -206,11 +212,11 @@ public class StandardCharacterController : MonoBehaviour
 		RaycastHit hitInfo;
 #if UNITY_EDITOR
 		// helper to visualise the ground check ray in the scene view
-		Debug.DrawLine(transform.position + (Vector3.up * 0.1f), transform.position + (Vector3.up * 0.1f) + (Vector3.down * GroundCheckDistance));
+		Debug.DrawLine(transform.position + (Vector3.up * 0.05f), transform.position + (Vector3.up * 0.05f) + (Vector3.down * GroundCheckDistance));
 #endif
 		// 0.1f is a small offset to start the ray from inside the character
 		// it is also good to note that the transform position in the sample assets is at the base of the character
-		if (Physics.Raycast(transform.position + (Vector3.up * 0.1f), Vector3.down, out hitInfo, GroundCheckDistance))
+		if (Physics.Raycast(transform.position + (Vector3.up * 0.05f), Vector3.down, out hitInfo, GroundCheckDistance))
 		{
 			GroundNormal = hitInfo.normal;
 			isGrounded = true;

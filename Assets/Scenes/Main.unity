@@ -15,33 +15,33 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 6
   m_Fog: 0
-  m_FogColor: {r: .5, g: .5, b: .5, a: 1}
+  m_FogColor: {r: .145098045, g: .145098045, b: .145098045, a: 1}
   m_FogMode: 3
-  m_FogDensity: .00999999978
+  m_FogDensity: .239999995
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 1, g: 1, b: 1, a: 1}
   m_AmbientEquatorColor: {r: .367647052, g: .367647052, b: .367647052, a: 1}
   m_AmbientGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 1
+  m_AmbientMode: 0
   m_SkyboxMaterial: {fileID: 2100000, guid: a8da550b687ca0b438cce78fbac39d6a, type: 2}
   m_HaloStrength: .5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
-  m_DefaultReflectionMode: 1
+  m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
+  m_Sun: {fileID: 1662062318}
 --- !u!157 &4
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 5
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_LightmapsMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -62,11 +62,12 @@ LightmapSettings:
     m_Padding: 2
     m_CompAOExponent: 0
     m_LightmapParameters: {fileID: 0}
-    m_TextureCompression: 1
+    m_TextureCompression: 0
     m_FinalGather: 0
     m_FinalGatherRayCount: 1024
     m_ReflectionCompression: 2
-  m_LightmapSnapshot: {fileID: 0}
+  m_LightmapSnapshot: {fileID: 112000001, guid: 0de0f270f86315f42a66d61bf2c89c29,
+    type: 2}
   m_RuntimeCPUUsage: 25
 --- !u!196 &5
 NavMeshSettings:
@@ -277,6 +278,26 @@ Prefab:
     - target: {fileID: 11436140, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
       propertyPath: _playerAssign
       value: J1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436140, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
+      propertyPath: GravityStrength
+      value: 1.70000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436140, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
+      propertyPath: JumpStrength
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436140, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
+      propertyPath: GroundCheckDistance
+      value: .25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5493184, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5493184, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
+      propertyPath: m_Interpolate
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c14e9d00a475d82429394a01879a7b71, type: 2}

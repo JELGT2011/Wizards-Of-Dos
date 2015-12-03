@@ -708,11 +708,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 421018, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
   m_PrefabInternal: {fileID: 1765273356}
---- !u!95 &1753673968 stripped
-Animator:
-  m_PrefabParentObject: {fileID: 9569230, guid: c14e9d00a475d82429394a01879a7b71,
-    type: 2}
-  m_PrefabInternal: {fileID: 1765273356}
 --- !u!1001 &1765273356
 Prefab:
   m_ObjectHideFlags: 0
@@ -751,74 +746,6 @@ Prefab:
     - target: {fileID: 421018, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 11448566, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 1753673968}
-    - target: {fileID: 11436140, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
-      propertyPath: _playerAssign
-      value: K1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11436140, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
-      propertyPath: _animator
-      value: 
-      objectReference: {fileID: 1753673968}
-    - target: {fileID: 5493184, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
-      propertyPath: m_Interpolate
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9569230, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
-      propertyPath: m_UpdateMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11436140, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
-      propertyPath: GroundCheckDistance
-      value: .300000012
-      objectReference: {fileID: 0}
-    - target: {fileID: 11436140, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
-      propertyPath: JumpStrength
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5493184, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
-      propertyPath: m_UseGravity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 14445682, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
-      propertyPath: m_ConnectedAnchor.z
-      value: .241588861
-      objectReference: {fileID: 0}
-    - target: {fileID: 14496148, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
-      propertyPath: m_ConnectedAnchor.z
-      value: -.24158892
-      objectReference: {fileID: 0}
-    - target: {fileID: 14423528, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
-      propertyPath: m_ConnectedAnchor.z
-      value: 1.48329406e-07
-      objectReference: {fileID: 0}
-    - target: {fileID: 14440698, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
-      propertyPath: m_ConnectedAnchor.y
-      value: -1.94413587e-08
-      objectReference: {fileID: 0}
-    - target: {fileID: 14440698, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
-      propertyPath: m_ConnectedAnchor.z
-      value: -7.4505806e-09
-      objectReference: {fileID: 0}
-    - target: {fileID: 14415538, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
-      propertyPath: m_ConnectedAnchor.y
-      value: 1.62981451e-09
-      objectReference: {fileID: 0}
-    - target: {fileID: 14415538, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
-      propertyPath: m_ConnectedAnchor.z
-      value: -2.98023224e-08
-      objectReference: {fileID: 0}
-    - target: {fileID: 14409538, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
-      propertyPath: m_ConnectedAnchor.y
-      value: 3.57831169e-07
-      objectReference: {fileID: 0}
-    - target: {fileID: 13613472, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
-      propertyPath: m_Height
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
