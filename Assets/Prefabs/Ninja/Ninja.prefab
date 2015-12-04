@@ -2160,8 +2160,8 @@ MonoBehaviour:
   _animator: {fileID: 9569230}
   JumpStrength: 7
   GravityStrength: 2
-  GroundCheckDistance: .200000003
-  _playerAssign: K1
+  GroundCheckDistance: .300000012
+  _playerAssign: J1
   _weaponManager: {fileID: 11402452}
   camAssign: 1
 --- !u!114 &11448566
@@ -2189,7 +2189,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cols: []
   rigids: []
-  ninja: {fileID: 0}
+  CharJoints: []
+  mainRagdoll: {fileID: 0}
 --- !u!114 &11485562
 MonoBehaviour:
   m_ObjectHideFlags: 1

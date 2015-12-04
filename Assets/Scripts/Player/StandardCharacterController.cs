@@ -17,9 +17,9 @@ public class StandardCharacterController : MonoBehaviour
     CapsuleCollider bodyCol;
     GameObject playerCam;
 
-	[SerializeField] float JumpStrength = 5f;
+	[SerializeField] float JumpStrength = 8f;
 	[SerializeField] float GravityStrength = 2f;
-	[SerializeField] float GroundCheckDistance = 0.1f;
+	[SerializeField] float GroundCheckDistance = 0.3f;
 	float origGroundCheckDis;
 	bool isGrounded;
 	bool Jump;
@@ -69,7 +69,7 @@ public class StandardCharacterController : MonoBehaviour
 		inLocomotionState = _animator.GetCurrentAnimatorStateInfo(0).IsName("Locomotion");
 		inJump = _animator.GetCurrentAnimatorStateInfo(0).IsName("Jumping");
 		origGroundCheckDis = GroundCheckDistance;
-        _animator = GetComponent<Animator>();
+		_animator = GetComponentInChildren<Animator>();
 		rigid = GetComponent<Rigidbody>();
         bodyCol = GetComponent<CapsuleCollider>();
         if (_weaponManager == null)
@@ -202,6 +202,8 @@ public class StandardCharacterController : MonoBehaviour
 
 	void AirborneMovment()
 	{
+
+		rigid.AddForce(inputVec * 10, ForceMode.Force);
 		Vector3 gravityFactor = (Physics.gravity * GravityStrength) - Physics.gravity;
 		rigid.AddForce(gravityFactor);
 		GroundCheckDistance = rigid.velocity.y < 0 ? origGroundCheckDis : 0.01f;
