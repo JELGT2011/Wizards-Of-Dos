@@ -14,6 +14,7 @@ public class SwampBuffCollide : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider col){
+		Debug.Log("called");
 		col.gameObject.GetComponent<CharacterStats> ().AddBuff ("BigTreeGrace", 5f);
 		Destroy (this.gameObject, 0.5f);
 	}
