@@ -14,8 +14,9 @@ public class SwampBuffCollide : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider col){
-		Debug.Log("called");
-		col.gameObject.GetComponent<CharacterStats> ().AddBuff ("BigTreeGrace", 5f);
-		Destroy (this.gameObject, 0.5f);
+		if ((col.gameObject.tag == "Player1" || col.gameObject.tag == "Player2") && !col.gameObject.GetComponent<CharacterStats>().HasBuff("BigTreeGrace")) {
+			col.gameObject.GetComponent<CharacterStats> ().AddBuff ("BigTreeGrace", 5f);
+			Destroy (this.gameObject, 0.5f);
+		}
 	}
 }
