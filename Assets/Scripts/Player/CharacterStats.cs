@@ -70,6 +70,8 @@ public class CharacterStats : MonoBehaviour
             }
         }
 
+		buffList = new Dictionary<string, float> ();
+
     }
 
     // Update is called once per frame
@@ -81,6 +83,24 @@ public class CharacterStats : MonoBehaviour
             _animator.SetTrigger("DeathTrigger");
         }
     }
+
+	void FixedUpdate () {
+		//update buffs
+		List<string> buffNames = new List<string>(buffList.Keys);
+		foreach (string buff in buffNames) {
+			buffList[buff] = buffList[buff] - Time.deltaTime;
+			if(buffList[buff] <= 0){
+				if(buff.Equals("SwampDamage") && !HasBuff("BigTreeGrace")){
+					TakeDamage(100);
+					RemoveBuff("SwampDamage");
+					AddBuff("SwampDamage", 2f);
+				}
+				else if(buff.Equals("BigTreeGrace")){
+					RemoveBuff ("BigTreeGrace");
+				}
+			}
+		}
+	}
 
     void OnGUI()
     {
@@ -115,12 +135,12 @@ public class CharacterStats : MonoBehaviour
 	public void AddBuff(string name, float duration){
 		buffList.Add (name, duration);
 	}
-
+	
 	public void RemoveBuff(string name){
 		if (buffList.ContainsKey (name))
 			buffList.Remove (name);
 	}
-
+	
 	public bool HasBuff(string name){
 		if (buffList.ContainsKey (name) && buffList [name] <= 0)
 			buffList.Remove (name);
