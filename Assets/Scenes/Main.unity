@@ -219,6 +219,7 @@ MonoBehaviour:
   randomness: .5
   blockModel: {fileID: 179850, guid: 8ae515b77d4dcd94989f325ee4e6b58a, type: 2}
   collpaseInterval: 1.5
+  particle: {fileID: 159376, guid: 1a1c370c9bd91b94586b2b02f168e4f9, type: 2}
 --- !u!4 &793234203
 Transform:
   m_ObjectHideFlags: 0
@@ -472,6 +473,46 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22457542, guid: 7b57c1295a381473783b867b1d969d90, type: 2}
       propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22424274, guid: 7b57c1295a381473783b867b1d969d90, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22424274, guid: 7b57c1295a381473783b867b1d969d90, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22433944, guid: 7b57c1295a381473783b867b1d969d90, type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22433944, guid: 7b57c1295a381473783b867b1d969d90, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22433944, guid: 7b57c1295a381473783b867b1d969d90, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22420212, guid: 7b57c1295a381473783b867b1d969d90, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22420212, guid: 7b57c1295a381473783b867b1d969d90, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22449108, guid: 7b57c1295a381473783b867b1d969d90, type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22449108, guid: 7b57c1295a381473783b867b1d969d90, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22449108, guid: 7b57c1295a381473783b867b1d969d90, type: 2}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
