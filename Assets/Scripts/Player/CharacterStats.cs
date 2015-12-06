@@ -91,7 +91,7 @@ public class CharacterStats : MonoBehaviour
 			buffList[buff] = buffList[buff] - Time.deltaTime;
 			if(buffList[buff] <= 0){
 				if(buff.Equals("SwampDamage") && !HasBuff("BigTreeGrace")){
-					TakeDamage(100);
+					TakeDamage(10);
 					RemoveBuff("SwampDamage");
 					AddBuff("SwampDamage", 2f);
 				}

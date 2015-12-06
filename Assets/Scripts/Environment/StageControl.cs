@@ -59,7 +59,8 @@ public class StageControl : MonoBehaviour {
 			else{
 				pos.x+=blockModel.GetComponent<MeshRenderer> ().bounds.size.x;
 			}
-			pos.y = UnityEngine.Random.Range(0,100) >= 90 ? UnityEngine.Random.Range(2, 5) : 0;
+			//pos.y = UnityEngine.Random.Range(0,100) >= 90 ? UnityEngine.Random.Range(2, 5) : 0;
+			pos.y = 0;
 			list.Add(obj);
 			pos = new Vector3(pos.x, pos.y, pos.z);
 		}
