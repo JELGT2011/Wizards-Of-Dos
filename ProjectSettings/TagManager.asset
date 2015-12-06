@@ -25,6 +25,7 @@ TagManager:
   - HUD
   - weapon
   - SwampBuff
+  - SwampBuffOnPlayer
   layers:
   - Default
   - TransparentFX
