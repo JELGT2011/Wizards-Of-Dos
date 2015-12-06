@@ -17,12 +17,12 @@ public class WalkingSound : MonoBehaviour {
 			walkSound = (AudioClip)Resources.Load("Audio/snow_step");
 		}
 		source = GetComponent<AudioSource>();
-		Player = GameObject.FindGameObjectWithTag("Player");
+		Player = GameObject.FindGameObjectWithTag("Player1");
 	}
 
 	void OnCollisionEnter (Collision coll)
 	{
-		if (coll.gameObject.tag == "Player" && coll.gameObject.GetComponentInChildren<StandardCharacterController>().IsMoving){
+		if (coll.gameObject.tag == "Player1" && coll.gameObject.GetComponentInChildren<StandardCharacterController>().IsMoving){
 			source.clip = walkSound;
 			source.Play ();
 		}

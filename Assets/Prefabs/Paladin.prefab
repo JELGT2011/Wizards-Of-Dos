@@ -2121,10 +2121,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 190162}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c832bdd443c39c4c972913f53569bec, type: 3}
+  m_Script: {fileID: 11500000, guid: 3c98de8e0cf59d049b315926c34f6503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animSpeed: 1.5
+  _animator: {fileID: 0}
+  _playerAssign: K1
+  camAssign: 1
 --- !u!114 &11493650
 MonoBehaviour:
   m_ObjectHideFlags: 1
