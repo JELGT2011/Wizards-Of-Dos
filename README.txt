@@ -15,6 +15,15 @@ Jason Libbey
 ii. Detail which requirements you have completed, which are incomplete, and which
 are buggy (be specific)
 
+We have implemented a PvP 2 person fighting game; one person vs another. We have 4 characters to choose from with 3 attacks each (Maria, Ninja, Masked Torra, and Ekko) and we have 4 stages to choose from (Ice, Hell, Jungle, and Japan).
+
+You and another player should battle it out on a chosen stage to the death. 
+
+Some terrains are helpful and offer bonuses that help your health; in the japanese terrain. Other terrains have AI that is harmful. 
+
+
+
+
 Who did what:
 
 Lanssie
@@ -91,3 +100,9 @@ vii. URL of the web page where you posted your assignment
 c) Complete Unity project (each script file you created should include team name and
 members’ names in comments at top of file, and any file you acquired outside should also
 be attributed with the appropriate source information)
+
+
+
+
+
+
