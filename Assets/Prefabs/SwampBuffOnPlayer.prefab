@@ -1,59 +1,58 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &116178
+--- !u!1 &123068
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 429544}
-  - 15: {fileID: 1507454}
-  - 12: {fileID: 1265358}
-  - 26: {fileID: 2674870}
-  - 136: {fileID: 13613320}
-  - 114: {fileID: 11487008}
+  - 4: {fileID: 448418}
+  - 15: {fileID: 1507366}
+  - 12: {fileID: 1252214}
+  - 26: {fileID: 2658142}
+  - 136: {fileID: 13639992}
   m_Layer: 0
-  m_Name: SwampBuff
-  m_TagString: SwampBuff
+  m_Name: SwampBuffOnPlayer
+  m_TagString: SwampBuffOnPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &429544
+--- !u!4 &448418
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 116178}
+  m_GameObject: {fileID: 123068}
   m_LocalRotation: {x: 0, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: 24, y: 8, z: 28.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: .5, y: 1, z: .5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!12 &1265358
+--- !u!12 &1252214
 ParticleAnimator:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 116178}
+  m_GameObject: {fileID: 123068}
   Does Animate Color?: 1
   colorAnimation[0]:
     serializedVersion: 2
-    rgba: 176552168
+    rgba: 176812799
   colorAnimation[1]:
     serializedVersion: 2
-    rgba: 3032481783
+    rgba: 3030187263
   colorAnimation[2]:
     serializedVersion: 2
-    rgba: 4287627232
+    rgba: 4287692793
   colorAnimation[3]:
     serializedVersion: 2
-    rgba: 3029336047
+    rgba: 3029532665
   colorAnimation[4]:
     serializedVersion: 2
-    rgba: 175569663
+    rgba: 178782206
   worldRotationAxis: {x: 0, y: 0, z: 0}
   localRotationAxis: {x: 0, y: 0, z: 0}
   sizeGrow: 0
@@ -62,17 +61,17 @@ ParticleAnimator:
   damping: 1
   stopSimulation: 0
   autodestruct: 0
---- !u!15 &1507454
+--- !u!15 &1507366
 EllipsoidParticleEmitter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 116178}
+  m_GameObject: {fileID: 123068}
   serializedVersion: 2
   m_Enabled: 1
   m_Emit: 1
-  minSize: .100000001
-  maxSize: .150000006
+  minSize: .150000006
+  maxSize: .200000003
   minEnergy: 10
   maxEnergy: 20
   minEmission: 500
@@ -89,12 +88,12 @@ EllipsoidParticleEmitter:
   m_OneShot: 0
   m_Ellipsoid: {x: 1.5, y: .5, z: 1.5}
   m_MinEmitterRange: 0
---- !u!26 &2674870
+--- !u!26 &2658142
 ParticleRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 116178}
+  m_GameObject: {fileID: 123068}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -123,24 +122,12 @@ ParticleRenderer:
     x Tile: 1
     y Tile: 1
     cycles: 1
---- !u!114 &11487008
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 116178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84f78baa2ceeb9041ac2641cd8f6358b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buffEffect: {fileID: 123068, guid: 34d1c0582e514b74d9ec9e6a4841710b, type: 2}
---- !u!136 &13613320
+--- !u!136 &13639992
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 116178}
+  m_GameObject: {fileID: 123068}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
@@ -156,42 +143,10 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 0}
-      propertyPath: buffEffect
-      value: 
-      objectReference: {fileID: 123068, guid: 34d1c0582e514b74d9ec9e6a4841710b, type: 2}
-    - target: {fileID: 0}
-      propertyPath: colorAnimation[0].rgba
-      value: 176552168
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: colorAnimation[1].rgba
-      value: 3032481783
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: colorAnimation[2].rgba
-      value: 4287627232
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: colorAnimation[3].rgba
-      value: 3029336047
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: colorAnimation[4].rgba
-      value: 175569663
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: maxSize
-      value: .150000006
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: minSize
-      value: .100000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: Does Animate Color?
-      value: 1
+      propertyPath: m_TagString
+      value: SwampBuffOnPlayer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 116178}
+  m_RootGameObject: {fileID: 123068}
   m_IsPrefabParent: 1
