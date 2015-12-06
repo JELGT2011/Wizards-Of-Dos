@@ -31,6 +31,8 @@ public class CharacterStats : MonoBehaviour
 
     RagdollController rdc;
 
+	protected Dictionary<string, float> buffList; //buff name, durations
+
     // Use this for initialization
     void Start()
     {
@@ -68,6 +70,8 @@ public class CharacterStats : MonoBehaviour
             }
         }
 
+		buffList = new Dictionary<string, float> ();
+
     }
 
     // Update is called once per frame
@@ -79,6 +83,29 @@ public class CharacterStats : MonoBehaviour
             _animator.SetTrigger("DeathTrigger");
         }
     }
+
+	void FixedUpdate () {
+		//update buffs
+		List<string> buffNames = new List<string>(buffList.Keys);
+		foreach (string buff in buffNames) {
+			buffList[buff] = buffList[buff] - Time.deltaTime;
+			if(buffList[buff] <= 0){
+				if(buff.Equals("SwampDamage") && !HasBuff("BigTreeGrace")){
+					TakeDamage(10);
+					RemoveBuff("SwampDamage");
+					AddBuff("SwampDamage", 2f);
+				}
+				else if(buff.Equals("BigTreeGrace")){
+					RemoveBuff ("BigTreeGrace");
+					foreach(Transform t in gameObject.transform){
+						if(t.tag == "SwampBuffOnPlayer"){
+							Destroy(t.gameObject);
+						}
+					}
+				}
+			}
+		}
+	}
 
     void OnGUI()
     {
@@ -93,18 +120,26 @@ public class CharacterStats : MonoBehaviour
         {
             rdc.triggerRagdoll();
             _animator.SetTrigger("DeathTrigger");
-
-            GameObject _fireworksParticleEffect = GameObject.Find("Fireworks Particle Effect");
-            if (_fireworksParticleEffect)
-            {
-                ParticleSystem _particleSystem = _fireworksParticleEffect.GetComponent<ParticleSystem>();
-                _particleSystem.Play();
-            }
         }
     }
 
-    //Return the damage from an attack given its name
-    public int GetAttackDamage(string attack)
+	public void AddHealth(int h)
+	{
+		//Debug.Log("old health");
+		//Debug.Log (_currentHealth);
+		//healthSlider.value = currentHealth;
+		if (_currentHealth + h > startingHealth) {
+			_currentHealth = 100;
+		} else 
+		{
+			_currentHealth += h;
+		}
+		//Debug.Log("new health");
+		//Debug.Log (_currentHealth);
+	}
+	
+	//Return the damage from an attack given its name
+	public int GetAttackDamage(string attack)
     {
         int damage;
         if (attackDamage.TryGetValue(attack, out damage))
@@ -116,5 +151,20 @@ public class CharacterStats : MonoBehaviour
             return 0;
         }
     }
+
+	public void AddBuff(string name, float duration){
+		buffList.Add (name, duration);
+	}
+	
+	public void RemoveBuff(string name){
+		if (buffList.ContainsKey (name))
+			buffList.Remove (name);
+	}
+	
+	public bool HasBuff(string name){
+		if (buffList.ContainsKey (name) && buffList [name] <= 0)
+			buffList.Remove (name);
+		return buffList.ContainsKey(name);
+	}
 
 }
