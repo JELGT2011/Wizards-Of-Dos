@@ -118,8 +118,23 @@ public class CharacterStats : MonoBehaviour
         }
     }
 
-    //Return the damage from an attack given its name
-    public int GetAttackDamage(string attack)
+	public void AddHealth(int h)
+	{
+		Debug.Log("old health");
+		Debug.Log (_currentHealth);
+		//healthSlider.value = currentHealth;
+		if (_currentHealth + h > startingHealth) {
+			_currentHealth = 100;
+		} else 
+		{
+			_currentHealth += h;
+		}
+		Debug.Log("new health");
+		Debug.Log (_currentHealth);
+	}
+	
+	//Return the damage from an attack given its name
+	public int GetAttackDamage(string attack)
     {
         int damage;
         if (attackDamage.TryGetValue(attack, out damage))

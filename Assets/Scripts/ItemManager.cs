@@ -4,16 +4,19 @@ public class ItemManager : MonoBehaviour
 {
 	public CharacterStats player1Health;
 	public CharacterStats player2Health;
+
 	public GameObject item;
 	public bool isBuff;
 	public float spawnTime = 30f; //Spawn item every 30 seconds
 	public Transform[] spawnPoints;
 	private float aliveTime = 1f;
-	
-	
+	public Object clonedItem;
+
 	void Awake ()
 	{
 		InvokeRepeating ("Spawn", spawnTime, spawnTime);
+		//temp
+		//player1Health.TakeDamage (40);
 	}
 	
 	
@@ -25,6 +28,7 @@ public class ItemManager : MonoBehaviour
 			}
 		}
 		int spawnPointIndex = Random.Range (0, spawnPoints.Length);
-		Object clonedItem = Instantiate (item, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+		clonedItem = Instantiate (item, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
 	}
+	
 }
