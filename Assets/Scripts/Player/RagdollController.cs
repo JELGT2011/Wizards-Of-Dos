@@ -9,13 +9,8 @@ public class RagdollController : MonoBehaviour {
 	[SerializeField]
 	private Rigidbody[] rigids;
 
-	[SerializeField]
-	private CharacterJoint[] CharJoints; 
-
 	private Animator anim;
 	bool goRagdoll;
-	[SerializeField]
-	Rigidbody mainRagdoll;
 
 	// Use this for initialization
 	void Start () 
@@ -23,8 +18,6 @@ public class RagdollController : MonoBehaviour {
 		anim = GetComponent<Animator>();
 		cols = GetComponentsInChildren<Collider>();
 		rigids = GetComponentsInChildren<Rigidbody>();
-		mainRagdoll = GetComponent<Rigidbody>();
-		CharJoints = GetComponentsInChildren<CharacterJoint>();
 
 		foreach(Collider col in cols)
 		{
@@ -39,13 +32,7 @@ public class RagdollController : MonoBehaviour {
 			if(rigid.gameObject.layer == 9)
 			{
 				rigid.isKinematic = true;
-
 			}
-		}
-
-		foreach(CharacterJoint CharJoint in CharJoints)
-		{
-			CharJoint.enableProjection = true;
 		}
 	}
 	
@@ -74,8 +61,6 @@ public class RagdollController : MonoBehaviour {
 				if(rigid.gameObject.layer == 9)
 				{
 					rigid.isKinematic = false;
-					rigid.velocity = mainRagdoll.velocity;
-
 				}
 			}
 

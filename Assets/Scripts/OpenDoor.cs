@@ -17,7 +17,7 @@ public class OpenDoor : MonoBehaviour {
 	void Start () 
 	{
 		DRB = GetComponent<Rigidbody>();
-		player = GameObject.FindGameObjectWithTag("Player1");
+		player = GameObject.FindGameObjectWithTag("Player");
 	}
 	
 	// Update is called once per frame

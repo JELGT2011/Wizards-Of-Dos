@@ -6,12 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MenuScreen.unity
-  - enabled: 1
-    path: Assets/Scenes/CharacterSelect.unity
-  - enabled: 1
-    path: Assets/Scenes/Credits.unity
-  - enabled: 1
     path: Assets/Scenes/Main.unity
   - enabled: 1
     path: Assets/Scenes/JapaneseEnvironmentScene.unity
