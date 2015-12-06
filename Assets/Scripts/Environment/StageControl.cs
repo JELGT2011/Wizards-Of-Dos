@@ -11,7 +11,6 @@ public class StageControl : MonoBehaviour {
 	public float randomness = 0.5f; //range from 0.0 to 1.0
 	public GameObject blockModel;
 	public float collpaseInterval = 1.8f;
-	public GameObject particle;
 
 	int numOfBlock;
 	List<GameObject> list;
@@ -60,8 +59,7 @@ public class StageControl : MonoBehaviour {
 			else{
 				pos.x+=blockModel.GetComponent<MeshRenderer> ().bounds.size.x;
 			}
-			//pos.y = UnityEngine.Random.Range(0,100) >= 90 ? UnityEngine.Random.Range(2, 5) : 0;
-			pos.y = 0;
+			pos.y = UnityEngine.Random.Range(0,100) >= 90 ? UnityEngine.Random.Range(2, 5) : 0;
 			list.Add(obj);
 			pos = new Vector3(pos.x, pos.y, pos.z);
 		}
@@ -80,21 +78,9 @@ public class StageControl : MonoBehaviour {
 	}
 
 	void CollapseNext(){
-		ShowParticle (blocks[index].GetComponent<Transform>());
-
-	}
-
-	void ShowParticle(Transform t){
-		Vector3 newPos = new Vector3 (t.position.x, t.position.y + 0.3f, t.position.z);
-		GameObject hellfire = (GameObject)Instantiate (particle, newPos, new Quaternion(0f,0f,0f,0f));
-		Destroy (hellfire, 1f);
-		Invoke ("CollapseBlock", 1f);
-	}
-
-	void CollapseBlock(){
 		int rand = UnityEngine.Random.Range (0, 100);
 		if (rand >= 80) {
-			blocksToRise.Add(blocks[index++].GetComponent<Transform>(), UnityEngine.Random.Range(3,6));
+				blocksToRise.Add(blocks[index++].GetComponent<Transform>(), UnityEngine.Random.Range(3,6));
 		} else {
 			Rigidbody rb = blocks [index].AddComponent<Rigidbody> ();
 			rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
