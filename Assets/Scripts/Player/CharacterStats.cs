@@ -120,8 +120,8 @@ public class CharacterStats : MonoBehaviour
 
 	public void AddHealth(int h)
 	{
-		Debug.Log("old health");
-		Debug.Log (_currentHealth);
+		//Debug.Log("old health");
+		//Debug.Log (_currentHealth);
 		//healthSlider.value = currentHealth;
 		if (_currentHealth + h > startingHealth) {
 			_currentHealth = 100;
@@ -129,8 +129,8 @@ public class CharacterStats : MonoBehaviour
 		{
 			_currentHealth += h;
 		}
-		Debug.Log("new health");
-		Debug.Log (_currentHealth);
+		//Debug.Log("new health");
+		//Debug.Log (_currentHealth);
 	}
 	
 	//Return the damage from an attack given its name
