@@ -97,6 +97,11 @@ public class CharacterStats : MonoBehaviour
 				}
 				else if(buff.Equals("BigTreeGrace")){
 					RemoveBuff ("BigTreeGrace");
+					foreach(Transform t in gameObject.transform){
+						if(t.tag == "SwampBuffOnPlayer"){
+							Destroy(t.gameObject);
+						}
+					}
 				}
 			}
 		}

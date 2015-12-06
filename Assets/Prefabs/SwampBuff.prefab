@@ -41,19 +41,19 @@ ParticleAnimator:
   Does Animate Color?: 1
   colorAnimation[0]:
     serializedVersion: 2
-    rgba: 167827442
+    rgba: 176552168
   colorAnimation[1]:
     serializedVersion: 2
-    rgba: 3019962623
+    rgba: 3032481783
   colorAnimation[2]:
     serializedVersion: 2
-    rgba: 4278255601
+    rgba: 4287627232
   colorAnimation[3]:
     serializedVersion: 2
-    rgba: 3019964401
+    rgba: 3029336047
   colorAnimation[4]:
     serializedVersion: 2
-    rgba: 167837691
+    rgba: 175569663
   worldRotationAxis: {x: 0, y: 0, z: 0}
   localRotationAxis: {x: 0, y: 0, z: 0}
   sizeGrow: 0
@@ -71,8 +71,8 @@ EllipsoidParticleEmitter:
   serializedVersion: 2
   m_Enabled: 1
   m_Emit: 1
-  minSize: .0500000007
-  maxSize: .100000001
+  minSize: .100000001
+  maxSize: .150000006
   minEnergy: 10
   maxEnergy: 20
   minEmission: 500
@@ -134,6 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84f78baa2ceeb9041ac2641cd8f6358b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buffEffect: {fileID: 123068, guid: 34d1c0582e514b74d9ec9e6a4841710b, type: 2}
 --- !u!136 &13613320
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -153,7 +154,43 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: buffEffect
+      value: 
+      objectReference: {fileID: 123068, guid: 34d1c0582e514b74d9ec9e6a4841710b, type: 2}
+    - target: {fileID: 0}
+      propertyPath: colorAnimation[0].rgba
+      value: 176552168
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: colorAnimation[1].rgba
+      value: 3032481783
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: colorAnimation[2].rgba
+      value: 4287627232
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: colorAnimation[3].rgba
+      value: 3029336047
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: colorAnimation[4].rgba
+      value: 175569663
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: maxSize
+      value: .150000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: minSize
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: Does Animate Color?
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 116178}
