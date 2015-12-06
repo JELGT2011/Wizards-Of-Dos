@@ -17,9 +17,10 @@ public class StandardCharacterController : MonoBehaviour
     CapsuleCollider bodyCol;
     GameObject playerCam;
 
+	[SerializeField] float MovementSpeed = 1f;
 	[SerializeField] float JumpStrength = 8f;
 	[SerializeField] float GravityStrength = 2f;
-	[SerializeField] float GroundCheckDistance = 0.3f;
+	[SerializeField] float GroundCheckDistance = 0.23f;
 	float origGroundCheckDis;
 	bool isGrounded;
 	bool Jump;
@@ -87,6 +88,7 @@ public class StandardCharacterController : MonoBehaviour
     }
 	void FixedUpdate()
 	{
+		OverRideRootMotion();
 		GroundCheck();
 		if(isGrounded)
 		{
@@ -200,10 +202,20 @@ public class StandardCharacterController : MonoBehaviour
 		}
 	}
 
+	void OverRideRootMotion()
+	{
+		if(isGrounded && Time.deltaTime > 0)
+		{
+			Vector3 v = (_animator.deltaPosition * MovementSpeed) / Time.deltaTime;
+			v.y = rigid.velocity.y;
+			rigid.velocity = v;
+		}
+	}
+
 	void AirborneMovment()
 	{
 
-		rigid.AddForce(inputVec * 10, ForceMode.Force);
+		rigid.AddForce(inputVec * 15, ForceMode.Force);
 		Vector3 gravityFactor = (Physics.gravity * GravityStrength) - Physics.gravity;
 		rigid.AddForce(gravityFactor);
 		GroundCheckDistance = rigid.velocity.y < 0 ? origGroundCheckDis : 0.01f;
