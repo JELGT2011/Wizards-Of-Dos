@@ -561,10 +561,10 @@ GameObject:
   - 95: {fileID: 9540700}
   - 136: {fileID: 13650972}
   - 54: {fileID: 5433220}
-  - 114: {fileID: 11457830}
   - 114: {fileID: 11496682}
   - 114: {fileID: 11418104}
-  - 114: {fileID: 11413722}
+  - 114: {fileID: 11425394}
+  - 114: {fileID: 11408946}
   m_Layer: 8
   m_Name: Ekko
   m_TagString: Player
@@ -5889,7 +5889,7 @@ Animator:
   m_GameObject: {fileID: 116124}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 69784a728f64fb44c888b40cbec78121, type: 3}
-  m_Controller: {fileID: 9100000, guid: b54cb3e091ad54e4ba8b07db811ce42f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 39fcf91273f3cdb4abed864dc2ca0d80, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 1
   m_ApplyRootMotion: 1
@@ -5897,7 +5897,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11413722
+--- !u!114 &11408946
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -5905,11 +5905,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 116124}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9680a29b8a02ab84cb7315677117f061, type: 3}
+  m_Script: {fileID: 11500000, guid: bca736d8a1b5edd429e8dcfa1f4ff5f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cols: []
-  rigids: []
+  _animator: {fileID: 9540700}
+  MovementSpeed: 1
+  JumpStrength: 8
+  GravityStrength: 2
+  GroundCheckDistance: .230000004
+  _playerAssign: K1
+  camAssign: 1
 --- !u!114 &11418104
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5921,8 +5926,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b695168601c94046a9352e74571bf97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
---- !u!114 &11457830
+  animator: {fileID: 9540700}
+--- !u!114 &11425394
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -5930,13 +5935,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 116124}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c98de8e0cf59d049b315926c34f6503, type: 3}
+  m_Script: {fileID: 11500000, guid: a984d64d0d36bba498627816cf86112c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animator: {fileID: 0}
-  _playerAssign: J1
-  _weaponManager: {fileID: 0}
-  camAssign: 1
+  cols: []
+  rigids: []
+  CharJoints: []
+  mainRagdoll: {fileID: 0}
 --- !u!114 &11496682
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10556,6 +10561,14 @@ Prefab:
       propertyPath: _playerAssign
       value: J1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 9540700}
+    - target: {fileID: 0}
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 9540700}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 116124}
