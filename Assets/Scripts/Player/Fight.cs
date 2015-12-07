@@ -23,7 +23,7 @@ public class Fight : MonoBehaviour
         weaponColliders = GetComponentsInChildren<BoxCollider>();
         playerCollider = GetComponent<CapsuleCollider>();
         playerStats = GetComponent<CharacterStats>();
-        foreach (BoxCollider weaponCollider in weaponColliders)
+        foreach (Collider weaponCollider in weaponColliders)
         {
             Physics.IgnoreCollision(weaponCollider, playerCollider);
         }

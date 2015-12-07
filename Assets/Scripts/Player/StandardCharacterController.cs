@@ -49,7 +49,7 @@ public class StandardCharacterController : MonoBehaviour
 
     [SerializeField]
     [Range(1, 2)]
-    protected int camAssign = 1;
+    public int camAssign = 1;
 
     void Start()
     {

@@ -24,13 +24,17 @@ public class StageInitialization : MonoBehaviour
         player1.tag = "Player1";
         player1Camera.GetComponent<AutoCam>().SetTarget(player1.transform);
         player1.GetComponent<StandardCharacterController>()._playerAssign = "J1";
+		player1.GetComponent<StandardCharacterController>().camAssign = 1;
 
-        character2 = Resources.Load("Characters/" + (CharacterSelect.player1Character ?? "Tora"));
+
+        character2 = Resources.Load("Characters/" + (CharacterSelect.player2Character ?? "Tora"));
         GameObject player2 = (GameObject) Instantiate(character2, player2Spawn.position, player2Spawn.rotation);
 
         player2.tag = "Player2";
         player2Camera.GetComponent<AutoCam>().SetTarget(player2.transform);
         player2.GetComponent<StandardCharacterController>()._playerAssign = "J2";
+		player2.GetComponent<StandardCharacterController> ().camAssign = 2;
+
 
     }
 

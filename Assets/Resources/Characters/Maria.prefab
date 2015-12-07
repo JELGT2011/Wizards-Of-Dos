@@ -383,10 +383,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 455524}
-  - 136: {fileID: 13638042}
-  m_Layer: 9
+  - 65: {fileID: 6519598}
+  m_Layer: 8
   m_Name: Offset
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1522,8 +1522,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 135688}
-  m_LocalRotation: {x: .806926548, y: 1.7148075e-08, z: 1.60230641e-07, w: .59065181}
-  m_LocalPosition: {x: 0, y: -.109999999, z: .360000014}
+  m_LocalRotation: {x: .801454186, y: -.00259500835, z: -.0045472905, w: .598033309}
+  m_LocalPosition: {x: .0240000002, y: -.116999999, z: .382999986}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 492714}
@@ -2250,6 +2250,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .306579351, y: .219753623, z: .216512382}
   m_Center: {x: 0, y: .0530250669, z: -.0310786068}
+--- !u!65 &6519598
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 135688}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .100000001, y: 1.29999995, z: .100000001}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &6564564
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -2435,19 +2447,6 @@ CapsuleCollider:
   m_Height: .431678593
   m_Direction: 1
   m_Center: {x: 0, y: .215839297, z: 0}
---- !u!136 &13638042
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 135688}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: .100000001
-  m_Height: 1.29999995
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &13651280
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -2531,9 +2530,7 @@ SkinnedMeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -2634,9 +2631,7 @@ SkinnedMeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}

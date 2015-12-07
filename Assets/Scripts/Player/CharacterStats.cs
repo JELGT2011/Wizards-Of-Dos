@@ -108,6 +108,10 @@ public class CharacterStats : MonoBehaviour
                 }
             }
         }
+
+		if (gameObject.transform.position.y < -5) {
+			TakeDamage(100);
+		}
     }
 
     void OnGUI()

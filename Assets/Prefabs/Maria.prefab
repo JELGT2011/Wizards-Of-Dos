@@ -520,9 +520,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 461052}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: sword_joint
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1588,7 +1588,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 148750}
-  m_LocalRotation: {x: .67253077, y: .591397285, z: -.357632011, w: -.264671773}
+  m_LocalRotation: {x: .672530711, y: .591397226, z: -.357631981, w: -.264671743}
   m_LocalPosition: {x: -.0214210339, y: .094829239, z: .0159670245}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2405,9 +2405,7 @@ SkinnedMeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -2508,9 +2506,7 @@ SkinnedMeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}

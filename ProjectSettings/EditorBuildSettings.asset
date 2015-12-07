@@ -21,3 +21,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Stages/SwampStage/SwampStage.unity
   - enabled: 1
     path: Assets/Scenes/CharacterSelect/CharacterSelect.unity
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
