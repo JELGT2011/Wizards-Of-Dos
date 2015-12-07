@@ -6,7 +6,7 @@ Wizards_of_Dos_final.zip
 i. Full name, email, and prism account name for each member of the team
 Lanssie Mingyue Ma 		mma48@gatech.edu 	mma48
 Timothy Storm 			tstorm3@gatech.edu	tstorm3
-Nate Ziran Chen			ziranchen@gatech.edu	n/a
+Nate Ziran Chen			ziranchen@gatech.edu	zchen39
 Robert Sun 			sunwrobert@gatech.edu   rsun39
 Jesus Carillo			jcarrillo9@gatech.edu   jcarrillo9
 Jason Libbey			jlibbey3@gatech.edu    jlibbey3
@@ -19,7 +19,7 @@ We have implemented a PvP 2 person fighting game; one person vs another. We have
 
 You and another player should battle it out on a chosen stage to the death.
 
-Some terrains are helpful and offer bonuses that help your health; i.e. the Japanese terrain has ice cream and hamburgers that give you bonus health. Other terrains have AI that is harmful, like the ice terrain which has spiders that will attack and seek out players. In the Swamp, the weeds will cause users to have extra damage, while the tree in the center that appears once in a while offers a safe haven for players. 
+Some terrains are helpful and offer bonuses that help your health; i.e. the Japanese terrain has ice cream and hamburgers that give you bonus health. Other terrains have AI that is harmful, like the ice terrain which has spiders that will attack and seek out players. In the Swamp, the weeds will cause users to have extra damage, while the tree in the center that once in a while offers a protection for players. In the Hell, platforms may drop or rise, causing unexpected fun for the fight.
 
 Who did what:
 
@@ -102,22 +102,21 @@ Pick the character each player wants to use, and then press Enter or the attack 
 
 Choose the map you want to play in
 
-Beat the other player(s)
+Take advantage of different stages and beat the other player(s)
+
+Controlls:
+
 keyboard:
 WASD to move P1, arrow keys P2
-ugh for 3 attacks
-space
+FGH for 3 attacks
+Space for Jump
 
-controller
+controller:
 joystick to move
 R joystick is camera
 A jump
-XMB are three attacks. 
+XYB are three attacks. 
 
-
-Win the game!
-
-Replay?
 
 vi. Which scene file is the main file that should be opened first in Unity
 
