@@ -36,12 +36,13 @@ public class StageControl : MonoBehaviour {
 	}
 
 	void FixedUpdate () {
-		foreach (KeyValuePair<Transform, int> entry in blocksToRise) {
-			if(entry.Key.position.y < entry.Value){
-				entry.Key.position = new Vector3(entry.Key.position.x, entry.Key.position.y+0.25f, entry.Key.position.z);
+		List<Transform> tmpBlockRiseList = new List<Transform> (blocksToRise.Keys);
+		foreach (Transform key in tmpBlockRiseList) {
+			if(key.position.y < blocksToRise[key]){
+				key.position = new Vector3(key.position.x, key.position.y+0.25f, key.position.z);
 			}
 			else{
-				blocksToRise.Remove(entry.Key);
+				blocksToRise.Remove(key);
 			}
 		}
 	}

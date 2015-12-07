@@ -33,11 +33,11 @@ public class GameOverManager : MonoBehaviour
 		}
 		player1health = Player1Health.GetHealth();
 		player2health = Player2Health.GetHealth();	
-		if(player1health <= 0 || player2health <= 0){
-			if(player1health <= 0){
+		if(player1health <= 0 || player2health <= 0  || Player1Health.gameObject.transform.position.y <= -1  || Player1Health.gameObject.transform.position.y <= -1){
+			if(player1health <= 0 || Player1Health.gameObject.transform.position.y <= -1){
 				gameOverText.text = "Player 2 Wins!";
 			}
-			if(player2health <= 0){
+			if(player2health <= 0 || Player1Health.gameObject.transform.position.y <= -1){
 				gameOverText.text = "Player 1 Wins!";
 			}
 			anim.SetTrigger("GameOver");
