@@ -13,18 +13,21 @@ public class GameOverManager : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        
+
         gameOverText = GetComponentInChildren<Text>();
+		
     }
+
+
 
     public void PlayerDeath()
     {
-        anim.SetTrigger("GameOver");
-        restartTimer += Time.deltaTime;
-        if (restartTimer >= restartDelay)
-        {
-            Application.LoadLevel("MenuScreen");
-        }
+		anim.SetTrigger("GameOver");
+		Invoke ("ReloadMenu", 5f);
 
     }
+
+	public void ReloadMenu(){
+		Application.LoadLevel("MenuScreen");
+	}
 }

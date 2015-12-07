@@ -125,8 +125,8 @@ public class CharacterStats : MonoBehaviour
         //healthSlider.value = currentHealth;
         if (_currentHealth <= 0)
         {
-            rdc.triggerRagdoll();
             _animator.SetTrigger("DeathTrigger");
+			rdc.triggerRagdoll();
             GameObject.FindGameObjectWithTag("HUD").GetComponentInChildren<GameOverManager>().PlayerDeath();
         }
     }

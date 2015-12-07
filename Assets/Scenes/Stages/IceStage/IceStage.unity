@@ -3300,6 +3300,10 @@ Prefab:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11404062, guid: b65894c5c313d764cbef9921d59ecad3, type: 2}
+      propertyPath: restartDelay
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b65894c5c313d764cbef9921d59ecad3, type: 2}
   m_IsPrefabParent: 0

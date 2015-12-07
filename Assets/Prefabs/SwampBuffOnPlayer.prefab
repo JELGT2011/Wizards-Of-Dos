@@ -70,8 +70,8 @@ EllipsoidParticleEmitter:
   serializedVersion: 2
   m_Enabled: 1
   m_Emit: 1
-  minSize: .150000006
-  maxSize: .200000003
+  minSize: .0500000007
+  maxSize: .100000001
   minEnergy: 10
   maxEnergy: 20
   minEmission: 500
@@ -145,6 +145,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_TagString
       value: SwampBuffOnPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: maxSize
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: minSize
+      value: .0500000007
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
