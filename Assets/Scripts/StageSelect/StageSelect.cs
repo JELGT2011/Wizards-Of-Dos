@@ -13,28 +13,24 @@ public class StageSelect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (ControlInputWrapper.GetButtonDown(ControlInputWrapper.Buttons.A))
+        {
+            Application.LoadLevel("JapaneseStage");
+        }
 
-    }
+        if (ControlInputWrapper.GetButtonDown(ControlInputWrapper.Buttons.X))
+        {
+            Application.LoadLevel("IceStage");
+        }
 
-    public void LoadJapaneseStage()
-    {
-        Application.LoadLevel("JapaneseStage");
-    }
+        if (ControlInputWrapper.GetButtonDown(ControlInputWrapper.Buttons.Y))
+        {
+            Application.LoadLevel("HellStage");
+        }
 
-    public void LoadIceStage()
-    {
-        Application.LoadLevel("IceStage");
-    }
-    public void LoadJungleStage()
-    {
-        Application.LoadLevel("JungleStage");
-    }
-    public void LoadHellStage()
-    {
-        Application.LoadLevel("HellStage");
-    }
-    public void LoadSwampStage()
-    {
-        Application.LoadLevel("SwampStage");
+        if (ControlInputWrapper.GetButtonDown(ControlInputWrapper.Buttons.B))
+        {
+            Application.LoadLevel("SwampStage");
+        }
     }
 }

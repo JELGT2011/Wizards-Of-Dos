@@ -12,8 +12,6 @@ public class CharacterSelect : MonoBehaviour
     int spacing = 4;
     public static string player1Character;
     public static string player2Character;
-    private bool player1AxisInUse = false;
-    private bool player2AxisInUse = false;
     float timerRestart = 0.3f;
     float currentTime = 0f;
 
@@ -93,7 +91,6 @@ public class CharacterSelect : MonoBehaviour
                     player2.position = new Vector3(player2.position.x + spacing, player2.position.y, player2.position.z);
                 }
                 currentTime = 0;
-
             }
         }
 
