@@ -205,8 +205,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 384049129}
-  m_LocalRotation: {x: -.112434931, y: .683220625, z: .107676208, w: .713424027}
-  m_LocalPosition: {x: -9.00760651, y: -39.7153854, z: 84.9543991}
+  m_LocalRotation: {x: -.0644844621, y: 0, z: 0, w: .997918725}
+  m_LocalPosition: {x: -8.46000004, y: 3.33000016, z: -31.4500008}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -368,14 +368,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31d5b1cb001dcd049b6134ec30f71ccc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player1Health: {fileID: 0}
-  player2Health: {fileID: 0}
   item: {fileID: 116178, guid: 2d7f35c632f37cb4ab157f3663337eba, type: 2}
   isBuff: 1
   spawnTime: 5
   spawnPoints:
   - {fileID: 1681667535}
-  clonedItem: {fileID: 0}
 --- !u!1 &506437514
 GameObject:
   m_ObjectHideFlags: 0
@@ -834,7 +831,12 @@ Prefab:
       propertyPath: m_AutoTargetPlayer
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8145528, guid: 43353fae4b73817449908ac5b6914354, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8145528, guid: 43353fae4b73817449908ac5b6914354, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 43353fae4b73817449908ac5b6914354, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1681667534

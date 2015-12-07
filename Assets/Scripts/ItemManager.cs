@@ -2,28 +2,32 @@
 
 public class ItemManager : MonoBehaviour
 {
-	public CharacterStats player1Health;
-	public CharacterStats player2Health;
+	CharacterStats player1Health;
+	CharacterStats player2Health;
 
 	public GameObject item;
 	public bool isBuff;
 	public float spawnTime = 30f; //Spawn item every 30 seconds
 	public Transform[] spawnPoints;
 	private float aliveTime = 1f;
-	public Object clonedItem;
+	private Object clonedItem;
 
-	void Awake ()
+	void Start ()
 	{
 		InvokeRepeating ("Spawn", spawnTime, spawnTime);
 		//temp
 		//player1Health.TakeDamage (40);
+	}
+
+	void Update(){
+			
 	}
 	
 	
 	void Spawn ()
 	{
 		if (isBuff) {
-			if(player1Health.HasBuff("BigTreeGrace") || player2Health.HasBuff("BigTreeGrace") || GameObject.FindGameObjectsWithTag("SwampBuff").Length > 0){
+			if(GameObject.FindGameObjectsWithTag("SwampBuff").Length > 0){
 				return;
 			}
 		}
