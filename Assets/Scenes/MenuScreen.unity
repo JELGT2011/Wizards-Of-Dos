@@ -187,6 +187,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 9540700, guid: 0a21b492efb066348a73645fe2b0c4d8, type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 39fcf91273f3cdb4abed864dc2ca0d80, type: 2}
     m_RemovedComponents:
     - {fileID: 11457830, guid: 0a21b492efb066348a73645fe2b0c4d8, type: 2}
     - {fileID: 11496682, guid: 0a21b492efb066348a73645fe2b0c4d8, type: 2}
@@ -506,6 +510,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9569230, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: e75210f39dc1b684baf5aebaf348e2da, type: 2}
     m_RemovedComponents:
     - {fileID: 11436140, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
     - {fileID: 11485562, guid: c14e9d00a475d82429394a01879a7b71, type: 2}
@@ -896,6 +904,14 @@ Prefab:
     - target: {fileID: 143962, guid: a7be69f4803787549831b4996f10c615, type: 2}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 9529386, guid: a7be69f4803787549831b4996f10c615, type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 608454e618e7b4542854be264f7e64c1, type: 2}
+    - target: {fileID: 9529386, guid: a7be69f4803787549831b4996f10c615, type: 2}
+      propertyPath: m_CullingMode
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11449142, guid: a7be69f4803787549831b4996f10c615, type: 2}

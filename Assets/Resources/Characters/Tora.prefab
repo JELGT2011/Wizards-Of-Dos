@@ -672,10 +672,10 @@ GameObject:
   - 95: {fileID: 9529386}
   - 54: {fileID: 5499352}
   - 136: {fileID: 13673562}
-  - 114: {fileID: 11449142}
-  - 114: {fileID: 11468832}
   - 114: {fileID: 11452674}
   - 114: {fileID: 11400858}
+  - 114: {fileID: 11491356}
+  - 114: {fileID: 11487406}
   m_Layer: 8
   m_Name: Tora
   m_TagString: Untagged
@@ -2768,7 +2768,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 143962}
   serializedVersion: 2
-  m_Mass: 60
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: .0500000007
   m_UseGravity: 1
@@ -2833,7 +2833,7 @@ Animator:
   m_GameObject: {fileID: 143962}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: aef49b13b2665324bb71bec76d8831dc, type: 3}
-  m_Controller: {fileID: 9100000, guid: 8821e4258f298354f81d97b6f527394d, type: 2}
+  m_Controller: {fileID: 9100000, guid: 608454e618e7b4542854be264f7e64c1, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 1
   m_ApplyRootMotion: 1
@@ -2852,22 +2852,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b695168601c94046a9352e74571bf97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
---- !u!114 &11449142
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 143962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c98de8e0cf59d049b315926c34f6503, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _animator: {fileID: 0}
-  _playerAssign: J1
-  _weaponManager: {fileID: 0}
-  camAssign: 1
+  animator: {fileID: 9529386}
 --- !u!114 &11452674
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2881,7 +2866,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 100
   _healthSlider: {fileID: 0}
---- !u!114 &11468832
+--- !u!114 &11487406
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -2889,11 +2874,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 143962}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9680a29b8a02ab84cb7315677117f061, type: 3}
+  m_Script: {fileID: 11500000, guid: a984d64d0d36bba498627816cf86112c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cols: []
   rigids: []
+  CharJoints: []
+  mainRagdoll: {fileID: 0}
+--- !u!114 &11491356
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bca736d8a1b5edd429e8dcfa1f4ff5f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 9529386}
+  MovementSpeed: 1
+  JumpStrength: 8
+  GravityStrength: 2
+  GroundCheckDistance: .230000004
+  _playerAssign: K1
+  camAssign: 1
 --- !u!135 &13527332
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -4269,6 +4274,18 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: _playerAssign
       value: J1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 9529386}
+    - target: {fileID: 0}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 9529386}
+    - target: {fileID: 0}
+      propertyPath: m_Mass
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
