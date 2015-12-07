@@ -19,7 +19,7 @@ We have implemented a PvP 2 person fighting game; one person vs another. We have
 
 You and another player should battle it out on a chosen stage to the death.
 
-Some terrains are helpful and offer bonuses that help your health; i.e. the Japanese terrain has ice cream and hamburgers that give you bonus health. Other terrains have AI that is harmful, like the ice terrain which has spiders that will attack and seek out players.
+Some terrains are helpful and offer bonuses that help your health; i.e. the Japanese terrain has ice cream and hamburgers that give you bonus health. Other terrains have AI that is harmful, like the ice terrain which has spiders that will attack and seek out players. In the Swamp, the weeds will cause users to have extra damage, while the tree in the center that appears once in a while offers a safe haven for players. 
 
 Who did what:
 
