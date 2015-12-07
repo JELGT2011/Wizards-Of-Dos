@@ -41,7 +41,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 5
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_LightmapsMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -66,7 +66,8 @@ LightmapSettings:
     m_FinalGather: 0
     m_FinalGatherRayCount: 1024
     m_ReflectionCompression: 2
-  m_LightmapSnapshot: {fileID: 0}
+  m_LightmapSnapshot: {fileID: 112000001, guid: 722ed6d7f2db200489905958377dc967,
+    type: 2}
   m_RuntimeCPUUsage: 25
 --- !u!196 &4
 NavMeshSettings:
@@ -382,7 +383,7 @@ Prefab:
   m_IsPrefabParent: 0
 --- !u!4 &94204730 stripped
 Transform:
-  m_PrefabParentObject: {fileID: 400000, guid: f63e675fe3b6b9646beb49d9dd3e30ba, type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 94204729}
 --- !u!1 &170712215
 GameObject:
@@ -654,7 +655,7 @@ Prefab:
   m_IsPrefabParent: 0
 --- !u!4 &299597792 stripped
 Transform:
-  m_PrefabParentObject: {fileID: 400004, guid: e2536659f7193414490a3fea04200a6d, type: 3}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 299597791}
 --- !u!1001 &347716151
 Prefab:
@@ -700,7 +701,7 @@ Prefab:
   m_IsPrefabParent: 0
 --- !u!4 &347716152 stripped
 Transform:
-  m_PrefabParentObject: {fileID: 470486, guid: bac5005d86904144895f29c85e6b50ea, type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 347716151}
 --- !u!1001 &365365476
 Prefab:
@@ -750,7 +751,7 @@ Prefab:
   m_IsPrefabParent: 0
 --- !u!4 &365365477 stripped
 Transform:
-  m_PrefabParentObject: {fileID: 400000, guid: 49bfd2e7a273e7a4ca574b30808dd0b4, type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 365365476}
 --- !u!1001 &469803830
 Prefab:
@@ -858,7 +859,7 @@ Prefab:
   m_IsPrefabParent: 0
 --- !u!4 &474278323 stripped
 Transform:
-  m_PrefabParentObject: {fileID: 461572, guid: ce7cd7a09945e4a0684f76ecb54d47bf, type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 474278322}
 --- !u!1001 &495059128
 Prefab:
@@ -994,7 +995,7 @@ Prefab:
   m_IsPrefabParent: 0
 --- !u!4 &571855737 stripped
 Transform:
-  m_PrefabParentObject: {fileID: 400000, guid: af5d2d14895eaed4dae91d06b8ca164f, type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 571855736}
 --- !u!1001 &693721739
 Prefab:
@@ -1057,7 +1058,7 @@ Prefab:
   m_IsPrefabParent: 0
 --- !u!4 &693721740 stripped
 Transform:
-  m_PrefabParentObject: {fileID: 400000, guid: 0571280cf8b869247a7c98022cbf03a8, type: 3}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 693721739}
 --- !u!1001 &762231040
 Prefab:
@@ -1897,6 +1898,68 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
   m_PrefabInternal: {fileID: 1304793748}
+--- !u!1 &1320257162
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1320257164}
+  - 20: {fileID: 1320257163}
+  m_Layer: 0
+  m_Name: RiverReflectionSceneCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!20 &1320257163
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1320257162}
+  m_Enabled: 0
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 1}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: .300000012
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967279
+  m_RenderingPath: 1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: .0219999999
+  m_StereoMirrorMode: 0
+--- !u!4 &1320257164
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1320257162}
+  m_LocalRotation: {x: -.112434931, y: .683220625, z: .107676208, w: .713424027}
+  m_LocalPosition: {x: -9.00760651, y: -37.0153847, z: 84.9543991}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
 --- !u!1 &1375145708
 GameObject:
   m_ObjectHideFlags: 0
@@ -2136,7 +2199,7 @@ Prefab:
   m_IsPrefabParent: 0
 --- !u!4 &1423698564 stripped
 Transform:
-  m_PrefabParentObject: {fileID: 400000, guid: c6e9afa85a031c242b1e1eccb205ce46, type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 1423698563}
 --- !u!1 &1450356581 stripped
 GameObject:
@@ -2928,7 +2991,7 @@ Prefab:
   m_IsPrefabParent: 0
 --- !u!4 &1804281974 stripped
 Transform:
-  m_PrefabParentObject: {fileID: 400000, guid: 49bfd2e7a273e7a4ca574b30808dd0b4, type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 1804281973}
 --- !u!1001 &1914339442
 Prefab:
@@ -3372,7 +3435,7 @@ Prefab:
   m_IsPrefabParent: 0
 --- !u!4 &2054727450 stripped
 Transform:
-  m_PrefabParentObject: {fileID: 400000, guid: f63e675fe3b6b9646beb49d9dd3e30ba, type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 2054727449}
 --- !u!1 &2074977758 stripped
 GameObject:
@@ -3455,7 +3518,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
 --- !u!45 &2076649730
 Skybox:
   m_ObjectHideFlags: 0
@@ -3590,5 +3653,5 @@ Prefab:
   m_IsPrefabParent: 0
 --- !u!4 &2134342701 stripped
 Transform:
-  m_PrefabParentObject: {fileID: 400000, guid: 0571280cf8b869247a7c98022cbf03a8, type: 3}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 2134342700}

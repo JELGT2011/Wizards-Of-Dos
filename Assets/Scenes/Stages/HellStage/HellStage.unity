@@ -41,7 +41,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 5
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_LightmapsMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -66,7 +66,8 @@ LightmapSettings:
     m_FinalGather: 0
     m_FinalGatherRayCount: 1024
     m_ReflectionCompression: 2
-  m_LightmapSnapshot: {fileID: 0}
+  m_LightmapSnapshot: {fileID: 112000001, guid: 6b56afe9550c4c742b407bd1b0f74e17,
+    type: 2}
   m_RuntimeCPUUsage: 25
 --- !u!196 &5
 NavMeshSettings:
@@ -183,7 +184,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
---- !u!1001 &169282987
+--- !u!1 &211979593
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 211979594}
+  m_Layer: 0
+  m_Name: Player2Spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &211979594
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 211979593}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: -1.62920685e-07}
+  m_LocalPosition: {x: 7.90999985, y: 0, z: 11.5600004}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+--- !u!1001 &434631938
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -220,7 +248,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22430416, guid: b65894c5c313d764cbef9921d59ecad3, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 22430416, guid: b65894c5c313d764cbef9921d59ecad3, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -262,36 +290,49 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 22432198, guid: b65894c5c313d764cbef9921d59ecad3, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22432198, guid: b65894c5c313d764cbef9921d59ecad3, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22487492, guid: b65894c5c313d764cbef9921d59ecad3, type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22487492, guid: b65894c5c313d764cbef9921d59ecad3, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22487492, guid: b65894c5c313d764cbef9921d59ecad3, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22475900, guid: b65894c5c313d764cbef9921d59ecad3, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22475900, guid: b65894c5c313d764cbef9921d59ecad3, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22477772, guid: b65894c5c313d764cbef9921d59ecad3, type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22477772, guid: b65894c5c313d764cbef9921d59ecad3, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22477772, guid: b65894c5c313d764cbef9921d59ecad3, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b65894c5c313d764cbef9921d59ecad3, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &211979593
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 211979594}
-  m_Layer: 0
-  m_Name: Player2Spawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &211979594
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 211979593}
-  m_LocalRotation: {x: 0, y: -1, z: 0, w: -1.62920685e-07}
-  m_LocalPosition: {x: 7.90999985, y: 0, z: 11.5600004}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
 --- !u!1001 &452571480
 Prefab:
   m_ObjectHideFlags: 0

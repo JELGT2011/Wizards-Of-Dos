@@ -41,7 +41,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 5
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_LightmapsMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -66,7 +66,8 @@ LightmapSettings:
     m_FinalGather: 0
     m_FinalGatherRayCount: 1024
     m_ReflectionCompression: 2
-  m_LightmapSnapshot: {fileID: 0}
+  m_LightmapSnapshot: {fileID: 112000003, guid: c7c808ce85322f14ab0cb11330328d59,
+    type: 2}
   m_RuntimeCPUUsage: 25
 --- !u!196 &4
 NavMeshSettings:
@@ -1856,7 +1857,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 8
 --- !u!1 &194375088
 GameObject:
   m_ObjectHideFlags: 0
@@ -6896,7 +6897,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22430416, guid: b65894c5c313d764cbef9921d59ecad3, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 22430416, guid: b65894c5c313d764cbef9921d59ecad3, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -6958,23 +6959,23 @@ Prefab:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 22418430, guid: b65894c5c313d764cbef9921d59ecad3, type: 2}
+    - target: {fileID: 22432198, guid: b65894c5c313d764cbef9921d59ecad3, type: 2}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 22418430, guid: b65894c5c313d764cbef9921d59ecad3, type: 2}
+    - target: {fileID: 22432198, guid: b65894c5c313d764cbef9921d59ecad3, type: 2}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 22413598, guid: b65894c5c313d764cbef9921d59ecad3, type: 2}
+    - target: {fileID: 22487492, guid: b65894c5c313d764cbef9921d59ecad3, type: 2}
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 22413598, guid: b65894c5c313d764cbef9921d59ecad3, type: 2}
+    - target: {fileID: 22487492, guid: b65894c5c313d764cbef9921d59ecad3, type: 2}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 22413598, guid: b65894c5c313d764cbef9921d59ecad3, type: 2}
+    - target: {fileID: 22487492, guid: b65894c5c313d764cbef9921d59ecad3, type: 2}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
@@ -9161,7 +9162,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!1 &1069995522
 GameObject:
   m_ObjectHideFlags: 0
@@ -14788,7 +14789,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 9
 --- !u!1 &1720394202
 GameObject:
   m_ObjectHideFlags: 0
