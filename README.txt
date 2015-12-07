@@ -1,4 +1,4 @@
-The submissions should follow these guidelines:
+﻿The submissions should follow these guidelines:
 
 a) ZIP file name: <teamname>_final.zip
 Wizards_of_Dos_final.zip
@@ -105,10 +105,7 @@ Take advantage of different stages and beat the other player(s)
 
 Controlls:
 
-keyboard:
-WASD to move P1, arrow keys P2
-FGH for 3 attacks
-Space for Jump
+Naviagate menu with controller. Press A to confirm
 
 controller:
 joystick to move
@@ -123,7 +120,7 @@ MenuScreen
 
 vii. URL of the web page where you posted your assignment
 
-http://wizards-of-dos.s3-website-us-east-1.amazonaws.com/final.html
+http://www.prism.gatech.edu/~tstorm3/FinalBuild/Builds.html
 
 c) Complete Unity project (each script file you created should include team name and
 members’ names in comments at top of file, and any file you acquired outside should also
