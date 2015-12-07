@@ -178,10 +178,10 @@ namespace UnityStandardAssets.ImageEffects
 					Vector3 res = Vector3.zero;
 					// minimize with other samples
 					for (int j = 0; j < count; ++j) {
-						Vector3 force = vec - samples[j];
-						float fac = Vector3.Dot (force, force);
+						Vector3 delta = vec - samples[j];
+						float fac = Vector3.Dot (delta, delta);
 						if (fac > 0.00001f)
-							res += force * (1.0f / fac);
+							res += delta * (1.0f / fac);
 					}
 					samples[i] = (samples[i] + res * 0.5f).normalized;
 				}

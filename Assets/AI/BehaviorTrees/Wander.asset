@@ -21,7 +21,7 @@ MonoBehaviour:
       debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
       aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;Player&amp;quot;&quot;
       /&gt;&lt;move turnspeed=&quot;&quot; repeatuntil=&quot;&quot; name=&quot;move&quot;
-      movetarget=&quot;playerLocation&quot; movespeed=&quot;3&quot; facetarget=&quot;&quot;
+      movetarget=&quot;playerLocation&quot; movespeed=&quot;6&quot; facetarget=&quot;&quot;
       debugbreak=&quot;False&quot; closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot;
       /&gt;&lt;animate repeatuntil=&quot;&quot; name=&quot;animate&quot; debugbreak=&quot;False&quot;
       animationstate=&quot;run&quot; /&gt;&lt;/parallel&gt;&lt;/behaviortree&gt;"

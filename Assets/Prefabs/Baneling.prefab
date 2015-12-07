@@ -27,7 +27,8 @@ GameObject:
   - 65: {fileID: 6536056}
   - 114: {fileID: 11443946}
   - 54: {fileID: 5452262}
-  - 65: {fileID: 6501488}
+  - 135: {fileID: 13534574}
+  - 114: {fileID: 11462490}
   m_Layer: 0
   m_Name: Baneling
   m_TagString: Untagged
@@ -1389,7 +1390,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100426}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -32.3800011, y: 11.6260004, z: 5.32000017}
+  m_LocalPosition: {x: 34.7999992, y: 4.59000015, z: 10.46}
   m_LocalScale: {x: .25, y: .25, z: .25}
   m_Children:
   - {fileID: 454890}
@@ -1581,7 +1582,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100426}
   serializedVersion: 2
-  m_Mass: 50000
+  m_Mass: 5
   m_Drag: 0
   m_AngularDrag: .0500000007
   m_UseGravity: 1
@@ -1589,18 +1590,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &6501488
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100426}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.44000006, y: 2.5999999, z: 4.21000004}
-  m_Center: {x: 0, y: 1.29999995, z: .170000002}
 --- !u!65 &6536056
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -1646,6 +1635,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 2}
+--- !u!114 &11462490
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e1b03ca804b8b42b8b1cc4929b622b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tag: 
+  speed: 5
 --- !u!114 &11472924
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1665,9 +1667,10 @@ MonoBehaviour:
       id="_ai" /></fields><references><reference type="RAIN.Core.AI" refcount="1"
       id="0"><field value="True" type="System.Boolean" id="_isActive" /><field type="UnityEngine.GameObject"
       id="_body" gameobject="0" /><field type="RAIN.Memory.BasicMemory" reference="1"
-      id="_workingMemory" /><field type="RAIN.Minds.BasicMind" reference="2" id="_mind"
-      /><field type="RAIN.Motion.BasicMotor" reference="3" id="_motor" /><field type="RAIN.Animation.BasicAnimator"
-      reference="4" id="_animator" /><field type="RAIN.Navigation.BasicNavigator"
+      id="_workingMemory" childrenvisible="False" /><field type="RAIN.Minds.BasicMind"
+      reference="2" id="_mind" childrenvisible="False" /><field type="RAIN.Motion.BasicMotor"
+      reference="3" id="_motor" childrenvisible="False" /><field type="RAIN.Animation.BasicAnimator"
+      reference="4" id="_animator" childrenvisible="True" /><field type="RAIN.Navigation.BasicNavigator"
       reference="7" id="_navigator" /><field type="RAIN.Perception.BasicSenses" reference="8"
       id="_senses" /><field type="System.Collections.Generic.List" id="_customElements"
       elementtype="RAIN.Core.CustomAIElement" /></reference><reference type="RAIN.Memory.BasicMemory"
@@ -1729,6 +1732,18 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 92ec2310cb4efd94ba7985a105e1f0e2, type: 2}
     - {fileID: 475068}
     _serializedCustomData: []
+--- !u!135 &13534574
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100426}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.22000003
+  m_Center: {x: 0, y: 1.11000001, z: 0}
 --- !u!137 &13749952
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -1836,6 +1851,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Mass
       value: 50000
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
