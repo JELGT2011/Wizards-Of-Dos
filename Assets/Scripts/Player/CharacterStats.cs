@@ -47,7 +47,7 @@ public class CharacterStats : MonoBehaviour
 
         GameObject HUD = GameObject.FindGameObjectWithTag("HUD");
 
-        if (_characterController.PlayerAssign == "J1")
+		if (_characterController._playerAssign == "J1" || _characterController._playerAssign == "K1")
         {
             Slider[] _sliders = HUD.GetComponentsInChildren<Slider>();
             foreach (Slider _slider in _sliders)
@@ -58,7 +58,7 @@ public class CharacterStats : MonoBehaviour
                 }
             }
         }
-        else if (_characterController.PlayerAssign == "J2")
+		else if (_characterController._playerAssign == "J2" || _characterController._playerAssign == "K2")
         {
             Slider[] _sliders = HUD.GetComponentsInChildren<Slider>();
             foreach (Slider _slider in _sliders)
@@ -165,6 +165,10 @@ public class CharacterStats : MonoBehaviour
 		if (buffList.ContainsKey (name) && buffList [name] <= 0)
 			buffList.Remove (name);
 		return buffList.ContainsKey(name);
+	}
+	
+	public int GetHealth(){
+		return _currentHealth;
 	}
 
 }

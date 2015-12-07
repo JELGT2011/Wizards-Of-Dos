@@ -60,16 +60,16 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _BumpSpecMap
+          name: _TranslucencyMap
         second:
-          m_Texture: {fileID: 2800000, guid: e82f155b648310b4b8b3900db5a34d62, type: 3}
+          m_Texture: {fileID: 2800000, guid: d751bca24dbb0124fbdef80ceb2b9477, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _TranslucencyMap
+          name: _BumpSpecMap
         second:
-          m_Texture: {fileID: 2800000, guid: d751bca24dbb0124fbdef80ceb2b9477, type: 3}
+          m_Texture: {fileID: 2800000, guid: e82f155b648310b4b8b3900db5a34d62, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -125,16 +125,16 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _BumpSpecMap
+          name: _TranslucencyMap
         second:
-          m_Texture: {fileID: 2800000, guid: e82f155b648310b4b8b3900db5a34d62, type: 3}
+          m_Texture: {fileID: 2800000, guid: d751bca24dbb0124fbdef80ceb2b9477, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _TranslucencyMap
+          name: _BumpSpecMap
         second:
-          m_Texture: {fileID: 2800000, guid: d751bca24dbb0124fbdef80ceb2b9477, type: 3}
+          m_Texture: {fileID: 2800000, guid: e82f155b648310b4b8b3900db5a34d62, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -207,7 +207,9 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}

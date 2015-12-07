@@ -332,6 +332,7 @@ MonoBehaviour:
   spawnTime: 5
   spawnPoints:
   - {fileID: 1681667535}
+  clonedItem: {fileID: 0}
 --- !u!1001 &972430830
 Prefab:
   m_ObjectHideFlags: 0
