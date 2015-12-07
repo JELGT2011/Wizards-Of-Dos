@@ -60,11 +60,13 @@ MonoBehaviour:
       constraint=&quot;meleeLocation != null&quot;&gt;&lt;animate repeatuntil=&quot;&quot;
       name=&quot;Attack Start&quot; debugbreak=&quot;False&quot; animationstate=&quot;attackStart&quot;
       /&gt;&lt;timer waitforsec=&quot;1&quot; returnvalue=&quot;success&quot; name=&quot;Reaction
-      Timer&quot; debugbreak=&quot;False&quot; /&gt;&lt;animate repeatuntil=&quot;&quot;
-      name=&quot;Attack End&quot; debugbreak=&quot;False&quot; animationstate=&quot;attackEnd&quot;
+      Timer&quot; debugbreak=&quot;False&quot; /&gt;&lt;parallel tiebreaker=&quot;fail&quot;
+      succeed=&quot;all&quot; repeatuntil=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;animate repeatuntil=&quot;&quot; name=&quot;Attack
+      End&quot; debugbreak=&quot;False&quot; animationstate=&quot;attackEnd&quot;
       /&gt;&lt;action repeatuntil=&quot;&quot; parametervalues=&quot;&quot; parameters=&quot;&quot;
       namespace=&quot;&quot; name=&quot;Damage Player&quot; debugbreak=&quot;False&quot;
-      classname=&quot;DamagePlayer&quot; /&gt;&lt;/constraint&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/behaviortree&gt;"
+      classname=&quot;DamagePlayer&quot; /&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/behaviortree&gt;"
       type="System.String" id="treeData" /><field type="System.Array" id="treeBindings"
       elementtype="System.String" /></fields><references /></scriptableobject>
     _serializedGameObjects: []

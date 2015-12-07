@@ -27,6 +27,7 @@ public class DamagePlayer : RAINAction
             playerObject = aspect.Entity.Form.gameObject;
             if(playerObject.tag == "Player1" || playerObject.tag == "Player2")
             {
+                Debug.Log(playerObject.tag + " took damge");
                 playerObject.GetComponent<CharacterStats>().TakeDamage(10);
             }
         }
