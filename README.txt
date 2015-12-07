@@ -6,10 +6,10 @@ Wizards_of_Dos_final.zip
 i. Full name, email, and prism account name for each member of the team
 Lanssie Mingyue Ma 		mma48@gatech.edu 		mma48
 Timothy Storm 			tstorm3@gatech.edu		tstorm3
-Nate Zhiran Chen		
+Nate Zhiran Chen
 Robert Sun 				sunwrobert@gatech.edu   rsun39
-Jesus Carillo			
-Jason Libbey			
+Jesus Carillo			jcarrillo9@gatech.edu   jcarrillo9
+Jason Libbey			jlibbey3@gatech.edu    jlibbey3
 
 
 ii. Detail which requirements you have completed, which are incomplete, and which
@@ -17,11 +17,9 @@ are buggy (be specific)
 
 We have implemented a PvP 2 person fighting game; one person vs another. We have 4 characters to choose from with 3 attacks each (Maria, Ninja, Masked Torra, and Ekko) and we have 4 stages to choose from (Ice, Hell, Jungle, and Japan).
 
-You and another player should battle it out on a chosen stage to the death. 
+You and another player should battle it out on a chosen stage to the death.
 
-Some terrains are helpful and offer bonuses that help your health; in the japanese terrain. Other terrains have AI that is harmful. 
-
-
+Some terrains are helpful and offer bonuses that help your health; i.e. the Japanese terrain. Other terrains have AI that is harmful.
 
 
 Who did what:
@@ -48,7 +46,7 @@ Some particle systems
 
 
 Robert
-Character controller 
+Character controller
 1 character design and animations (Ninja)
 (Game Play Mechanics)
 1 Terrain and fight map
@@ -59,6 +57,7 @@ Some particle systems
 Jesus
 2 AI in the terrains
 1 character design and animations (but not playable in the final submisison)
+
 
 Jason
 1 character design and animations (Ekko)
@@ -100,13 +99,10 @@ MenuScreen
 
 vii. URL of the web page where you posted your assignment
 
+http://wizards-of-dos.s3-website-us-east-1.amazonaws.com/final.html
 
 c) Complete Unity project (each script file you created should include team name and
 members’ names in comments at top of file, and any file you acquired outside should also
 be attributed with the appropriate source information)
 
-
-
-
-
-
+github URL: https://github.com/JELGT2011/Wizards-Of-Dos.git
