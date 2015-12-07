@@ -73,6 +73,13 @@ Material:
           m_Offset: {x: 1, y: 1}
       data:
         first:
+          name: _ReflectiveColorCube
+        second:
+          m_Texture: {fileID: 8900000, guid: 0620bdf0302d84423be4aa15b82a0e11, type: 2}
+          m_Scale: {x: .150000006, y: .100000001}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _WavesTex
         second:
           m_Texture: {fileID: 0}
@@ -98,13 +105,6 @@ Material:
         second:
           m_Texture: {fileID: 2800000, guid: dc30b984e8e3c4cdfb38d5fceb411602, type: 2}
           m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _ReflectiveColorCube
-        second:
-          m_Texture: {fileID: 8900000, guid: 0620bdf0302d84423be4aa15b82a0e11, type: 2}
-          m_Scale: {x: .150000006, y: .100000001}
           m_Offset: {x: 0, y: 0}
       data:
         first:
@@ -363,14 +363,6 @@ Material:
         second: {r: .70338881, g: -.679999888, b: .717573524, a: -.200000003}
       data:
         first:
-          name: _DepthColor
-        second: {r: .0275116973, g: .141791046, b: .132267773, a: .4627451}
-      data:
-        first:
-          name: _RefractionFog
-        second: {r: .505434752, g: .505434752, b: .505434752, a: .5}
-      data:
-        first:
           name: _ReflectiveColorCube_ST
         second: {r: 1, g: 1, b: 0, a: 0}
       data:
@@ -381,6 +373,14 @@ Material:
         first:
           name: _WaveOffset
         second: {r: 1, g: 1, b: -.00999999978, a: -.00999999978}
+      data:
+        first:
+          name: _DepthColor
+        second: {r: .0275116973, g: .141791046, b: .132267773, a: .4627451}
+      data:
+        first:
+          name: _RefractionFog
+        second: {r: .505434752, g: .505434752, b: .505434752, a: .5}
       data:
         first:
           name: _DisplacementXz

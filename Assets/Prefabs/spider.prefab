@@ -2111,14 +2111,13 @@ MonoBehaviour:
       id="0"><field value="True" type="System.Boolean" id="_isActive" /><field type="UnityEngine.GameObject"
       id="_body" gameobject="0" /><field type="RAIN.Memory.BasicMemory" reference="1"
       id="_workingMemory" /><field type="RAIN.Minds.BasicMind" reference="3" id="_mind"
-      childrenvisible="False" /><field type="RAIN.Motion.BasicMotor" reference="4"
-      id="_motor" /><field type="RAIN.Animation.BasicAnimator" reference="5" id="_animator"
-      childrenvisible="False" /><field type="RAIN.Navigation.BasicNavigator" reference="11"
-      id="_navigator" childrenvisible="False" /><field type="RAIN.Perception.BasicSenses"
-      reference="12" id="_senses" childrenvisible="True" /><field type="System.Collections.Generic.List"
-      id="_customElements" elementtype="RAIN.Core.CustomAIElement" /></reference><reference
-      type="RAIN.Memory.BasicMemory" refcount="1" id="1"><field type="System.Collections.Generic.List"
-      id="_memoryItems" elementtype="RAIN.Memory.BasicMemory+MemoryItem"><field type="RAIN.Memory.BasicMemory+MemoryItem"
+      /><field type="RAIN.Motion.BasicMotor" reference="4" id="_motor" /><field type="RAIN.Animation.BasicAnimator"
+      reference="5" id="_animator" /><field type="RAIN.Navigation.BasicNavigator"
+      reference="11" id="_navigator" /><field type="RAIN.Perception.BasicSenses" reference="12"
+      id="_senses" /><field type="System.Collections.Generic.List" id="_customElements"
+      elementtype="RAIN.Core.CustomAIElement" /></reference><reference type="RAIN.Memory.BasicMemory"
+      refcount="1" id="1"><field type="System.Collections.Generic.List" id="_memoryItems"
+      elementtype="RAIN.Memory.BasicMemory+MemoryItem"><field type="RAIN.Memory.BasicMemory+MemoryItem"
       reference="2" id="element0" /></field></reference><reference type="RAIN.Memory.BasicMemory+MemoryItem"
       refcount="1" id="2"><field value="Health" type="System.String" id="Key" /><field
       value="System.Single" type="System.Type" id="ValueType" /><field value="100"
@@ -2142,7 +2141,7 @@ MonoBehaviour:
       reference="9" id="element3" /><field type="RAIN.Animation.BasicAnimator+BasicAnimatorState"
       reference="10" id="element4" /></field></reference><reference type="RAIN.Animation.BasicAnimator+BasicAnimatorState"
       refcount="1" id="6"><field value="walk" type="System.String" id="stateName"
-      /><field type="UnityEngine.AnimationClip" id="animationClip" gameobject="5"
+      /><field type="UnityEngine.AnimationClip" id="animationClip" gameobject="-1"
       /><field value="0" type="System.Int32" id="layer" /><field value="1" type="System.Single"
       id="weight" /><field value="1" type="System.Single" id="speed" /><field value="0"
       type="System.Single" id="fadeInTime" /><field value="0" type="System.Single"
@@ -2150,7 +2149,7 @@ MonoBehaviour:
       /><field type="System.Collections.Generic.List" id="mixingTransforms" elementtype="RAIN.Animation.BasicAnimator+BasicAnimatorState+MixingTransform"
       /></reference><reference type="RAIN.Animation.BasicAnimator+BasicAnimatorState"
       refcount="1" id="7"><field value="run" type="System.String" id="stateName" /><field
-      type="UnityEngine.AnimationClip" id="animationClip" gameobject="6" /><field
+      type="UnityEngine.AnimationClip" id="animationClip" gameobject="-1" /><field
       value="0" type="System.Int32" id="layer" /><field value="1" type="System.Single"
       id="weight" /><field value="1" type="System.Single" id="speed" /><field value="0"
       type="System.Single" id="fadeInTime" /><field value="0" type="System.Single"
@@ -2166,7 +2165,7 @@ MonoBehaviour:
       /><field type="System.Collections.Generic.List" id="mixingTransforms" elementtype="RAIN.Animation.BasicAnimator+BasicAnimatorState+MixingTransform"
       /></reference><reference type="RAIN.Animation.BasicAnimator+BasicAnimatorState"
       refcount="1" id="9"><field value="attackEnd" type="System.String" id="stateName"
-      /><field type="UnityEngine.AnimationClip" id="animationClip" gameobject="7"
+      /><field type="UnityEngine.AnimationClip" id="animationClip" gameobject="-1"
       /><field value="0" type="System.Int32" id="layer" /><field value="1" type="System.Single"
       id="weight" /><field value="1" type="System.Single" id="speed" /><field value="0"
       type="System.Single" id="fadeInTime" /><field value="0" type="System.Single"
@@ -2174,7 +2173,7 @@ MonoBehaviour:
       /><field type="System.Collections.Generic.List" id="mixingTransforms" elementtype="RAIN.Animation.BasicAnimator+BasicAnimatorState+MixingTransform"
       /></reference><reference type="RAIN.Animation.BasicAnimator+BasicAnimatorState"
       refcount="1" id="10"><field value="death1" type="System.String" id="stateName"
-      /><field type="UnityEngine.AnimationClip" id="animationClip" gameobject="8"
+      /><field type="UnityEngine.AnimationClip" id="animationClip" gameobject="-1"
       /><field value="0" type="System.Int32" id="layer" /><field value="1" type="System.Single"
       id="weight" /><field value="1" type="System.Single" id="speed" /><field value="0"
       type="System.Single" id="fadeInTime" /><field value="0" type="System.Single"
@@ -2221,10 +2220,6 @@ MonoBehaviour:
     - {fileID: 7400000, guid: 768e4986b9fdc144f9b6351c7ef4a179, type: 2}
     - {fileID: 427578}
     - {fileID: 427578}
-    - {fileID: 7400002, guid: bc600cce01eb57a409f4e69025868a2c, type: 3}
-    - {fileID: 7400004, guid: bc600cce01eb57a409f4e69025868a2c, type: 3}
-    - {fileID: 7400006, guid: bc600cce01eb57a409f4e69025868a2c, type: 3}
-    - {fileID: 7400020, guid: bc600cce01eb57a409f4e69025868a2c, type: 3}
     _serializedCustomData: []
 --- !u!135 &13582036
 SphereCollider:
