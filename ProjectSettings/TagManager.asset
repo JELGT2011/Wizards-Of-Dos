@@ -26,6 +26,9 @@ TagManager:
   - weapon
   - SwampBuff
   - SwampBuffOnPlayer
+  - Lantern
+  - Player1Char
+  - Player2Char
   layers:
   - Default
   - TransparentFX

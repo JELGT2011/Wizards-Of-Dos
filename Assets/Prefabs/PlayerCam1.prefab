@@ -107,8 +107,8 @@ Camera:
     y: .5
     width: 1
     height: .5
-  near clip plane: 1
-  far clip plane: 100
+  near clip plane: .200000003
+  far clip plane: 5000
   field of view: 60
   orthographic: 0
   orthographic size: 4.5
@@ -187,8 +187,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05dd88c5d55f6ab40b5eda5cf19112b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationRange: {x: 55, y: Infinity}
-  rotationSpeed: 5
+  rotationRange: {x: 60, y: Infinity}
+  rotationSpeed: 8
   dampingTime: .200000003
   autoZeroVerticalOnMobile: 1
   autoZeroHorizontalOnMobile: 0

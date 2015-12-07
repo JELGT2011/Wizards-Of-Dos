@@ -7,7 +7,7 @@ i. Full name, email, and prism account name for each member of the team
 Lanssie Mingyue Ma 		mma48@gatech.edu 		mma48
 Timothy Storm 			tstorm3@gatech.edu		tstorm3
 Nate Zhiran Chen		
-Robert Sun 				
+Robert Sun 				sunwrobert@gatech.edu   rsun39
 Jesus Carillo			
 Jason Libbey			
 
@@ -82,9 +82,11 @@ assignment requirements.
 
 Start the game
 
-choose character select
+Press Play
 
-choose the map you want to play in
+Pick the character each player wants to use, and then press Enter or the attack button on the controller
+
+Choose the map you want to play in
 
 Beat the other player(s)
 
@@ -93,6 +95,8 @@ Win the game!
 Replay?
 
 vi. Which scene file is the main file that should be opened first in Unity
+
+MenuScreen
 
 vii. URL of the web page where you posted your assignment
 
