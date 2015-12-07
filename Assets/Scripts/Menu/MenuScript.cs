@@ -16,12 +16,12 @@ public class MenuScript : MonoBehaviour
     {
         if (ControlInputWrapper.GetButtonDown(ControlInputWrapper.Buttons.A))
         {
-            Application.LoadLevel("CharacterSelect");
+            LoadCharacterSelect();
         }
-        
+
         if (ControlInputWrapper.GetButtonDown(ControlInputWrapper.Buttons.B))
         {
-            Application.LoadLevel("Credits");
+            LoadCredits();
         }
     }
 
