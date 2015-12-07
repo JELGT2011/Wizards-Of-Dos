@@ -4,10 +4,10 @@ a) ZIP file name: <teamname>_final.zip
 Wizards_of_Dos_final.zip
 
 i. Full name, email, and prism account name for each member of the team
-Lanssie Mingyue Ma 		mma48@gatech.edu 		mma48
-Timothy Storm 			tstorm3@gatech.edu		tstorm3
-Nate Zhiran Chen
-Robert Sun 				sunwrobert@gatech.edu   rsun39
+Lanssie Mingyue Ma 		mma48@gatech.edu 	mma48
+Timothy Storm 			tstorm3@gatech.edu	tstorm3
+Nate Ziran Chen			ziranchen@gatech.edu	n/a
+Robert Sun 			sunwrobert@gatech.edu   rsun39
 Jesus Carillo			jcarrillo9@gatech.edu   jcarrillo9
 Jason Libbey			jlibbey3@gatech.edu    jlibbey3
 
@@ -15,12 +15,11 @@ Jason Libbey			jlibbey3@gatech.edu    jlibbey3
 ii. Detail which requirements you have completed, which are incomplete, and which
 are buggy (be specific)
 
-We have implemented a PvP 2 person fighting game; one person vs another. We have 4 characters to choose from with 3 attacks each (Maria, Ninja, Masked Torra, and Ekko) and we have 4 stages to choose from (Ice, Hell, Jungle, and Japan).
+We have implemented a PvP 2 person fighting game; one person vs another. We have 4 characters to choose from with 3 attacks each (Maria, Ninja, Masked Torra, and Ekko) and we have 4 stages to choose from (Ice, Hell, Jungle, and Japan). Characters have standard movement with a dodge and jump, along with their respective rag dolls when they die. Each stage has different characteristics and embellishments, including background music, sound,   weather, and different particle effects. 
 
 You and another player should battle it out on a chosen stage to the death.
 
-Some terrains are helpful and offer bonuses that help your health; i.e. the Japanese terrain. Other terrains have AI that is harmful.
-
+Some terrains are helpful and offer bonuses that help your health; i.e. the Japanese terrain has ice cream and hamburgers that give you bonus health. Other terrains have AI that is harmful, like the ice terrain which has spiders that will attack and seek out players.
 
 Who did what:
 
@@ -71,10 +70,26 @@ being used for (e.g. Asset Bundles downloaded from the Asset Store for double
 sided cutout shaders, or this file was found on the internet has link
 http://example.com/test and does the orbit camera tracking).
 
+Built in Assets
+RAIN AI
+Asset Store 
+Ancient Japanese Blades
+Ball Pack
+Chain
+Edo Props
+Elementals
+Japanese village Kit
+Japanese Iris Garden Pack
+Lantern
+Nature Starter Kit
+skyb1
+SkyBox Volume 2
+UF Creator LITE
+Water FX Pack
 
 iv. Detail any special install instructions the grader will need to be aware of for
 building and running your code
-
+n/a
 
 v. Detail exact steps grader should take to demonstrate that your game meets
 assignment requirements.
@@ -88,6 +103,17 @@ Pick the character each player wants to use, and then press Enter or the attack 
 Choose the map you want to play in
 
 Beat the other player(s)
+keyboard:
+WASD to move P1, arrow keys P2
+ugh for 3 attacks
+space
+
+controller
+joystick to move
+R joystick is camera
+A jump
+XMB are three attacks. 
+
 
 Win the game!
 
